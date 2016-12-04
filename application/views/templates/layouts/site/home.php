@@ -5,9 +5,7 @@
 </head>
 <body>
 	{header}
-    <div class="content container">
-    	{content}   
-    </div>        
+    {content}         
     {footer}
     {scripts}
     <input type="hidden" id="base-url" value="<?php echo base_url(); ?>">

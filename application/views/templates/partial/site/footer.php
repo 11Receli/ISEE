@@ -1,13 +1,27 @@
-<footer class="footer">
-    Footer for public page
-    <ul class="sitemap">
-		<li><a href="<?php echo base_url(); ?>">Home</a></li>
-		<li><a href="#">Link 1</a></li>
-		<li><a href="#">Link 2</a></li>
-		<li><a href="#">Link 3</a></li>
-		<li><a href="#">Link 4</a></li>
-		<li><a href="#">Link 5</a></li>
-		<li><a href="#">Link 6</a></li>
-	</ul>
-
-</footer><!--//footer-->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
