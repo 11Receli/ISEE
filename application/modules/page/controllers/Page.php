@@ -2,6 +2,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends Public_Controller {
+var $validation = array(
+        array(
+                'field' => 'username',
+                'label' => 'Username',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'password',
+                'label' => 'Password',
+                'rules' => 'required',
+                'errors' => array(
+                        'required' => 'You must provide a %s.',
+                )
+        )
+	);
 
 	public function index() {
 		$this->templates->layout('home');
@@ -11,12 +26,53 @@ class Page extends Public_Controller {
 	public function login() {
 		//set layout as login
 		//-location of layout for login: application/views/templates/layouts/site/login.php
-		//
+		//$this->input->post('username') == $_POST['username']
+		/*$username=$this->input->post('username');
+		echo $username;
+		die();
+		*/
+		if ($this->session->userdata('username'))
+		{
+			redirect('page');
+		}
+
 		$this->templates->layout('login');
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules($this->validation);
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                		$this->templates->render('login');
+                        //$this->load->view('myform');
+                }
+                else
+                {		
+                		$username=$this->input->post('username');
+                		$password=$this->input->post('password');
+
+            			$this->load->model("Page_model");
+            			$check=$this->Page_model->checklogin($username,$password);
+            			if(count($check)>0) {
+            				//set session
+            				$this->session->set_userdata('username',$username);
+            				redirect('page');
+            				//get session
+            				/*echo $this->session->userdata('username');*/
+            			} else {
+            				echo "failed";
+            			}
+                        //$this->load->view('formsuccess');
+                }
+                
 
 		//$this->templates->render([Page filename]) ---> use for show page, replace [Page filename]
 		//with content you want to display located in modules/page/views
-		$this->templates->render('login');
+	}
+
+	function logout(){
+		session_destroy();
+		redirect('page');
 	}
 
 	public function test_page() {
