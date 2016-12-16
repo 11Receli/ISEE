@@ -22,6 +22,9 @@ var $validation = array(
 		$this->templates->layout('home');
 		$this->templates->render('home');
 	}
+	public function registration(){
+		$this->templates->layout('registermain');
+	}
 
 	public function login() {
 		//set layout as login
