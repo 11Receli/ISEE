@@ -4,4 +4,6 @@
 </div>
 <input type="password" name="password">
 <button type="submit" name="submit">Login</button>
+<p>New to this site? <a href="<?php echo base_url('page/registermain'); ?>">Register here!</a></p>
+
 <?php echo form_close(); ?>

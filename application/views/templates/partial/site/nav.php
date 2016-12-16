@@ -30,6 +30,11 @@
                         <a href="<?php echo base_url('page/login'); ?>">Login</a>
                     <?php endif; ?>
                     </li>
+                     <li>
+                    <?php if($this->session->userdata('username')): ?>
+                        <a href="<?php echo base_url('page/logout'); ?>">Logout</a>
+                    <?php endif; ?>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
