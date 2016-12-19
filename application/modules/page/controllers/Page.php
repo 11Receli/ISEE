@@ -24,6 +24,7 @@ var $validation = array(
 	}
 	public function registration(){
 		$this->templates->layout('registermain');
+		$this->templates->render('registermain');
 	}
 
 	public function login() {
