@@ -24,16 +24,20 @@
                         <a href="#">Contact</a>
                     </li>
                     <li>
-                    <?php if($this->session->userdata('username')): ?>
-                        <a href="#"><?php echo $this->session->userdata('username'); ?></a>
-                    <?php else: ?>
-                        <a href="<?php echo base_url('page/login'); ?>">Login</a>
-                    <?php endif; ?>
-                    </li>
-                     <li>
-                    <?php if($this->session->userdata('username')): ?>
-                        <a href="<?php echo base_url('page/logout'); ?>">Logout</a>
-                    <?php endif; ?>
+                        <?php if($this->session->userdata('username')): ?>
+                            <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <?php echo $this->session->userdata('username'); ?></a>
+                        <?php else: ?>
+                            <a href="<?php echo base_url('page/login'); ?>">Login</a>
+                        <?php endif; ?>
+                      
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <?php if($this->session->userdata('username')): ?>
+                                <a href="<?php echo base_url('page/logout'); ?>">Logout</a>
+                            <?php endif; ?>
+                        </li>
+                      </ul>
                     </li>
                 </ul>
             </div>
