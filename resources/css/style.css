@@ -1,0 +1,6 @@
+html, body,.content.container {
+    min-height:100% !important;
+}
+.content.container {
+    padding-top:55px;
+}
