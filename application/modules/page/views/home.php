@@ -1,4 +1,4 @@
-<!-- Header -->
+Header -->
 <div class="intro-header">
 
     <div class="container">
@@ -6,18 +6,28 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
-                    <h1>Find Jobs Here</h1>
-                    <h3>A Template by Start Bootstrap</h3>
-                    <hr class="intro-divider">
+                    <img src="<?php echo base_url(IMG . 'ISEE.GIF'); ?>" alt="">
+                    <h1>DISCOVER OR</h1>
+                    <h1>BE DISCOVERED</h1>
+                    <h3>A NEW AVENUE TO FIND JOBS AND EMPLOYEES ALL AT ONCE</h3>
+                    <!-- <hr class="intro-divider"> -->
                     <ul class="list-inline intro-social-buttons">
-                        <li>
+                        <!-- <li>
                             <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                         </li>
                         <li>
                             <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li> -->
+                        <li>
+                            <?php if($this->session->userdata('username')): ?>
+                                <h3 class="strong white">
+                                Welcome <?php echo $this->session->userdata('username'); ?></h3>
+                            <?php else: ?>
+                                <a href="<?php echo base_url('page/login'); ?>" class="btn btn-default btn-xxlg"> <span class="network-name">Login</span></a>
+                            <?php endif; ?>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            
                         </li>
                     </ul>
                 </div>
@@ -125,4 +135,4 @@
     <!-- /.container -->
 
 </div>
-<!-- /.banner -->
+<!-- /.banner

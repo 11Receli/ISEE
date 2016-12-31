@@ -31,20 +31,25 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background: url(../images/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.intro-message img{
+    width:250px;
+    padding-bottom:10px;
 }
 
 .intro-message > h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+    font-size: 4em;
 }
 
 .intro-divider {
@@ -55,8 +60,13 @@ h6 {
 
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 1.25em;
 }
 
+.intro-message > ul li span {
+    color:  #696969;
+    font-size: 1em;
+}
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -81,6 +91,70 @@ h6 {
     }
 }
 
+.intro-header-login {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../images/intro-bg-login.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message-login {
+    position: relative;
+    padding-top: 12.75%;
+    padding-bottom: 12.75%;
+}
+
+.intro-message-login img{
+    width:250px;
+    padding-bottom:10px;
+}
+
+.intro-message-login > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 4em;
+}
+
+.intro-divider-login {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message-login > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 1.25em;
+}
+
+.intro-message-login > ul li span {
+    color:  #696969;
+    font-size: 1em;
+}
+@media(max-width:767px) {
+    .intro-message-login {
+        padding-bottom: 15%;
+    }
+
+    .intro-message-login > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons-login > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons-login > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider-login {
+        width: 100%;
+    }
+}
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -112,7 +186,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../images/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 

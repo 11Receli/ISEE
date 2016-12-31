@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">I S E E</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -28,7 +28,7 @@
                             <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <?php echo $this->session->userdata('username'); ?></a>
                         <?php else: ?>
-                            <a href="<?php echo base_url('page/login'); ?>">Login</a>
+                            <a href="<?php echo base_url('page/registration'); ?>">Register</a>
                         <?php endif; ?>
                       
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

@@ -29,7 +29,7 @@ var $company_validation = array(
                 'label' => 'Company Type',
                 'rules' => 'required',
                 'errors' => array(
-                        'required' => 'You must provide a %s.',
+                'required' => 'You must provide a %s.',
                 )
         ),
         array(
@@ -198,7 +198,7 @@ var $company_validation = array(
             				//get session
             				/*echo $this->session->userdata('username');*/
             			} else {
-            				echo "failed";
+                            redirect('page/login');
             			}
                         //$this->load->view('formsuccess');
                 }

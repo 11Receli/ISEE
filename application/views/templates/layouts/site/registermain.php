@@ -63,7 +63,6 @@
 		    <label>
 		      <input type="checkbox"> Check me out
 		    </label>
-		  </div> -->
 		  <button type="submit" name="register" class="btn btn-lg btn-primary">Submit</button>
 		</form>
 	</div>
