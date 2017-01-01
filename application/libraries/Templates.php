@@ -17,6 +17,7 @@ class Templates {
 
     private $type;
     private $partials;
+    public $notify;
 
     function type($type=NULL){
         if($type) $this->type = $type;
@@ -48,6 +49,11 @@ class Templates {
         return $this;
     }
 
+    function notiy($notify=NULL){
+        if($notify) $this->notify = $notify;
+        return $this;
+    }
+
     function render($view,$data=NULL, $ci=NULL) {
         if($data==NULL) {
             $data=new stdClass();
@@ -61,6 +67,7 @@ class Templates {
         
         $data->css = $this->css;
         $data->js = $this->js;
+        $data->notify = $this->notify;
         $data->plugins = $this->plugins;
         $data->images = $this->images;
 

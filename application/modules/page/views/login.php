@@ -10,11 +10,20 @@
                 <div class="intro-message-login">
                     <form class="form-signin">
 						<h2 class="form-signin-heading">Login Here</h2>
-						<label for="username" class="sr-only">Email address</label>
-						<input type="text" name="username" class="login-textbox form-control" placeholder="User Name" required="" autofocus="">
+						<?php if($notify): ?>
+	                		<p class="text-danger">
+						  		<?php echo $notify; ?>
+						  	</p>
+		                <?php endif; ?>
+		                <div class="col-xs-12">
+					  	<?php echo form_error('username'); ?>
+						<?php echo form_label('Username','username'); ?>
+					    <?php echo form_input('username',$username,'class="login-textbox form-control" placeholder="User Name" id="username"'); ?>
 
-						<label for="password" class="sr-only">Password</label>
-						<input type="password" name="password" class="login-textbox form-control" placeholder="Password" required="" autofocus="">
+						<?php echo form_error('password'); ?>
+						<?php echo form_label('Password','password'); ?>
+					    <?php echo form_password('password',$password,'class="login-textbox form-control" placeholder="Password" id="password"'); ?>
+					    
 
 						<div class="checkbox">
 					      <label>

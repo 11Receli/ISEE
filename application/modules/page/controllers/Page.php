@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends Public_Controller {
-var $validation = array(
+var $login_validation = array(
         array(
                 'field' => 'username',
                 'label' => 'Username',
@@ -156,7 +156,7 @@ var $company_validation = array(
 
         			
             }
-            print_r($this->data);
+            /*print_r($this->data);*/
 		
 		$this->templates->render('registermain',$this->data);
 	}
@@ -177,17 +177,25 @@ var $company_validation = array(
 		$this->templates->layout('login');
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules($this->validation);
+
+        $this->form_validation->set_rules($this->login_validation);
 
                 if ($this->form_validation->run() == FALSE)
                 {
-                		$this->templates->render('login');
+                    foreach($this->login_validation as $row) {
+                        $this->data->$row['field']="";
+                    }
+                		$this->templates->render('login',$this->data);
                         //$this->load->view('myform');
                 }
                 else
                 {		
                 		$username=$this->input->post('username');
                 		$password=$this->input->post('password');
+
+                        foreach($this->login_validation as $row) {
+                            $this->data->$row['field']=$this->input->post($row['field']);
+                        }
 
             			$this->load->model("Page_model");
             			$check=$this->Page_model->checklogin($username,$password);
@@ -198,7 +206,10 @@ var $company_validation = array(
             				//get session
             				/*echo $this->session->userdata('username');*/
             			} else {
-                            redirect('page/login');
+
+                            $this->templates->notify="Incorrect Username or password.";
+                            $this->templates->render('login',$this->data);
+
             			}
                         //$this->load->view('formsuccess');
                 }
