@@ -17,6 +17,12 @@ html, body,.content.container {
 .white{
 	color:#fff;
 }
+.whitelink{
+	color:#fff;
+}
+.whitelink:hover{
+	color:#92d5fc;
+}
 .space{
 	margin-bottom: 10px;
 }
@@ -27,6 +33,35 @@ html, body,.content.container {
 	margin-left:auto;
 	margin-right:auto;
 }
+@media(max-width:1024px){
+		.login-textbox{
+		width:25%;
+	}
+}
+@media(max-width:768px){
+		.login-textbox{
+		width:35%;
+	}
+}
+@media(max-width:425px){
+		.login-textbox{
+		width:60%;
+	}
+}
+@media(max-width:320px){
+		.login-textbox{
+		width:75%;
+	}
+}
 .error {
   border:2px solid red;
+}
+.shadowimg{
+	margin-left:-255px;
+	z-index: 2000;
+}
+.opacity5{
+
+	opacity:0.5;
+	z-index: 1;
 }

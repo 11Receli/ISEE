@@ -24,7 +24,7 @@
 
 						<button type="submit" name="submit" class="btn btn-xlg btn-primary space">Login</button>
 
-						<p>New to this site? <a href="<?php echo base_url('page/registration'); ?>">Register here!</a></p>
+						<p>New to this site? <a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Register here!</a></p>
 
 					</form>
                 </div>
@@ -36,6 +36,5 @@
 
 </div>
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-`
 
 <?php echo form_close(); ?>
