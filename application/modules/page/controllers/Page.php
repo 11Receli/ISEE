@@ -198,8 +198,7 @@ var $company_validation = array(
             				//get session
             				/*echo $this->session->userdata('username');*/
             			} else {
-                            redirect('page/login');/*
-                            $( "#dialog" ).dialog();*/
+                            redirect('page/login');
             			}
                         //$this->load->view('formsuccess');
                 }

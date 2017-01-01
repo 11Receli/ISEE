@@ -7,12 +7,13 @@
   </div>
   <div class="form-group">
     <?php echo form_label('Type of Company:','companytype'); ?>
-  	<?php echo form_error('companytype'); ?>
+    <?php echo form_error('companytype'); ?>
     <?php echo form_input('companytype',$companytype,'class="form-control" placeholder="Type of Company:" id="companytype"'); ?>
   </div>
   <div class="form-group">
-    <label>Address: </label>
-    <input type="text" class="form-control" name="companyaddress" placeholder="Complete Address">
+    <?php echo form_label('Company Address:','companyaddress'); ?>
+  	<?php echo form_error('companyaddress'); ?>
+    <?php echo form_input('companyaddress',$companyaddress,'class="form-control" placeholder="Company Address:" id="companyaddress"'); ?>
   </div>
   <div class="form-group">
     <label>Contact Number: </label>
