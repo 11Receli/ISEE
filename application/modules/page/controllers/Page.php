@@ -124,6 +124,17 @@ var $company_validation = array(
             			$this->data->$row['field']=$this->input->post($row['field']);
             			$fields[]=$this->input->post($row['field']);
             		}
+                    $this->load->model("Page_model");
+                    $check=$this->Page_model->checkregistration($companyname,$companytype,$companyaddress,$companycontact,$companyemail,$companyfounder,$companyyear,$hrname,$hrcontact,$hremail,$positions);
+
+                    if($check) {
+                        $this->templates->layout('home');
+                        $this->templates->render('home');
+
+                        //redirect kung san page mo gusto
+                    } else {
+                        echo "registration failed";
+                    }
 
             		/* 
 					dito na ngayon malalagay yung pagtawag mo sa model

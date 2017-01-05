@@ -8,44 +8,52 @@
   <div class="form-group">
     <?php echo form_label('Type of Company:','companytype'); ?>
     <?php echo form_error('companytype'); ?>
-    <?php echo form_input('companytype',$companytype,'class="form-control" placeholder="Type of Company:" id="companytype"'); ?>
+    <?php echo form_input('companytype',$companytype,'class="form-control" placeholder="Type of Company" id="companytype"'); ?>
   </div>
   <div class="form-group">
     <?php echo form_label('Company Address:','companyaddress'); ?>
-  	<?php echo form_error('companyaddress'); ?>
-    <?php echo form_input('companyaddress',$companyaddress,'class="form-control" placeholder="Company Address:" id="companyaddress"'); ?>
+    <?php echo form_error('companyaddress'); ?>
+    <?php echo form_input('companyaddress',$companyaddress,'class="form-control" placeholder="Company Address" id="companyaddress"'); ?>
   </div>
   <div class="form-group">
-    <label>Contact Number: </label>
-    <input type="text" class="form-control" name="companycontact" placeholder="Contact Number">
+    <?php echo form_label('Contact Number:','companycontact'); ?>
+    <?php echo form_error('companycontact'); ?>
+    <?php echo form_input('companycontact',$companycontact,'class="form-control" placeholder="ex: (044) 6324 877 / +639984478282" id="companycontact"'); ?>
   </div>
   <div class="form-group">
-    <label>Email Address</label>
-    <input type="email" class="form-control" name="companyemail" placeholder="(ex. company@gmail.com)">
+    <?php echo form_label('E-mail Address:','companyemail'); ?>
+    <?php echo form_error('companyemail'); ?>
+    <?php echo form_input('companyemail',$companyemail,'class="form-control" placeholder="ex: companyemail@gmail.com" id="companyemail"'); ?>
   </div>
   <div class="form-group">
-    <label>Owner / Founder: </label>
-    <input type="text" class="form-control" name="companyfounder" placeholder="Complete Name">
+    <?php echo form_label('Company Owner:','companyfounder'); ?>
+    <?php echo form_error('companyfounder'); ?>
+    <?php echo form_input('companyfounder',$companyfounder,'class="form-control" placeholder="Name of Company Owner" id="companyfounder"'); ?>
   </div>
   <div class="form-group">
-    <label>Year of Establishment: </label>
-    <input type="text" class="form-control" name="companyyear" placeholder="(ex. 1990)">
+    <?php echo form_label('Company Year:','companyyear'); ?>
+    <?php echo form_error('companyyear'); ?>
+    <?php echo form_input('companyyear',$companyyear,'class="form-control" placeholder="Year of Establishment" id="companyyear"'); ?>
   </div>
   <div class="form-group">
-    <label>Human Resource Department's Contact Person: </label>
-    <input type="text" class="form-control" name="hrname" placeholder="Complete Name">
+    <?php echo form_label('Human Resource Representative:','hrname'); ?>
+    <?php echo form_error('hrname'); ?>
+    <?php echo form_input('hrname',$hrname,'class="form-control" placeholder="ex: John Martin" id="hrname"'); ?>
   </div>
   <div class="form-group">
-    <label>Department's Contact Number: </label>
-    <input type="text" class="form-control" name="hrcontact" placeholder="HR Department's Contact Number">
+    <?php echo form_label('HR Contact','hrcontact'); ?>
+    <?php echo form_error('hrcontact'); ?>
+    <?php echo form_input('hrcontact',$hrcontact,'class="form-control" placeholder="ex: (044) 6324 877 / +639984478282" id="hrcontact"'); ?>
   </div>
   <div class="form-group">
-    <label>Department's E-mail Address: </label>
-    <input type="email" class="form-control" name="hremail" placeholder="(ex. hrdepartment@gmail.com)">
+    <?php echo form_label('HR E-mail Address:','hremail'); ?>
+    <?php echo form_error('hremail'); ?>
+    <?php echo form_input('hremail',$hremail,'class="form-control" placeholder="ex: hremail@gmail.com" id="hremail"'); ?>
   </div>
   <div class="form-group">
-    <label>Job Position's in the company: </label>
-    <input type="text" class="form-control" name="positions" placeholder="(ex.Encoder)">
+    <?php echo form_label('Company Positions:','positions'); ?>
+    <?php echo form_error('positions'); ?>
+    <?php echo form_input('positions',$positions,'class="form-control" placeholder="ex: Accountant, Manager, etc." id="positions"'); ?>
   </div>
   <!-- <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
