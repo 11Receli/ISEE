@@ -19,7 +19,7 @@ class Page_model extends CI_Model {
       	echo $this->db->last_query();*/
         }
         function checkregistration($id){
-            $query="INSERT INTO 'employerinfo' ('name', 'type', 'location', 'contact', 'email', 'owner', 'year', 'hrperson', 'hrcontact', 'hremail', 'positions') VALUES ('".$companyname."','".$companytype."','".$companyaddress."','".$companycontact."','".$companyemail."','".$companyfounder."','".$companyyear."','".$hrname."','".$hrcontact."','".$hremail."','".$positions."')";
+            $query="INSERT INTO `employerinfo` (`name`, `type`, `location`, `contact`, `email`, `owner`, `year`, `hrperson`, `hrcontact`, `hremail`, `positions`) VALUES ('".$companyname."','".$companytype."','".$companyaddress."','".$companycontact."','".$companyemail."','".$companyfounder."','".$companyyear."','".$hrname."','".$hrcontact."','".$hremail."','".$positions."')";
                 $runquery=$this->db->query($query);
                 return $runquery->result();
                 /*print_r($runquery->result());*/
