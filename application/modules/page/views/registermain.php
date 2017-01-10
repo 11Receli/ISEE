@@ -8,7 +8,15 @@
   <div class="form-group">
     <?php echo form_label('Type of Company:','companytype'); ?>
     <?php echo form_error('companytype'); ?>
-    <?php echo form_input('companytype',$companytype,'class="form-control" placeholder="Type of Company" id="companytype"'); ?>
+    <?//php echo form_input('companytype',$companytype,'class="form-control" placeholder="Type of Company" id="companytype"'); ?>
+    <input id="companytype" class="form-control" placeholder="Type of Company" type="text" list="types" />
+    <datalist id="types">
+       <option value="Afghanistan">
+       <option value="Albania">
+       <option value="Algeria">
+       <option value="Andorra">
+       <option value="Angola">
+    </datalist>
   </div>
   <div class="form-group">
     <?php echo form_label('Company Address:','companyaddress'); ?>
@@ -53,7 +61,15 @@
   <div class="form-group">
     <?php echo form_label('Company Positions:','positions'); ?>
     <?php echo form_error('positions'); ?>
-    <?php echo form_input('positions',$positions,'class="form-control" placeholder="ex: Accountant, Manager, etc." id="positions"'); ?>
+    <?//php echo form_input('positions',$positions,'class="form-control" placeholder="ex: Accountant, Manager, etc." id="positions"'); ?>
+    <input id="positions" class="form-control" placeholder="ex: Accountant, Manager, etc." type="text" list="positionlist" />
+    <datalist id="positionlist">
+       <option value="Start Up">
+       <option value="Albania">
+       <option value="Algeria">
+       <option value="Andorra">
+       <option value="Angola">
+    </datalist>
   </div>
   <!-- <div class="form-group">
     <label for="exampleInputPassword1">Password</label>

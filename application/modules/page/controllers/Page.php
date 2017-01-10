@@ -125,14 +125,14 @@ var $company_validation = array(
             			$fields[]=$this->input->post($row['field']);
             		}
 
-                    $companyname=$this->input->post('name');
-                    $companytype=$this->input->post('type');
-                    $companyaddress=$this->input->post('location');
-                    $companycontact=$this->input->post('contact');
-                    $companyemail=$this->input->post('email');
-                    $companyfounder=$this->input->post('owner');
-                    $companyyear=$this->input->post('year');
-                    $hrname=$this->input->post('hrperson');
+                    $companyname=$this->input->post('companyname');
+                    $companytype=$this->input->post('companytype');
+                    $companyaddress=$this->input->post('companyaddress');
+                    $companycontact=$this->input->post('companycontact');
+                    $companyemail=$this->input->post('companyemail');
+                    $companyfounder=$this->input->post('companyfounder');
+                    $companyyear=$this->input->post('companyyear');
+                    $hrname=$this->input->post('hrname');
                     $hrcontact=$this->input->post('hrcontact');
                     $hremail=$this->input->post('hremail');
                     $positions=$this->input->post('positions');

@@ -21,7 +21,7 @@ class Page_model extends CI_Model {
         function checkregistration($companyname,$companytype,$companyaddress,$companycontact,$companyemail,$companyfounder,$companyyear,$hrname, $hrcontact,$hremail,$positions){
             $query="INSERT INTO `employerinfo` (`name`, `type`, `location`, `contact`, `email`, `owner`, `year`, `hrperson`, `hrcontact`, `hremail`, `positions`) VALUES ('".$companyname."','".$companytype."','".$companyaddress."','".$companycontact."','".$companyemail."','".$companyfounder."','".$companyyear."','".$hrname."','".$hrcontact."','".$hremail."','".$positions."')";
                 $goquery=$this->db->query($query);
-                return $goquery->result();/*
+                return $this->db->insert_id();/*
                 print_r($goquery->result());*/
             //echo $this->db->last_query();
         /*$this->db->get_where('accounts',array('username'=>$username,'password'=>$password));
