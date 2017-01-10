@@ -124,10 +124,23 @@ var $company_validation = array(
             			$this->data->$row['field']=$this->input->post($row['field']);
             			$fields[]=$this->input->post($row['field']);
             		}
-                    $this->load->model("Page_model");
-                    $check=$this->Page_model->checkregistration($companyname,$companytype,$companyaddress,$companycontact,$companyemail,$companyfounder,$companyyear,$hrname,$hrcontact,$hremail,$positions);
 
-                    if($check) {
+                    $companyname=$this->input->post('name');
+                    $companytype=$this->input->post('type');
+                    $companyaddress=$this->input->post('location');
+                    $companycontact=$this->input->post('contact');
+                    $companyemail=$this->input->post('email');
+                    $companyfounder=$this->input->post('owner');
+                    $companyyear=$this->input->post('year');
+                    $hrname=$this->input->post('hrperson');
+                    $hrcontact=$this->input->post('hrcontact');
+                    $hremail=$this->input->post('hremail');
+                    $positions=$this->input->post('positions');
+
+                    $this->load->model("Page_model");
+                    $register=$this->Page_model->checkregistration($companyname,$companytype,$companyaddress,$companycontact,$companyemail,$companyfounder,$companyyear,$hrname,$hrcontact,$hremail,$positions);
+
+                    if($register) {
                         $this->templates->layout('home');
                         $this->templates->render('home');
 
