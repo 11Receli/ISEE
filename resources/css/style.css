@@ -14,14 +14,28 @@ html, body,.content.container {
 	margin-top: 10px;
 	font-size: 20px;
 }
+.navbar-nav li a span{
+	color: #6BC7FB;
+}
+.navbar-nav li a span:hover{
+	color: #FFD03D;
+}
+.intro-social-buttons li a span{
+	color:#fff;
+}
+.borderline{
+	border-bottom:1px solid #fff;
+	width: 23.33333333%;
+	margin: 0 auto 20px auto;
+}
 .white{
 	color:#fff;
 }
 .whitelink{
-	color:#fff;
+	color:#93D6FC;
 }
 .whitelink:hover{
-	color:#92d5fc;
+	color:#FFD03D;
 }
 .space{
 	margin-bottom: 10px;
@@ -92,4 +106,43 @@ html, body,.content.container {
 
 	opacity:0.5;
 	z-index: 1;
+}
+
+/*.navbar_modif{
+	float:left;
+	padding-bottom: 20px;
+}
+.navbar_modif div{
+	display: block;
+	margin:0 auto -50px auto;
+}
+.navbar_modif div span{
+	margin:0 auto -19px auto;
+}
+.navbar_modif div span h6{
+	font-size: 9px;
+
+}
+.navbar_modif div span h4{
+	margin-bottom:15px;
+	margin-left: 28px;
+}
+
+*/
+.register h2{
+	text-align:center;
+	border-bottom:1px solid #D3D3D3;
+	padding-bottom:10px;
+}
+.register h3{
+	border-bottom:1px solid #D3D3D3;
+	margin-top: -5px;
+}
+.register div{
+	padding-top:5px;
+}
+.register button{
+	display: block;
+	margin:0px auto 10% auto;
+	padding: 15px 75px;
 }

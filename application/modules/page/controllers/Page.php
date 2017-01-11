@@ -81,11 +81,35 @@ var $company_validation = array(
 
 
 	public function index() {
+        //select successful students
+
+        //this is sample only, result from model
+        /*
+        array(
+            "key"=>"value"
+        ) is equal to
+
+        $array["key"]="value"
+
+        how to call the value of row in array?
+        echo $array["key"]
+        */
+        $students=array(
+            array(
+                    "name"=>"Ma. Nerissa Nicolas",
+                    "image"=>"resources/images/users/01.jpg",
+                    "achievement"=>"Lorem ipsum dolor",
+                    "quote"=>"Hello World"
+                ),
+            );
+        $this->data->students=$students;
+
 		$this->templates->layout('home');
-		$this->templates->render('home');
+		$this->templates->render('home',$this->data);
 	}
 	public function registration(){
-		$this->templates->layout('default');
+        $display="registermain";
+        $this->templates->layout('registermain');
 	
 		$this->load->library('form_validation');
 			$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
@@ -118,36 +142,50 @@ var $company_validation = array(
             }
             else {		
             	//check ng code mo yung nasunod yung rules (form validation)
-            		$this->form_validation->run();
+     
+                    if($this->form_validation->run()){
+                        foreach($this->company_validation as $row) {
+                            $this->data->$row['field']=$this->input->post($row['field']);
+                            $fields[$row['field']]=$this->input->post($row['field']);
+                          /*echo $row['field']."<br>";*/
+                        }
+                        /*echo "<pre>";
+                        print_r($fields);
+                        die();
+                        */
+                        /*$companyname=$fields['companyname'];
+                        $companytype=$fields['companytype'];
+                        $companyaddress=$fields['companyaddress'];
+                        $companycontact=$fields['companycontact'];
+                        $companyemail=$fields['companyemail'];
+                        $companyfounder=$fields['companyfounder'];
+                        $companyyear=$fields['companyyear'];
+                        $hrname=$fields['hrname'];
+                        $hrcontact=$fields['hrcontact'];
+                        $hremail=$fields['hremail'];
+                        $positions=$fields['positions'];*/
 
-            		foreach($this->company_validation as $row) {
-            			$this->data->$row['field']=$this->input->post($row['field']);
-            			$fields[]=$this->input->post($row['field']);
-            		}
+                        $this->load->model("Page_model");
+/*                        $register=$this->Page_model->checkregistration($companyname,$companytype,$companyaddress,$companycontact,$companyemail,$companyfounder,$companyyear,$hrname,$hrcontact,$hremail,$positions);*/
+                        $register=$this->Page_model->checkregistration($fields);
 
-                    $companyname=$this->input->post('companyname');
-                    $companytype=$this->input->post('companytype');
-                    $companyaddress=$this->input->post('companyaddress');
-                    $companycontact=$this->input->post('companycontact');
-                    $companyemail=$this->input->post('companyemail');
-                    $companyfounder=$this->input->post('companyfounder');
-                    $companyyear=$this->input->post('companyyear');
-                    $hrname=$this->input->post('hrname');
-                    $hrcontact=$this->input->post('hrcontact');
-                    $hremail=$this->input->post('hremail');
-                    $positions=$this->input->post('positions');
+                        if($register) {
+                            redirect();
+                            //$this->templates->layout('home');
+                            //$display="home";
 
-                    $this->load->model("Page_model");
-                    $register=$this->Page_model->checkregistration($companyname,$companytype,$companyaddress,$companycontact,$companyemail,$companyfounder,$companyyear,$hrname,$hrcontact,$hremail,$positions);
 
-                    if($register) {
-                        $this->templates->layout('home');
-                        $this->templates->render('home');
-
-                        //redirect kung san page mo gusto
+                            //redirect kung san page mo gusto
+                        } else {
+                            echo "registration failed";
+                        }
+                        //echo validation_errors()
                     } else {
-                        echo "registration failed";
+                        echo validation_errors();
+                        
                     }
+
+            		
 
             		/* 
 					dito na ngayon malalagay yung pagtawag mo sa model
@@ -182,7 +220,7 @@ var $company_validation = array(
             }
             /*print_r($this->data);*/
 		
-		$this->templates->render('registermain',$this->data);
+		$this->templates->render($display,$this->data);
 	}
 
 	public function login() {

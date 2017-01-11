@@ -9,7 +9,7 @@
             <div class="col-lg-12">
                 <div class="intro-message-login">
                     <form class="form-signin">
-						<h2 class="form-signin-heading">Login Here</h2>
+						<h2 class="form-signin-heading borderline">LOGIN</h2>
 						<?php if($notify): ?>
 	                		<p class="text-danger">
 						  		<?php echo $notify; ?>
@@ -24,13 +24,13 @@
 						<?php echo form_label('Password','password'); ?>
 					    <?php echo form_password('password',$password,'class="login-textbox form-control" placeholder="Password" id="password"'); ?>
 					    
-
+<!-- 
 						<div class="checkbox">
 					      <label>
 					        <input type="checkbox" value="remember-me"> Remember me
 					      </label>
 					    </div>
-
+ -->
 						<button type="submit" name="submit" class="btn btn-xlg btn-primary space">Login</button>
 
 						<p>New to this site? <a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Register here!</a></p>

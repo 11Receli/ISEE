@@ -28,7 +28,7 @@
                             <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <?php echo $this->session->userdata('username'); ?></a>
                         <?php else: ?>
-                            <a href="<?php echo base_url('page/registration'); ?>">Register</a>
+                            <a href="<?php echo base_url('page/registration'); ?>"><span>Sign In</span></a>
                         <?php endif; ?>
                       
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
