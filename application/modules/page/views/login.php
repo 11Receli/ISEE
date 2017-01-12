@@ -9,7 +9,9 @@
             <div class="col-lg-12">
                 <div class="intro-message-login">
                     <form class="form-signin">
-						<h2 class="form-signin-heading borderline">LOGIN</h2>
+                    <img class="opacity5" src="<?php echo base_url(IMG . 'ISEE2.GIF'); ?>" alt="">
+                    <img class="shadowimg" src="<?php echo base_url(IMG . 'ISEE.GIF'); ?>" alt="">
+						<h2 class="form-signin-heading borderline"></h2>
 						<?php if($notify): ?>
 	                		<p class="text-danger">
 						  		<?php echo $notify; ?>
@@ -32,8 +34,10 @@
 					    </div>
  -->
 						<button type="submit" name="submit" class="btn btn-xlg btn-primary space">Login</button>
-
+						<h2 class="borderline"></h2>
 						<p>New to this site? <a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Register here!</a></p>
+
+						
 
 					</form>
                 </div>

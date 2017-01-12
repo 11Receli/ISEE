@@ -102,12 +102,12 @@ h6 {
 
 .intro-message-login {
     position: relative;
-    padding-top: 12.15%;
-    padding-bottom: 12.15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .intro-message-login img{
-    width:250px;
+    width:180px;
     padding-bottom:10px;
 }
 
