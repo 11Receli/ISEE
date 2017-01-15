@@ -108,7 +108,7 @@ html, body,.content.container {
 	z-index: 1;
 }
 .intro-message-login .shadowimg{
-	margin-left:-200px;
+	margin-left:-185px;
 	z-index: 2000;
 }
 .intro-message-login .opacity5{
@@ -117,28 +117,6 @@ html, body,.content.container {
 	z-index: 1;
 }
 
-
-/*.navbar_modif{
-	float:left;
-	padding-bottom: 20px;
-}
-.navbar_modif div{
-	display: block;
-	margin:0 auto -50px auto;
-}
-.navbar_modif div span{
-	margin:0 auto -19px auto;
-}
-.navbar_modif div span h6{
-	font-size: 9px;
-
-}
-.navbar_modif div span h4{
-	margin-bottom:15px;
-	margin-left: 28px;
-}
-
-*/
 .register h2{
 	text-align:center;
 	border-bottom:1px solid #D3D3D3;
@@ -155,4 +133,19 @@ html, body,.content.container {
 	display: block;
 	margin:0px auto 10% auto;
 	padding: 15px 75px;
+}
+.center{
+	text-align: center;
+}
+.centerblock{
+	display:block;
+	margin: 0px auto;
+}
+.font-40{
+	font-size:250%;
+}
+@media(min-width:425px){	
+	.font-40{
+		font-size:300%;
+	}
 }

@@ -16,6 +16,49 @@ var $login_validation = array(
                         'required' => 'You must provide a %s.',
                 )
         )
+    );
+
+var $achievers_load = array(
+        array(
+                'field' => 'name',
+                'label' => 'Name',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'achievements',
+                'label' => 'Achievements',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'work',
+                'label' => 'Work',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'company',
+                'label' => 'Company',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'years',
+                'label' => 'Years',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'quote',
+                'label' => 'Quote',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'course',
+                'label' => 'Course',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'graduation',
+                'label' => 'Graduation',
+                'rules' => 'required'
+        )
 	);
 
 var $company_validation = array(
@@ -94,11 +137,21 @@ var $company_validation = array(
         how to call the value of row in array?
         echo $array["key"]
         */
+        /*$username=$this->input->post('username');
+        $password=$this->input->post('password');*/
+
+        /*foreach($this->achievers_load as $row) {
+                $this->data->students=$row['field'];
+            }
+        
+
+        $this->load->model("Page_model");
+        $check=$this->Page_model->achieversfetch($fields);*/
         $students=array(
             array(
                     "name"=>"Ma. Nerissa Nicolas",
                     "image"=>"resources/images/users/01.jpg",
-                    "achievement"=>"Lorem ipsum dolor",
+                    "achievements"=>"Lorem ipsum dolor",
                     "quote"=>"Hello World"
                 ),
             );
@@ -181,7 +234,7 @@ var $company_validation = array(
                         }
                         //echo validation_errors()
                     } else {
-                        echo validation_errors();
+                        /*echo validation_errors();*/
                         
                     }
 
