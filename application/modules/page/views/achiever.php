@@ -35,11 +35,17 @@
             <div class="col-lg-4 col-sm-12 text-center bottom-space ">
                 <img class="img-circle img-responsive img-center circle" src="<?php echo base_url($row->image); ?>" alt="">
                 
-                <h3><?php echo $row->name; ?><br></h3>
+                <div style="min-height:115px;">
+                    <h3><?php echo $row->name; ?></h3>
+                    <h5><?php echo $row->course; ?><br></h5>
+                    <h6><?php echo $row->achievements; ?><br></h6>
+                    <h6><?php echo $row->graduation; ?><br></h6>
+                </div>
                 <div class="bg-blue">
-                    <span class="font-18 white"><?php echo $row->course; ?><br></span>
-                    <span class="font-14"><?php echo $row->achievements; ?><br></span>
-                    <p class="font-13"><?php echo $row->year; ?></p>
+                    <span class="font-18 white"><?php echo $row->work; ?><br></span>
+                    <span class="font-13"><?php echo $row->company; ?><br></span><!-- 
+                    <p class="font-13"><?php echo $row->year; ?></p> -->
+                    <p></p>
                     <div class="bg-white">
                         <p class="italic"><?php echo $row->quote; ?></p>
                     </div>

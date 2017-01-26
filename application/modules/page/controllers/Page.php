@@ -150,7 +150,7 @@ var $company_validation = array(
                     "name"=>"Ma. Nerissa M. Nicolas",
                     "image"=>"resources/images/users/01.jpg",
                     "course"=>"Bachelor of Science in Computer Science",
-                    "year"=>"2015",
+                    "graduation"=>"2015",
                     "achievements"=>"Magna Cum Laude",
                     "quote"=>"''Don't tell me that the sky is the limit for there are footsteps on the moon.''"
                 ),

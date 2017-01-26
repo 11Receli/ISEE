@@ -43,80 +43,90 @@
 <!-- /.intro-header -->
 
 <!-- Page Content -->
+<div style="padding:20px 0;">
+    <div><h2 class="center" style="padding-bottom:10px;">Achievers</h2></div>
+    <div class="content-section-a" id="achievers">
 
-<div class="content-section-a" id="achievers">
+        <div class="container">
 
-    <div class="container">
-
-        <div class="row">
-        <?php foreach($students as $row): ?>
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><?php echo $row['name']; ?><br></h2>
-                <p class="lead"><?php echo $row['achievements']; ?></p>
-                <p class="block-quote"><?php echo $row['quote']; ?>
+            <div class="row">
+            <?php foreach($students as $row): ?>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4 col-sm-12">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><?php echo $row['name']; ?></h2>
+                    <p class="lead"><?php echo $row['course']; ?><br></p>
+                    <p class="lead"><?php echo $row['graduation']; ?><br></p>
+                    <p class="lead"><?php echo $row['achievements']; ?><br></p>
+                    <p class="block-quote"><?php echo $row['quote']; ?>
+                    
+                </div>
+                <div class="col-lg-3 col-lg-offset-1 col-sm-6">
+                    <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
+                </div>
+            <?php endforeach; ?>
             </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="<?php echo base_url($row['image']); ?>" alt="">
-            </div>
-        <?php endforeach; ?>
+
         </div>
+        <!-- /.container -->
 
     </div>
-    <!-- /.container -->
+     <div class="content-section-b" id="achievers">
 
-</div>
-<!-- /.content-section-a -->
+        <div class="container">
 
-<div class="content-section-b">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><?php echo $row['name']; ?><br></h2>
-                <p class="lead"><?php echo $row['achievements']; ?></p>
-                <p class="block-quote"><?php echo $row['quote']; ?>
+            <div class="row">
+            <?php foreach($students as $row): ?>
+                <div class="col-lg-2"></div>
+                 <div class="col-lg-3 col-sm-6">
+                    <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
+                </div>
+                <div class="col-lg-4  col-lg-offset-1 col-sm-12">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><?php echo $row['name']; ?></h2>
+                    <p class="lead"><?php echo $row['course']; ?><br></p>
+                    <p class="lead"><?php echo $row['graduation']; ?><br></p>
+                    <p class="lead"><?php echo $row['achievements']; ?><br></p>
+                    <p class="block-quote"><?php echo $row['quote']; ?>
+                    
+                </div>
+               
+            <?php endforeach; ?>
             </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <img class="img-responsive" src="<?php echo base_url($row['image']); ?>" alt="">
-            </div>
+
         </div>
+        <!-- /.container -->
 
     </div>
-    <!-- /.container -->
+    <div class="content-section-a" id="achievers">
 
-</div>
-<!-- /.content-section-b -->
+        <div class="container">
 
-<div class="content-section-a">
-
-    <div class="container">
-
-        <div class="row">
-        <?php foreach($students as $row): ?>
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><?php echo $row['name']; ?><br></h2>
-                <p class="lead"><?php echo $row['achievements']; ?></p>
-                <p class="block-quote"><?php echo $row['quote']; ?>
+            <div class="row">
+            <?php foreach($students as $row): ?>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4 col-sm-12">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><?php echo $row['name']; ?></h2>
+                    <p class="lead"><?php echo $row['course']; ?><br></p>
+                    <p class="lead"><?php echo $row['graduation']; ?><br></p>
+                    <p class="lead"><?php echo $row['achievements']; ?><br></p>
+                    <p class="block-quote"><?php echo $row['quote']; ?>
+                    
+                </div>
+                <div class="col-lg-3 col-lg-offset-1 col-sm-6">
+                    <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
+                </div>
+            <?php endforeach; ?>
             </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="<?php echo base_url($row['image']); ?>" alt="">
-            </div>
-        <?php endforeach; ?>
+
         </div>
-
+        <!-- /.container -->
     </div>
-    <!-- /.container -->
-
 </div>
-<!-- /.content-section-a -->
-
 <div class="banner">
 
     <div class="container">
