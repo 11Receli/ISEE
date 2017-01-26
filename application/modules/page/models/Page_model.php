@@ -36,4 +36,8 @@ class Page_model extends CI_Model {
         echo $this->db->last_query();*/
         }
 
+        function get_achievers() {
+            $achievers=$this->db->get('achievers');
+            return $achievers->result();
+        }
 }

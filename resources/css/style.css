@@ -149,3 +149,51 @@ html, body,.content.container {
 		font-size:300%;
 	}
 }
+.circle{
+	width:250px;
+}
+.circle_120{
+	width:120px;
+}
+.bottom-space{
+	margin-bottom: 20px;
+}
+.font-13{
+	font-size: 13px;
+}
+.font-14{
+	font-size: 14px;
+}
+.font-18{
+	font-size: 18px;
+}
+.italic{
+	font-style: italic;
+}
+.gray{
+	color:#e8e7e7;
+}
+.bg-blue{
+	background-color: #48b2d9;
+	border-radius: 8px;
+	padding: 8px;
+}
+.bg-white{
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 8px;
+}
+.img-header {
+  padding-bottom: 9px;
+  margin: 40px 20px 20px 0;
+}
+.bottom-line {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 55px;
+}
+.margin-top_85{
+	margin-top: 85px
+}
+.float_left{
+	float: left;
+}

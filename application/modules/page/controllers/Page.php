@@ -121,8 +121,6 @@ var $company_validation = array(
                 'rules' => 'required'
         )
 	);
-
-
 	public function index() {
         //select successful students
 
@@ -149,10 +147,12 @@ var $company_validation = array(
         $check=$this->Page_model->achieversfetch($fields);*/
         $students=array(
             array(
-                    "name"=>"Ma. Nerissa Nicolas",
+                    "name"=>"Ma. Nerissa M. Nicolas",
                     "image"=>"resources/images/users/01.jpg",
-                    "achievements"=>"Lorem ipsum dolor",
-                    "quote"=>"Hello World"
+                    "course"=>"Bachelor of Science in Computer Science",
+                    "year"=>"2015",
+                    "achievements"=>"Magna Cum Laude",
+                    "quote"=>"''Don't tell me that the sky is the limit for there are footsteps on the moon.''"
                 ),
             );
         $this->data->students=$students;
@@ -160,6 +160,26 @@ var $company_validation = array(
 		$this->templates->layout('home');
 		$this->templates->render('home',$this->data);
 	}
+
+    public function achiever() {
+        $this->load->model("Page_model");
+        /*$students=array(
+            array(
+                    "name"=>"Ma. Nerissa M. Nicolas",
+                    "image"=>"resources/images/users/01.jpg",
+                    "course"=>"Bachelor of Science in Computer Science",
+                    "year"=>"2015",
+                    "achievements"=>"Magna Cum Laude",
+                    "quote"=>"''Don't tell me that the sky is the limit for there are footsteps on the moon.''"
+                ),
+            );
+        */
+        $students=$this->Page_model->get_achievers();
+        $this->data->students=$students;
+        $this->templates->layout('achiever');
+        $this->templates->render('achiever',$this->data);
+    }
+
 	public function registration(){
         $display="registermain";
         $this->templates->layout('registermain');

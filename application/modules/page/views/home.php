@@ -1,4 +1,4 @@
-Header -->
+
 <div class="intro-header" id="home">
 
     <div class="container">
@@ -129,7 +129,7 @@ Header -->
                     <!-- <hr class="intro-divider"> -->
                     <ul class="list-inline intro-social-buttons center">
                         <li>
-                                <a href="<?php echo base_url('page/login'); ?>" class="btn btn-primary btn-xxlg">
+                                <a href="<?php echo base_url('page/achiever'); ?>" class="btn btn-primary btn-xxlg">
                                 <span>More Here</span></a>
                         </li>
                     </ul>
