@@ -35,7 +35,9 @@
  -->
 						<button type="submit" name="submit" class="btn btn-xlg btn-primary space">Login</button>
 						<h2 class="borderline"></h2>
-						<p>New to this site? <a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Register here!</a></p>
+						<p>New to this site?</p> <br/>
+						<p><a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Employer Registration</a></p><br/>
+						<p><a class="whitelink" href="<?php echo base_url('page/ApplicantRegistrationController/handleRegistrationRequest'); ?>">Job Applicant Registration</a></p>
 
 						
 
