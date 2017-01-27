@@ -23,7 +23,7 @@ class ApplicantRegistrationModel extends CI_Model {
 	function isUserNameValid($userName){
 		$this->db->select('email');
 		$this->db->from('accounts');
-		$this->db->where('username', $userName);
+		$this->db->where('username', $username);
 		$query = $this->db->get();
 
 
