@@ -61,7 +61,7 @@
         <?php echo form_label('HR E-mail Address:','hremail'); ?>
         <?php echo form_error('hremail'); ?>
         <?php echo form_input('hremail',$hremail,'class="form-control" placeholder="ex: hremail@gmail.com" id="hremail"'); ?>
-      </div>
+      </div><!-- 
       <div class="form-group">
         <?php echo form_label('Company Positions:','positions'); ?>
         <?php echo form_error('positions'); ?>
@@ -74,7 +74,7 @@
            <option value="Andorra">
            <option value="Angola">
         </datalist>
-      </div>
+      </div> -->
       <!-- <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
