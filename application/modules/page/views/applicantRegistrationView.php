@@ -6,9 +6,9 @@
       <h3></h3>
 	  
 	  <div class="form-group">
-        <?php echo form_label('user name:','userName'); ?>
+        <?php echo form_label('user name:','username'); ?>
         <?php echo form_error('userName'); ?>
-        <?php echo form_input('userName','','class="form-control" id="userName"'); ?>
+        <?php echo form_input('userName','','class="form-control" id="username"'); ?>
       </div>
 	  
 	  <div class="form-group">

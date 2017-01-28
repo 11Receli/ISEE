@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ApplicantRegistrationController extends Public_Controller {
-var $applicant_validation = array(
+	var $applicant_validation = array(
         array(
                 'field' => 'username',
                 'label' => 'Username',
@@ -22,8 +22,8 @@ var $applicant_validation = array(
                 )
         )
     );
-/*
-	function handleRegistrationRequestSubmit() {
+
+/*	function handleRegistrationRequestSubmit() {
 	
 		//get all the input fields from the form	
 		$fields = $this->input->post();
@@ -41,7 +41,7 @@ var $applicant_validation = array(
 		
 		$status = $this->ApplicantRegistrationModel->verifyEmail($email);
 		if($status == ''){//case 1 Email Does not exist
-			$isUserNameValid=$this->ApplicantRegistrationModel->isUserNameValid($fields["username"]);
+			$isUserNameValid=$this->ApplicantRegistrationModel->isUserNameValid($fields["userName"]);
 			if($isUserNameValid==true){ //check if userName exist in DB
 			
 				$this->load->helper('url');
@@ -57,8 +57,8 @@ var $applicant_validation = array(
 				//redirect('/page/login');
 			} else{
 				//invalid userName go to applicant registration form
-				//$this->templates->layout('applicantRegistrationView');
-				//$this->templates->render('applicantRegistrationView', $fields);
+				//$this->templates->layout('applicantregister');
+				//$this->templates->render('applicantregister', $fields);
 				echo "foo is $isUserNameValid";
 			}
 		} else if($status=='tentative'){
@@ -72,10 +72,9 @@ var $applicant_validation = array(
 	
 	function handleRegistrationRequest() {
 		//go to applicant registration form
-
-        $display="applicantregister";
+		$display="applicantregister";
 		$this->templates->layout('applicantregister');
-
+	
 		$this->load->library('form_validation');
 			$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
 		 $this->form_validation->set_rules($this->applicant_validation);
@@ -112,7 +111,7 @@ var $applicant_validation = array(
 						
 						$status = $this->ApplicantRegistrationModel->verifyEmail($email);
 						if($status == ''){//case 1 Email Does not exist
-							$isUserNameValid=$this->ApplicantRegistrationModel->isUserNameValid($fields["username"]);
+							$isUserNameValid=$this->ApplicantRegistrationModel->isUserNameValid($fields["userName"]);
 							if($isUserNameValid==true){ //check if userName exist in DB
 							
 								$this->load->helper('url');
@@ -128,8 +127,8 @@ var $applicant_validation = array(
 								//redirect('/page/login');
 							} else{
 								//invalid userName go to applicant registration form
-								//$this->templates->layout('applicantRegistrationView');
-								//$this->templates->render('applicantRegistrationView', $fields);
+								//$this->templates->layout('applicantregister');
+								//$this->templates->render('applicantregister', $fields);
 								echo "foo is $isUserNameValid";
 							}
 						} else if($status=='tentative'){
@@ -139,20 +138,14 @@ var $applicant_validation = array(
 							//case 3
 							//set message go to view
 						}
-                        /*$this->load->model("Page_model");
-                        $register=$this->Page_model->checkregistration($fields);
-
-                        if($register) {
-                            redirect();
-                        } else {
-                            echo "registration failed";
-                        }*/
-                    } else {
+                    }
+                    else {
                         
                     }
             }
 		$this->templates->render($display,$this->data);
 	}
+
 	
 	function handleConfirmationLinkVerification(){
 		$confirmationKey = $this->input->get("confirmationKey");
