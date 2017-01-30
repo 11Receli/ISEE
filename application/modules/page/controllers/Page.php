@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends Public_Controller {
-var $id='1';
 var $login_validation = array(
         array(
                 'field' => 'username',
@@ -136,9 +135,11 @@ var $company_validation = array(
             );
         $this->data->students=$students;*/
         /*$id_1= "1";*/
+        $id="1";
         $this->templates->layout('home');
         $this->load->model("Page_model");
-        $home_achievers=$this->Page_model->home_achievers_1();
+
+        $home_achievers=$this->Page_model->home_achievers_1($id);
         $this->data->home_achievers=$home_achievers;
 
 		

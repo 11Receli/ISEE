@@ -14,7 +14,7 @@ class Page_model extends CI_Model {
                 $runquery=$this->db->query($query);
                 return $runquery->result();
             }
-        function home_achievers_1(){
+        function home_achievers_1($id){
             $home_achievers="SELECT * FROM `achievers` WHERE `id`='".$id."' LIMIT 1";
                 $the_achievers=$this->db->query($home_achievers);/*
                 $achievers=$this->db->get('achievers');*/
