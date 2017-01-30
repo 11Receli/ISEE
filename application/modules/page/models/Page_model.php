@@ -14,6 +14,12 @@ class Page_model extends CI_Model {
                 $runquery=$this->db->query($query);
                 return $runquery->result();
             }
+        function home_achievers_1(){
+            $home_achievers="SELECT * FROM `achievers` WHERE `id`='".$id."' LIMIT 1";
+                $the_achievers=$this->db->query($home_achievers);/*
+                $achievers=$this->db->get('achievers');*/
+                return $the_achievers->result();
+            }
         function checkregistration($fields){
             $this->db->insert('employerinfo',$fields);
             return $this->db->insert_id();

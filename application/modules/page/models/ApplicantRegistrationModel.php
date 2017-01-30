@@ -4,6 +4,11 @@ if (!defined('BASEPATH'))
 
 class ApplicantRegistrationModel extends CI_Model {
 	
+    function checkpreregistration($fields){
+        $this->db->insert('applicantinfo',$fields);
+        return $this->db->insert_id();
+    }
+
 	//check if email exists and if exists return the status
 	function verifyEmail($email) {
 		

@@ -37,7 +37,7 @@
 						<h2 class="borderline"></h2>
 						<p>New to this site?</p> <br/>
 						<p><a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Employer Registration</a></p><br/>
-						<p><a class="whitelink" href="<?php echo base_url('page/ApplicantRegistrationController/handleRegistrationRequest'); ?>">Job Applicant Registration</a></p>
+						<p><a class="whitelink" href="<?php echo base_url('page/ApplicantRegistrationController/preregistration'); ?>">Job Applicant Registration</a></p>
 
 						
 

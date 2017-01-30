@@ -22,6 +22,56 @@ class ApplicantRegistrationController extends Public_Controller {
                 )
         )
     );
+    var $preapplicant_validation = array(
+        array(
+                'field' => 'firstname',
+                'label' => 'First Name',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'middlename',
+                'label' => 'Middle Name',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'lastname',
+                'label' => 'Last Name',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'department',
+                'label' => 'Department',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'graduation',
+                'label' => 'Year of Graduation',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'contact',
+                'label' => 'Contact Number',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'studentid',
+                'label' => 'Student ID',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'status',
+                'label' => 'Status',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'email',
+                'label' => 'E-mail',
+                'rules' => 'required',
+                'errors' => array(
+                        'required' => 'You must provide a %s.',
+                )
+        )
+    );
 
 /*	function handleRegistrationRequestSubmit() {
 	
@@ -163,5 +213,47 @@ class ApplicantRegistrationController extends Public_Controller {
 							window.alert('" . $completeRegistrationRes ."');
 							window.location.href='" . base_url() . "/page/login';" . "</SCRIPT>");
 		exit;
+	}
+
+
+	public function preregistration(){
+        $display="applicantpreregistration";
+        $this->templates->layout('applicantpreregistration');
+	
+		$this->load->library('form_validation');
+			$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+		 $this->form_validation->set_rules($this->preapplicant_validation);
+			
+			foreach($this->preapplicant_validation as $row) {
+	            $this->data->$row['field']=NULL;
+	        }
+
+	 		
+            if ($this->input->post('submit') == NULL)
+            {
+
+            		
+            }
+            else {		
+
+                    if($this->form_validation->run()){
+                        foreach($this->preapplicant_validation as $row) {
+                            $this->data->$row['field']=$this->input->post($row['field']);
+                            $fields[$row['field']]=$this->input->post($row['field']);
+                        }
+
+                        $this->load->model("ApplicantRegistrationModel");
+                        $register=$this->ApplicantRegistrationModel->checkpreregistration($fields);
+
+                        if($register) {
+                            redirect('page/ApplicantRegistrationController/handleRegistrationRequest');
+                        } else {
+                            echo "registration failed";
+                        }
+                    } else {
+                        
+                    }
+            }
+		$this->templates->render($display,$this->data);
 	}
 }

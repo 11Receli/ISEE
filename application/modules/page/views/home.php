@@ -48,10 +48,26 @@
     <div class="content-section-a" id="achievers">
 
         <div class="container">
-
             <div class="row">
-            <?php foreach($students as $row): ?>
-                <div class="col-lg-2"></div>
+            <?php foreach($home_achievers as $row): ?>
+                <img class="img-responsive circle" src="<?php echo base_url($row->image); ?>" alt="">
+                
+                <div style="min-height:115px;">
+                    <h3><?php echo $row->name; ?></h3>
+                    <h5><?php echo $row->course; ?><br></h5>
+                    <h6><?php echo $row->achievements; ?><br></h6>
+                    <h6><?php echo $row->graduation; ?><br></h6>
+                </div>
+                <div>
+                    <span class="font-18 white"><?php echo $row->work; ?><br></span>
+                    <span class="font-13"><?php echo $row->company; ?><br></span><!-- 
+                    <p class="font-13"><?php echo $row->year; ?></p> -->
+                    <p></p>
+                    <div>
+                        <p class="italic"><?php echo $row->quote; ?></p>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-2"></div>
                 <div class="col-lg-4 col-sm-12">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
@@ -64,14 +80,13 @@
                 </div>
                 <div class="col-lg-3 col-lg-offset-1 col-sm-6">
                     <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
-                </div>
+                </div> -->
             <?php endforeach; ?>
             </div>
-
         </div>
         <!-- /.container -->
 
-    </div>
+<!--     </div>
      <div class="content-section-b" id="achievers">
 
         <div class="container">
@@ -95,10 +110,7 @@
                
             <?php endforeach; ?>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
     <div class="content-section-a" id="achievers">
 
@@ -124,8 +136,7 @@
             </div>
 
         </div>
-        <!-- /.container -->
-    </div>
+    </div> -->
 </div>
 <div class="banner">
 

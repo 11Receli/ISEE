@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends Public_Controller {
+var $id='1';
 var $login_validation = array(
         array(
                 'field' => 'username',
@@ -123,7 +124,7 @@ var $company_validation = array(
 	);
 	public function index() {
  
-        $students=array(
+        /*$students=array(
             array(
                     "name"=>"Ma. Nerissa M. Nicolas",
                     "image"=>"resources/images/users/01.jpg",
@@ -133,9 +134,14 @@ var $company_validation = array(
                     "quote"=>"''Don't tell me that the sky is the limit for there are footsteps on the moon.''"
                 ),
             );
-        $this->data->students=$students;
+        $this->data->students=$students;*/
+        /*$id_1= "1";*/
+        $this->templates->layout('home');
+        $this->load->model("Page_model");
+        $home_achievers=$this->Page_model->home_achievers_1();
+        $this->data->home_achievers=$home_achievers;
 
-		$this->templates->layout('home');
+		
 		$this->templates->render('home',$this->data);
 	}
 
