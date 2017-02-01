@@ -302,3 +302,12 @@ p.copyright {
         width: 100%;
     }
 }
+.achiever_content {
+    background: url(../images/achiever_content.JPG) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+.achiever_highlight {
+    background: url(../images/achiever_highlight.png) no-repeat center center;
+    background-size: cover;
+}

@@ -135,12 +135,18 @@ var $company_validation = array(
             );
         $this->data->students=$students;*/
         /*$id_1= "1";*/
-        $id="1";
+        $id_1="1";
+        $id_2="2";
+        $id_3="4";
         $this->templates->layout('home');
         $this->load->model("Page_model");
 
-        $home_achievers=$this->Page_model->home_achievers_1($id);
-        $this->data->home_achievers=$home_achievers;
+        $home_achievers_1=$this->Page_model->home_achievers_1($id_1);
+        $this->data->home_achievers_1=$home_achievers_1;
+        $home_achievers_2=$this->Page_model->home_achievers_2($id_2);
+        $this->data->home_achievers_2=$home_achievers_2;
+        $home_achievers_3=$this->Page_model->home_achievers_3($id_3);
+        $this->data->home_achievers_3=$home_achievers_3;
 
 		
 		$this->templates->render('home',$this->data);

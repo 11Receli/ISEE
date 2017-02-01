@@ -152,17 +152,35 @@ html, body,.content.container {
 .circle{
 	width:250px;
 }
+.circle_200{
+	width:200px;
+}
 .circle_120{
 	width:120px;
 }
 .bottom-space{
 	margin-bottom: 20px;
 }
+.font-12{
+	font-size: 12px;
+}
 .font-13{
 	font-size: 13px;
 }
 .font-14{
 	font-size: 14px;
+}
+.font-15{
+	font-size: 15px;
+}
+.font-22{
+	font-size: 22px;
+}
+.font-30{
+	font-size: 30px;
+}
+.font-50{
+	font-size: 50px;
 }
 .font-18{
 	font-size: 18px;
@@ -174,7 +192,7 @@ html, body,.content.container {
 	color:#e8e7e7;
 }
 .bg-blue{
-	background-color: #48b2d9;
+	background-color: #053C64;
 	border-radius: 8px;
 	padding: 8px;
 }
@@ -191,8 +209,20 @@ html, body,.content.container {
   border-bottom: 1px solid #eee;
   padding-bottom: 55px;
 }
+.bottom-line2 {
+  border-bottom: 1px solid #eee;
+}
+.padding-top_25{
+	padding-top: 25px
+}
+.margin-top_25{
+	margin-top: 25px
+}
 .margin-top_85{
 	margin-top: 85px
+}
+.margin-bottom_35{
+	margin-bottom: 35px
 }
 .float_left{
 	float: left;

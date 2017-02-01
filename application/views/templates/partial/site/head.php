@@ -22,6 +22,8 @@
 
 <!-- Landing CSS -->
 <link rel="stylesheet" href="<?php echo base_url(CSS . 'landing-page.css'); ?>" />
+<!-- Animations -->
+<link rel="stylesheet" href="<?php echo base_url(CSS . 'animation.css'); ?>" />
 
 <!-- your CSS -->
 <link rel="stylesheet" href="<?php echo base_url(CSS . 'style.css'); ?>" />

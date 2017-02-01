@@ -14,16 +14,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li class="">
                         <a href="#home">Home</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="#achievers">Achievers</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="#">Contact</a>
                     </li>
-                    <li>
+                    <li class="">
                         <?php if($this->session->userdata('username')): ?>
                             <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <?php echo $this->session->userdata('username'); ?></a>

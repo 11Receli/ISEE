@@ -1,7 +1,7 @@
 
-<div class="intro-header" id="home">
+<div class="intro-header w3-animate-opacity" id="home">
 
-    <div class="container">
+    <div class="container ">
 
         <div class="row">
             <div class="col-lg-12">
@@ -19,7 +19,7 @@
                         <li>
                             <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li> -->
-                        <li>
+                        <li class="grow2">
                             <?php if($this->session->userdata('username')): ?>
                                 <h3 class="strong white">
                                 WELCOME!</h3>
@@ -44,100 +44,74 @@
 
 <!-- Page Content -->
 <div style="padding:20px 0;">
-    <div><h2 class="center" style="padding-bottom:10px;">Achievers</h2></div>
-    <div class="content-section-a" id="achievers">
-
+    <div><h1 class="center font-50" style="padding-bottom:10px;font-weight:bold;">Achievers</h1></div>
+    <div class="content-section-a grow " id="achievers">
         <div class="container">
             <div class="row">
-            <?php foreach($home_achievers as $row): ?>
-                <img class="img-responsive circle" src="<?php echo base_url($row->image); ?>" alt="">
+            <?php foreach($home_achievers_1 as $row): ?>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 col-sm-12"><!-- 
+                <hr class="-spacer"> -->
+                <div class="clearfix"></div>
+                <h2 class=" center font-30" style="font-weight:bold;"><?php echo $row->name; ?></h2>
+                <h2 class="center font-15" style="font-weight:bold;"><?php echo $row->course; ?><h4 class="lead center font-15" style="font-weight:bold;">Batch <?php echo $row->graduation; ?><br></h4></h2>
+                <p class="lead center font-15"><?php echo $row->achievements; ?><br></p>
                 
-                <div style="min-height:115px;">
-                    <h3><?php echo $row->name; ?></h3>
-                    <h5><?php echo $row->course; ?><br></h5>
-                    <h6><?php echo $row->achievements; ?><br></h6>
-                    <h6><?php echo $row->graduation; ?><br></h6>
-                </div>
-                <div>
-                    <span class="font-18 white"><?php echo $row->work; ?><br></span>
-                    <span class="font-13"><?php echo $row->company; ?><br></span><!-- 
-                    <p class="font-13"><?php echo $row->year; ?></p> -->
-                    <p></p>
-                    <div>
-                        <p class="italic"><?php echo $row->quote; ?></p>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-2"></div>
-                <div class="col-lg-4 col-sm-12">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading"><?php echo $row['name']; ?></h2>
-                    <p class="lead"><?php echo $row['course']; ?><br></p>
-                    <p class="lead"><?php echo $row['graduation']; ?><br></p>
-                    <p class="lead"><?php echo $row['achievements']; ?><br></p>
-                    <p class="block-quote"><?php echo $row['quote']; ?>
-                    
-                </div>
-                <div class="col-lg-3 col-lg-offset-1 col-sm-6">
-                    <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
-                </div> -->
-            <?php endforeach; ?>
+                <!-- <p class="block-quote italic center"><?php echo $row->quote; ?> -->
+                
             </div>
-        </div>
-        <!-- /.container -->
-
-<!--     </div>
-     <div class="content-section-b" id="achievers">
-
-        <div class="container">
-
-            <div class="row">
-            <?php foreach($students as $row): ?>
-                <div class="col-lg-2"></div>
-                 <div class="col-lg-3 col-sm-6">
-                    <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
-                </div>
-                <div class="col-lg-4  col-lg-offset-1 col-sm-12">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading"><?php echo $row['name']; ?></h2>
-                    <p class="lead"><?php echo $row['course']; ?><br></p>
-                    <p class="lead"><?php echo $row['graduation']; ?><br></p>
-                    <p class="lead"><?php echo $row['achievements']; ?><br></p>
-                    <p class="block-quote"><?php echo $row['quote']; ?>
-                    
-                </div>
-               
+            <div class="col-lg-3 col-lg-offset-1 col-sm-6">
+                <img class="img-thumbnail circle_200 img-circle w3-animate-opacity" src="<?php echo base_url($row->image); ?>" alt="">
+            </div>
+            
             <?php endforeach; ?>
             </div>
         </div>
     </div>
-    <div class="content-section-a" id="achievers">
-
+    <div class="content-section-b grow" id="achievers">
         <div class="container">
-
             <div class="row">
-            <?php foreach($students as $row): ?>
+            <?php foreach($home_achievers_2 as $row): ?>
                 <div class="col-lg-2"></div>
-                <div class="col-lg-4 col-sm-12">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading"><?php echo $row['name']; ?></h2>
-                    <p class="lead"><?php echo $row['course']; ?><br></p>
-                    <p class="lead"><?php echo $row['graduation']; ?><br></p>
-                    <p class="lead"><?php echo $row['achievements']; ?><br></p>
-                    <p class="block-quote"><?php echo $row['quote']; ?>
-                    
+                 <div class="col-lg-3 col-sm-6">
+                    <img class="img-thumbnail circle_200 img-circle w3-animate-opacity " src="<?php echo base_url($row->image); ?>" alt="">
                 </div>
-                <div class="col-lg-3 col-lg-offset-1 col-sm-6">
-                    <img class="img-responsive circle" src="<?php echo base_url($row['image']); ?>" alt="">
+                <div class="col-lg-4  col-lg-offset-1 col-sm-12"><!-- 
+                    <hr class="-spacer"> -->
+                    <div class="clearfix"></div>
+                    <h2 class=" center font-30" style="font-weight:bold;"><?php echo $row->name; ?></h2>
+                    <h2 class="center font-15" style="font-weight:bold;"><?php echo $row->course; ?><h4 class="lead center font-15" style="font-weight:bold;">Batch <?php echo $row->graduation; ?><br></h4></h2>
+                    <p class="lead center font-15"><?php echo $row->achievements; ?><br></p>
+                    
+                    <!-- <p class="block-quote italic center"><?php echo $row->quote; ?> -->
                 </div>
             <?php endforeach; ?>
             </div>
-
         </div>
-    </div> -->
-</div>
+    </div>
+    <div class="content-section-a grow" id="achievers">
+        <div class="container">
+            <div class="row">
+            <?php foreach($home_achievers_3 as $row): ?>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 col-sm-12"><!-- 
+                <hr class="-spacer"> -->
+                <div class="clearfix"></div>
+                <h2 class=" center font-30" style="font-weight:bold;"><?php echo $row->name; ?></h2>
+                <h2 class="center font-15" style="font-weight:bold;"><?php echo $row->course; ?><h4 class="lead center font-15" style="font-weight:bold;">Batch <?php echo $row->graduation; ?><br></h4></h2>
+                <p class="lead center font-15"><?php echo $row->achievements; ?><br></p>
+            
+                <!-- <p class="block-quote italic center"><?php echo $row->quote; ?> -->
+                
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-sm-6">
+                <img class="img-thumbnail circle_200 img-circle w3-animate-opacity" src="<?php echo base_url($row->image); ?>" alt="">
+            </div>
+            
+            <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
 <div class="banner">
 
     <div class="container">
@@ -149,7 +123,7 @@
                     <h1 class="center">SEE MORE SUCCESSFUL DYCIANS</h1>
                     <!-- <hr class="intro-divider"> -->
                     <ul class="list-inline intro-social-buttons center">
-                        <li>
+                        <li class="grow2">
                                 <a href="<?php echo base_url('page/achiever'); ?>" class="btn btn-primary btn-xxlg">
                                 <span>More Here</span></a>
                         </li>
@@ -163,4 +137,4 @@
     <!-- /.container -->
 
 </div>
-<!-- /.banner
+<!-- /.banner-->
