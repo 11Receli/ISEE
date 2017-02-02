@@ -223,3 +223,66 @@ CREATE TABLE `personalinfo` (
  KEY `fk_id` (`fk_id`),
  CONSTRAINT `fkPersonalInfo` FOREIGN KEY (`fk_id`) REFERENCES `accounts` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20;
+
+CREATE TABLE `educationalbackgroundinfo` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `fk_id` int(11) NOT NULL,
+ `schoolhs` varchar(100) DEFAULT NULL,
+ `datehs` varchar(100) DEFAULT NULL,
+ `degree` varchar(100) DEFAULT NULL,
+ `schoolcol` varchar(100) DEFAULT NULL,
+ `datecol` varchar(100) DEFAULT NULL,
+ `certifications` varchar(100) DEFAULT NULL,
+ `seminars` varchar(100) DEFAULT NULL,
+ `gwa` varchar(100) DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `fk_id` (`fk_id`),
+ CONSTRAINT `fk_educationBackgroundInfo` FOREIGN KEY (`fk_id`) REFERENCES `accounts` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5;
+
+
+	
+CREATE TABLE `technicalskillinfo` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `fk_id` int(11) NOT NULL,
+ `industryid` int(6) unsigned NOT NULL,
+ `jobid` int(11) NOT NULL,
+ `specialization` varchar(1000) DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `fk_id` (`fk_id`),
+ KEY `industryid` (`industryid`,`jobid`),
+ KEY `fk_technicalSkillInfo_industrysubccategory` (`jobid`),
+ CONSTRAINT `fk_technicalSkillInfo` FOREIGN KEY (`fk_id`) REFERENCES `accounts` (`id`),
+ CONSTRAINT `fk_technicalSkillInfo_industrylist` FOREIGN KEY (`industryid`) REFERENCES `industrylist` (`id`),
+ CONSTRAINT `fk_technicalSkillInfo_industrysubccategory` FOREIGN KEY (`jobid`) REFERENCES `industrysubcategorylist` (`pk_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18;
+
+
+INSERT INTO `industrylist` (`id`, `industry`) VALUES
+(4, 'Accounting'),
+(3, 'Admin / Human Resources'),
+(5, 'Banking / Finance'),
+(6, 'Building / Construction');
+
+INSERT INTO `industrysubcategorylist` (`id`, `industrysubcategory`, `pk_id`) VALUES
+(4, 'Chief Accountant', 1),
+(4, 'Financial Analyst', 2),
+(4, 'Consulting', 3),
+(4, 'Taxation', 4),
+(4, 'Treasurer', 5),
+(3, 'HR Director/Manager', 6),
+(3, 'HR Officer', 7),
+(3, 'Training and Development', 8),
+(3, 'Receptionist', 9),
+(5, 'Credit Analyst', 10),
+(5, 'Corporate Banking', 11),
+(5, 'Corporate Finance', 12),
+(5, 'Investment', 13),
+(5, 'Retail Banking', 14),
+(6, 'Architectural', 15),
+(6, 'Civil/Structural', 16),
+(7, 'DBA', 17),
+(7, 'Hardware', 18),
+(7, 'Networking', 19),
+(7, 'Software Development', 20),
+(7, 'Project Management', 21);
