@@ -10,9 +10,19 @@ class Page_model extends CI_Model {
         }
 
         function checklogin($username,$password){
-            $query="SELECT * FROM `accounts` WHERE `username`='".$username."' AND `password`='".$password."' LIMIT 1";
-                $runquery=$this->db->query($query);
-                return $runquery->result();
+		$this->db->select('id');
+		$this->db->from('accounts');
+		$this->db->where('username', $username );
+		$this->db->where('password', $password );
+		$this->db->where('status', 'active' );
+
+		$result = $this->db->get()->result();
+
+		if(empty($result)){
+			return 0;
+		} else {
+			return $result[0]->id;
+		}
             }
 
         function home_achievers_1($id_1){
