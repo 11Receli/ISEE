@@ -232,14 +232,14 @@ var $company_validation = array(
 
             			$this->load->model("Page_model");
             			$check=$this->Page_model->checklogin($username,$password);
-            			if(count($check)>0) {
-            				$this->session->set_userdata('username',$username);
-            				redirect('page');
-            			} else {
-
+            			if($check==0) {            				
                             $this->templates->notify="Incorrect Username or password.";
                             $this->templates->render('login',$this->data);
-
+            			} else {
+							//set session
+            				$this->session->set_userdata('username',$username);
+							$this->session->set_userdata('userid',$check);
+            				redirect('page');
             			}
                 }
 	}
