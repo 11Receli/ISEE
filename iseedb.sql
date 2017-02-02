@@ -192,3 +192,34 @@ ALTER TABLE `typelist`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `industrylist` (
+ `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+ `industry` varchar(100) NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `idxIndustry` (`industry`)
+) ENGINE=InnoDB AUTO_INCREMENT=8;
+
+CREATE TABLE `industrysubcategorylist` (
+ `id` int(6) unsigned NOT NULL,
+ `industrysubcategory` varchar(100) NOT NULL,
+ `pk_id` int(11) NOT NULL AUTO_INCREMENT,
+ PRIMARY KEY (`pk_id`),
+ KEY `id` (`id`),
+ CONSTRAINT `fkIndustrydubcategory` FOREIGN KEY (`id`) REFERENCES `industrylist` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22;
+
+
+CREATE TABLE `personalinfo` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `citizenship` varchar(20) DEFAULT NULL,
+ `status` varchar(20) DEFAULT NULL,
+ `age` int(10) DEFAULT NULL,
+ `gender` varchar(10) DEFAULT NULL,
+ `address` varchar(200) DEFAULT NULL,
+ `fk_id` int(11) NOT NULL,
+ `birthday` varchar(50) DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `fk_id` (`fk_id`),
+ CONSTRAINT `fkPersonalInfo` FOREIGN KEY (`fk_id`) REFERENCES `accounts` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20;
