@@ -31,13 +31,16 @@
                             <a href="<?php echo base_url('page/registration'); ?>"><span>Sign In</span></a>
                         <?php endif; ?>
                       
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li>
-                            <?php if($this->session->userdata('username')): ?>
-                                <a href="<?php echo base_url('page/logout'); ?>">Logout</a>
-                            <?php endif; ?>
-                        </li>
-                      </ul>
+                      <?php if($this->session->userdata('username')): ?>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li>
+								<a href="<?php echo base_url('page/ApplicantProfileUpdateController/handleProfileUpdate'); ?>">Update Profile</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url('page/logout'); ?>">Logout</a>
+							</li>
+						  </ul>
+					  <?php endif; ?>
                     </li>
                 </ul>
             </div>
