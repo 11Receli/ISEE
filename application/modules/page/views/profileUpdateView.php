@@ -1,5 +1,5 @@
 <div class="well">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" style="padding-top:50px">
       <li class="active"><a href="#personalInfo" data-toggle="tab">Personal Info</a></li>
       <li><a href="#educationalBackground" data-toggle="tab">Educational Background</a></li>
 	  <li><a href="#technicalSkills" data-toggle="tab">Technical Skills</a></li>
@@ -14,7 +14,7 @@
 				  <h3></h3>
 				  
 				  <div class="form-group">
-					<?php echo form_label('birth day:','birthday'); ?>
+					<?php echo form_label('Birthday:','birthday'); ?>
 					<?php echo form_error('birthday'); ?>
 					<?php echo form_input('birthday',$personalInfo['birthday'],'class="form-control" id="birthday"'); ?>
 				  </div>
@@ -26,25 +26,25 @@
 				  </div>
 				  
 				  <div class="form-group">
-					<?php echo form_label('status:','status'); ?>
+					<?php echo form_label('Status:','status'); ?>
 					<?php echo form_error('status'); ?>
 					<?php echo form_input('status',$personalInfo['status'],'class="form-control" id="status"'); ?>
 				  </div>
 				  
 				  <div class="form-group">
-					<?php echo form_label('age:','age'); ?>
+					<?php echo form_label('Age:','age'); ?>
 					<?php echo form_error('age'); ?>
 					<?php echo form_input('age',$personalInfo['age'],'class="form-control" id="age"'); ?>
 				  </div>
 				  
 				  <div class="form-group">
-					<?php echo form_label('gender:','gender'); ?>
+					<?php echo form_label('Gender:','gender'); ?>
 					<?php echo form_error('gender'); ?>
 					<?php echo form_input('gender',$personalInfo['gender'],'class="form-control" id="gender"'); ?>
 				  </div>
 				  
 				  <div class="form-group">
-					<?php echo form_label('address:','address'); ?>
+					<?php echo form_label('Address:','address'); ?>
 					<?php echo form_error('address'); ?>
 					<?php echo form_input('address',$personalInfo['address'],'class="form-control" id="address"'); ?>
 				  </div>
@@ -75,7 +75,7 @@
 			  </div>
 			  <h3 class="form-signin-heading">College</h3>			  
 			  <div class="form-group">
-				<?php echo form_label('degree:','degree'); ?>
+				<?php echo form_label('Degree:','degree'); ?>
 				<?php echo form_error('degree'); ?>
 				<?php echo form_input('degree',$educationalBackgroundInfo['degree'],'class="form-control" id="degree"'); ?>
 			  </div>
@@ -141,7 +141,7 @@
 				  </div>
 				  
 				  <div class="form-group">
-					<?php echo form_label('others/specialization:','specialization'); ?>
+					<?php echo form_label('Others/specialization:','specialization'); ?>
 					<?php echo form_error('specialization'); ?>
 					<?php echo form_input('specialization',$technicalSkillInfo['specialization'],'class="form-control" id="specialization"'); ?>
 				  </div>

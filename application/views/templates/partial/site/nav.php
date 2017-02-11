@@ -15,10 +15,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="">
-                        <a href="#home">Home</a>
+                        <a href="<?php echo base_url('page'); ?>">Home</a>
                     </li>
                     <li class="">
-                        <a href="#achievers">Achievers</a>
+                        <a href="<?php echo base_url('page/achiever'); ?>">Achievers</a>
                     </li>
                     <li class="">
                         <a href="#">Contact</a>

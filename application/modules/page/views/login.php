@@ -1,7 +1,7 @@
 
 <?php echo form_open(); ?>
 
-<div class="intro-header-login">
+<div class="intro-header-login  w3-animate-opacity">
 
     <div class="container">
 
@@ -35,9 +35,9 @@
  -->
 						<button type="submit" name="submit" class="btn btn-xlg btn-primary space">Login</button>
 						<h2 class="borderline"></h2>
-						<p>New to this site?</p> <br/>
+						<p>New to this site? <a class="whitelink" href="<?php echo base_url('page/mainregistration'); ?>">Click Here.</a></p> <br/><!-- 
 						<p><a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Employer Registration</a></p><br/>
-						<p><a class="whitelink" href="<?php echo base_url('page/ApplicantRegistrationController/preregistration'); ?>">Job Applicant Registration</a></p>
+						<p><a class="whitelink" href="<?php echo base_url('page/ApplicantRegistrationController/preregistration'); ?>">Job Applicant Registration</a></p> -->
 
 						
 

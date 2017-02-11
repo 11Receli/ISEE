@@ -1,8 +1,8 @@
 <?php echo form_open('','class="form-sign"'); ?>
-  <div class="container-fluid">
+  <div class=" black container-fluid intro-header-mainlogin  w3-animate-opacity">
     <div class="col-md-2"></div>
-    <div class="col-md-8 register">
-      <h2 class="form-signin-heading">Register Here</h2> 
+    <div class="col-md-8 register" style="min-height:140px; padding:10px 70px;">
+      <h2 class="form-signin-heading">Step 2</h2> 
       
       <div class="form-group">
         <?php echo form_label('First name:','firstname'); ?>
@@ -42,11 +42,6 @@
         <?php echo form_input('graduation',$graduation,'class="form-control" placeholder="ex: 1995" id="graduation"'); ?>
       </div>
       <div class="form-group">
-        <?php echo form_label('E-mail:','email'); ?>
-        <?php echo form_error('email'); ?>
-        <?php echo form_input('email',$email,'class="form-control" placeholder="ex: myemail@mail.com" id="email"'); ?>
-      </div>
-      <div class="form-group">
         <?php echo form_label('Contact Number:','contact'); ?>
         <?php echo form_error('contact'); ?>
         <?php echo form_input('contact',$contact,'class="form-control" placeholder="ex: +639123456789" id="contact"'); ?>
@@ -56,7 +51,7 @@
         <?php echo form_error('studentid'); ?>
         <?php echo form_input('studentid',$studentid,'class="form-control" placeholder="ex: 21316211" id="studentid"'); ?>
       </div>
-      <div class="form-group">
+      <div class="form-group" style="padding-bottom:30px;">
         <?php echo form_label('Status:','status'); ?>
         <?php echo form_error('status'); ?>
         <?//php echo form_input('status',$status,'class="form-control" placeholder="Type of Company" id="status"'); ?>
@@ -66,7 +61,7 @@
            <option value="Alumni">
         </datalist>
       </div>
-      <button type="submit" name="submit" class="btn btn-lg btn-primary" value="1">Submit</button>
+      <button type="submit" name="submit" class="btn btn-lg btn-primary"  style="float:right" value="1">Submit</button>
           
     </div>
   </div>

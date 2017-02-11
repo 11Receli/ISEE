@@ -10,7 +10,7 @@
                     <div class="intro-message-achievers">
                          <div class="col-lg-8">
                             <h1 class="page-header">DYCIan Achievers</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                            <p>DYCIans are true individuals that shows the value of perseverance and uniqueness in the world. Here are a few of those personalities that became accomplished individuals in the industry today.</p>
                         </div>
                     </div>
                 </div>

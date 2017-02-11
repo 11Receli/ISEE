@@ -26,7 +26,7 @@ class ApplicantProfileUpdateModel extends CI_Model {
 			$this->db->where('fk_id', $this->session->userdata('userid'));
 			$result = $this->db->get()->result_array();
 			if(empty($result)){
-				getEmptyAplicantProfile($tableName);
+				/*getEmptyAplicantProfile($tableName);*/
 			}else{
 				return $result[0];
 			}

@@ -61,6 +61,13 @@ var $achievers_load = array(
         )
 	);
 
+var $mainlogin_validation = array(
+        array(
+                'field' => 'accounttype',
+                'label' => 'Account Type',
+                'rules' => 'required'
+        )
+    );
 var $company_validation = array(
         array(
                 'field' => 'companyname',
@@ -161,6 +168,55 @@ var $company_validation = array(
         $this->templates->render('achiever',$this->data);
     }
 
+    public function mainregistration(){
+        $display="mainregistration";
+        $this->templates->layout('mainregistration');
+
+        $accounttype=$this->input->post('accounttype');
+
+       $this->load->library('form_validation');
+
+
+        $this->form_validation->set_rules($this->mainlogin_validation);
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                    foreach($this->mainlogin_validation as $row) {
+                        $this->data->$row['field']="";
+                    }
+                        $this->templates->render('page/mainregistration',$this->data);
+                }/*
+                elseif ($this->form_validation->run() == TRUE) {
+                    if ($this->mainlogin_validation as $row == "Employer"){
+                        
+                    }
+                    elseif ($this->mainlogin_validation as $row == "Job Applicant"){
+                        
+                    }
+                    else{
+                            foreach($this->mainlogin_validation as $row) {
+                            $this->data->$row['field']="";
+                        }
+                    }
+                }*/
+
+        if ($this->input->post('submit') == NULL)
+            {
+
+                    
+            }
+        else {
+            if ($accounttype == "Employer"){
+                redirect('page/registration');
+            }
+            elseif ($accounttype == "Job Applicant"){
+                /*redirect('page/ApplicantRegistrationController/handleRegistrationRequest');*/
+                redirect('page/ApplicantRegistrationController/preregistration');
+            }
+        }
+
+        $this->templates->render($display,$this->data);
+    }
 	public function registration(){
         $display="employerregister";
         $this->templates->layout('employerregister');
@@ -239,7 +295,7 @@ var $company_validation = array(
 							//set session
             				$this->session->set_userdata('username',$username);
 							$this->session->set_userdata('userid',$check);
-            				redirect('page');
+            				redirect('page/search_applicant');
             			}
                 }
 	}
@@ -248,7 +304,17 @@ var $company_validation = array(
 		session_destroy();
 		redirect('page');
 	}
-
+    public function search_applicant() {
+        if($this->input->post()) {
+            $inputs=$this->input->post();
+            $query=$this->db->like($inputs)->get('applicant_view');
+            $result=$query->result(); 
+            $this->data->result=$result;
+            $this->templates->render('search_result',$this->data);
+        } else {
+            $this->templates->render('applicant_home',$this->data);
+        }
+    }
 	public function test_page() {
 		$x=0;
 		$y=1;
@@ -257,4 +323,6 @@ var $company_validation = array(
 		$this->data->test_string='Hello World';
 		$this->templates->render('test_page',$this->data);
 	}
+
+
 }

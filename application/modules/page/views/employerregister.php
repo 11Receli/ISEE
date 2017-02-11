@@ -1,5 +1,5 @@
 <?php echo form_open('','class="form-sign"'); ?>
-  <div class="container-fluid">
+  <div class=" black container-fluid">
     <div class="col-md-2"></div>
     <div class="col-md-8 register">
       <h2 class="form-signin-heading">Register Here</h2> 

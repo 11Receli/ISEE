@@ -311,3 +311,11 @@ p.copyright {
     background: url(../images/achiever_highlight.png) no-repeat center center;
     background-size: cover;
 }
+
+.intro-header-mainlogin {
+    padding-top: 40px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 216px;
+    color: #f8f8f8;
+    background: url(../images/intro-bg-mainlogin.jpg) no-repeat center center;
+    background-size: cover;
+}

@@ -4,10 +4,30 @@ if (!defined('BASEPATH'))
 
 class ApplicantRegistrationModel extends CI_Model {
 	
-    function checkpreregistration($fields){
-        $this->db->insert('applicantinfo',$fields);
-        return $this->db->insert_id();
-    }
+    function checkpreregistration($firstname,$middlename,$lastname,$department,$graduation,$studentid){
+		$this->db->select('id');
+		$this->db->from('applicantrecords');
+		$this->db->where('firstname', $firstname );
+		$this->db->where('middlename', $middlename );
+		$this->db->where('lastname', $lastname );
+		$this->db->where('department', $department );
+		$this->db->where('graduation', $graduation );
+		$this->db->where('studentid', $studentid );
+
+		$check = $this->db->get()->result();
+
+		if(empty($check)){
+			return 0;
+		} else {/*
+			$addstatus="UPDATE `applicantrecords` SET `status`= '".$status."' ";
+                $addnow=$this->db->query($addstatus);
+			$addcontact="UPDATE `applicantrecords` SET `contact`= '".$contact."' ";
+                $addnow2=$this->db->query($addcontact);*/
+			return $check[0]->id;
+			
+		}
+            }
+
 
 	//check if email exists and if exists return the status
 	function verifyEmail($email) {

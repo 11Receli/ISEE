@@ -23,6 +23,7 @@ class ApplicantRegistrationController extends Public_Controller {
         )
     );
     var $preapplicant_validation = array(
+        
         array(
                 'field' => 'firstname',
                 'label' => 'First Name',
@@ -49,28 +50,21 @@ class ApplicantRegistrationController extends Public_Controller {
                 'rules' => 'required'
         ),
         array(
-                'field' => 'contact',
-                'label' => 'Contact Number',
+                'field' => 'studentid',
+                'label' => 'Student ID',
                 'rules' => 'required'
         ),
         array(
-                'field' => 'studentid',
-                'label' => 'Student ID',
+                'field' => 'contact',
+                'label' => 'Contact Number',
                 'rules' => 'required'
         ),
         array(
                 'field' => 'status',
                 'label' => 'Status',
                 'rules' => 'required'
-        ),
-        array(
-                'field' => 'email',
-                'label' => 'E-mail',
-                'rules' => 'required',
-                'errors' => array(
-                        'required' => 'You must provide a %s.',
-                )
         )
+        
     );
 
 /*	function handleRegistrationRequestSubmit() {
@@ -217,43 +211,55 @@ class ApplicantRegistrationController extends Public_Controller {
 
 
 	public function preregistration(){
-        $display="applicantpreregistration";
-        $this->templates->layout('applicantpreregistration');
-	
-		$this->load->library('form_validation');
-			$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
-		 $this->form_validation->set_rules($this->preapplicant_validation);
-			
-			foreach($this->preapplicant_validation as $row) {
-	            $this->data->$row['field']=NULL;
-	        }
+        if ($this->session->userdata('id'))
+		{
+			redirect('page/ApplicantRegistrationController/handleRegistrationRequest');
+		}
 
-	 		
-            if ($this->input->post('submit') == NULL)
-            {
+		$this->templates->layout('applicantpreregistration');
+        $this->load->library('form_validation');
 
-            		
-            }
-            else {		
 
-                    if($this->form_validation->run()){
+        $this->form_validation->set_rules($this->preapplicant_validation);
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                    foreach($this->preapplicant_validation as $row) {
+                        $this->data->$row['field']="";
+                    }
+                		$this->templates->render('applicantpreregistration',$this->data);
+                }
+                else
+                {	
+               
+		            	$firstname=$this->input->post('firstname');
+                		$middlename=$this->input->post('middlename');
+                		$lastname=$this->input->post('lastname');
+                		$department=$this->input->post('department');
+                		$graduation=$this->input->post('graduation');
+                		$studentid=$this->input->post('studentid');
+
                         foreach($this->preapplicant_validation as $row) {
                             $this->data->$row['field']=$this->input->post($row['field']);
-                            $fields[$row['field']]=$this->input->post($row['field']);
                         }
 
-                        $this->load->model("ApplicantRegistrationModel");
-                        $register=$this->ApplicantRegistrationModel->checkpreregistration($fields);
+						$this->load->model("ApplicantRegistrationModel");
+            			$check=$this->ApplicantRegistrationModel->checkpreregistration($firstname,$middlename,$lastname,$department,$graduation,$studentid);
+            			if($check==0) {            				
+                            
+                            $this->templates->render('applicantpreregistration',$this->data);
+                            $completeRegistrationRes = "Your profile input is invalid. Please try again.";
+                            echo ("<SCRIPT LANGUAGE='JavaScript'>
+							window.alert('" . $completeRegistrationRes ."');
+							window.location.href='" . "preregistration';" . "</SCRIPT>");
+                            /*print_r($check);*/
+            			} else {
+							
+            				redirect('page/ApplicantRegistrationController/handleRegistrationRequest');
+            				 /*print_r($check);*/
+            			}
 
-                        if($register) {
-                            redirect('page/ApplicantRegistrationController/handleRegistrationRequest');
-                        } else {
-                            echo "registration failed";
-                        }
-                    } else {
-                        
-                    }
-            }
-		$this->templates->render($display,$this->data);
+		        
+                }
 	}
 }
