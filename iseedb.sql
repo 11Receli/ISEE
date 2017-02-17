@@ -487,6 +487,50 @@ ALTER TABLE `technicalskillinfo`
   ADD CONSTRAINT `fk_technicalSkillInfo_industrylist` FOREIGN KEY (`industryid`) REFERENCES `industrylist` (`id`),
   ADD CONSTRAINT `fk_technicalSkillInfo_industrysubccategory` FOREIGN KEY (`jobid`) REFERENCES `industrysubcategorylist` (`pk_id`);
 
+
+
+CREATE TABLE `jobadds` (
+  `id` int(6) UNSIGNED NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` text,
+  `location` varchar(100) DEFAULT NULL,
+  `course` varchar(100) DEFAULT NULL,
+  `yrsofexp` varchar(100) DEFAULT NULL,
+  `salary` varchar(100) DEFAULT NULL,
+  `contactno` varchar(100) DEFAULT NULL,
+  `address` varchar(100) NOT NULL,
+  `skills` text NOT NULL,
+  `fk_employer` int(6) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `jobadds`
+  ADD PRIMARY KEY (`id`);
+  
+  ALTER TABLE `jobadds`
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+INSERT INTO `jobadds` (`id`, `title`, `description`, `location`, `course`, `yrsofexp`, `salary`, `contactno`, `address`, `skills`, `fk_employer`) VALUES
+(1, 'Senior Java Programmer', 'Delivering elegant and scalable solutions in Java', 'Makati', 'Computer Science', '5', '120000', '2871560', 'Legaspi Village Makati City', 'Object oriented software development in Java.\r\nExperience building low latency and highly available systems.\r\nExperience in multi-threaded and distributed application programming', 2),
+(4, 'HR Director/Manager', 'Will lead the team in hiring finest people in call center industry.', 'Ortigas', 'Psychologist', '5', '50000', '09194776900', 'Tektite Bldg. Ortigas Center', 'Leadership and resourceful hr personnel\r\n<br/>A One recruiting skill\r\n', 1);
+
+CREATE TABLE `jobalertpreferences` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `fk_id` int(11) NOT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `salary` float UNSIGNED DEFAULT NULL,
+  `yrsofexp` int(4) UNSIGNED DEFAULT NULL,
+  `industryid` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `jobalertpreferences`
+  ADD PRIMARY KEY (`id`);
+  
+  
+  ALTER TABLE `jobalertpreferences`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
