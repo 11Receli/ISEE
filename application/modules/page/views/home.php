@@ -43,6 +43,13 @@
 <!-- /.intro-header -->
 
 <!-- Page Content -->
+<?php if($this->session->userdata('username')): ?>
+	<?php
+		$this->view('jobAlertView');
+	?>
+	
+<?php endif; ?>
+
 <div style="padding:20px 0;">
     <div><h1 class="center font-50" style="padding-bottom:10px;font-weight:bold;">Achievers</h1></div>
     <div class="content-section-a grow " id="achievers">
