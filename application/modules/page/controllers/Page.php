@@ -295,7 +295,17 @@ var $company_validation = array(
 							//set session
             				$this->session->set_userdata('username',$username);
 							$this->session->set_userdata('userid',$check);
-            				redirect('page/search_applicant');
+            				$this->load->model("JobAlertModel");
+					$this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+							
+					$this->load->model("ApplicantProfileUpdateModel");
+					$this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
+							
+							
+					$this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+							
+					$this->templates->layout('home');
+					$this->templates->render('home',$this->data);
             			}
                 }
 	}
