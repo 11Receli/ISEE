@@ -128,32 +128,47 @@ var $company_validation = array(
                 'rules' => 'required'
         )
 	);
+
+var $inquiry_validation = array(
+        array(
+                'field' => 'inquiryname',
+                'label' => 'Inquiry Name',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'inquiryemail',
+                'label' => 'Inquiry Email',
+                'rules' => 'required',
+                'errors' => array(
+                'required' => 'You must provide a %s.',
+                )
+        ),
+        array(
+                'field' => 'inquirycontact',
+                'label' => 'Inquiry Contact',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'inquirymessage',
+                'label' => 'Inquiry Message',
+                'rules' => 'required'
+        )
+    );
 	public function index() {
- 
-        /*$students=array(
-            array(
-                    "name"=>"Ma. Nerissa M. Nicolas",
-                    "image"=>"resources/images/users/01.jpg",
-                    "course"=>"Bachelor of Science in Computer Science",
-                    "graduation"=>"2015",
-                    "achievements"=>"Magna Cum Laude",
-                    "quote"=>"''Don't tell me that the sky is the limit for there are footsteps on the moon.''"
-                ),
-            );
-        $this->data->students=$students;*/
-        /*$id_1= "1";*/
+
         $id_1="1";
         $id_2="2";
         $id_3="4";
         $this->templates->layout('home');
         $this->load->model("Page_model");
 
-        $home_achievers_1=$this->Page_model->home_achievers_1($id_1);
-        $this->data->home_achievers_1=$home_achievers_1;
+        $latest_article=$this->Page_model->get_latest_article();
+        $this->data->latest_article=$latest_article;
+        /*$this->data->home_achievers_1=$home_achievers_1;
         $home_achievers_2=$this->Page_model->home_achievers_2($id_2);
         $this->data->home_achievers_2=$home_achievers_2;
         $home_achievers_3=$this->Page_model->home_achievers_3($id_3);
-        $this->data->home_achievers_3=$home_achievers_3;
+        $this->data->home_achievers_3=$home_achievers_3;*/
 
 		
 		$this->templates->render('home',$this->data);
@@ -167,25 +182,41 @@ var $company_validation = array(
         $this->templates->layout('achiever');
         $this->templates->render('achiever',$this->data);
     }
+    public function about() {
+        $this->load->model("Page_model");
 
-    public function mainregistration(){
+        $students=$this->Page_model->get_achievers();
+        $this->data->students=$students;
+        $this->templates->layout('about');
+        $this->templates->render('about',$this->data);
+    }
+
+        public function mainregistration(){
         $display="mainregistration";
         $this->templates->layout('mainregistration');
 
         $accounttype=$this->input->post('accounttype');
 
-       $this->load->library('form_validation');
-
-
+        $this->load->library('form_validation');
         $this->form_validation->set_rules($this->mainlogin_validation);
 
                 if ($this->form_validation->run() == FALSE)
                 {
                     foreach($this->mainlogin_validation as $row) {
                         $this->data->$row['field']="";
+                    }/*
+                        $this->templates->render('page/mainregistration',$this->data);*/
+                }
+                else{
+                    if ($accounttype == "TRUE"){
+                        redirect('page/ApplicantRegistrationController/preregistration_employer');
                     }
-                        $this->templates->render('page/mainregistration',$this->data);
-                }/*
+                    elseif ($accounttype == "FALSE"){
+                        /*redirect('page/ApplicantRegistrationController/handleRegistrationRequest');*/
+                        redirect('page/ApplicantRegistrationController/preregistration_applicant');
+                    }   
+                }
+                /*
                 elseif ($this->form_validation->run() == TRUE) {
                     if ($this->mainlogin_validation as $row == "Employer"){
                         
@@ -200,23 +231,9 @@ var $company_validation = array(
                     }
                 }*/
 
-        if ($this->input->post('submit') == NULL)
-            {
-
-                    
-            }
-        else {
-            if ($accounttype == "Employer"){
-                redirect('page/registration');
-            }
-            elseif ($accounttype == "Job Applicant"){
-                /*redirect('page/ApplicantRegistrationController/handleRegistrationRequest');*/
-                redirect('page/ApplicantRegistrationController/preregistration');
-            }
-        }
-
         $this->templates->render($display,$this->data);
     }
+
 	public function registration(){
         $display="employerregister";
         $this->templates->layout('employerregister');
@@ -333,6 +350,45 @@ var $company_validation = array(
 		$this->data->test_string='Hello World';
 		$this->templates->render('test_page',$this->data);
 	}
+
+
+    public function inquiry(){
+        $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+         $this->form_validation->set_rules($this->inquiry_validation);
+            
+            foreach($this->inquiry_validation as $row) {
+                $this->data->$row['field']=NULL;
+            }
+
+            
+            if ($this->input->post('submit') == NULL)
+            {
+
+                    
+            }
+            else {      
+
+                    if($this->form_validation->run()){
+                        foreach($this->inquiry_validation as $row) {
+                            $this->data->$row['field']=$this->input->post($row['field']);
+                            $fields[$row['field']]=$this->input->post($row['field']);
+                        }
+
+                        $this->load->model("Page_model");
+                        $register=$this->Page_model->checkinquiry($fields);
+
+                        if($register) {
+                            redirect();
+                        } else {
+                            echo "registration failed";
+                        }
+                    } else {
+                        
+                    }
+                }
+
+    }
 
 
 }

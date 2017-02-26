@@ -15,18 +15,15 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="<?php echo base_url(CSS . 'bootstrap.min.css'); ?>" />
-
+<!-- Bootstrap Core CSS -->
 <!-- favicon -->
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-<!-- Landing CSS -->
-<link rel="stylesheet" href="<?php echo base_url(CSS . 'landing-page.css'); ?>" />
 <!-- Animations -->
 <link rel="stylesheet" href="<?php echo base_url(CSS . 'animation.css'); ?>" />
-
-<!-- your CSS -->
-<link rel="stylesheet" href="<?php echo base_url(CSS . 'style.css'); ?>" />
+<link rel="stylesheet" href="<?php echo base_url(CSS . 'my_style.css'); ?>" />
+<link rel="stylesheet" href="<?php echo base_url(CSS . 'freelancer.min.css'); ?>" />
 
 <script src="<?php echo base_url(JS . 'site/script.js'); ?>"></script>
 

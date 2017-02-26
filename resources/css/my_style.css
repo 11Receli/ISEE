@@ -1,0 +1,540 @@
+.spacer_1{
+min-height: 15px;
+}
+.btn-mycustom {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 8px;
+  margin-left: -1.75%;
+}
+.btn-mycustom:hover,
+.btn-mycustom:focus,
+.btn-mycustom:active,
+.btn-mycustom.active,
+.open .dropdown-toggle.btn-mycustom {
+  color: white;
+  background-color: #1a242f;
+  border-color: #161f29;
+  text-decoration: none;
+}
+.btn-mycustom:active,
+.btn-mycustom.active,
+.open .dropdown-toggle.btn-mycustom {
+  background-image: none;
+}
+.btn-mycustom.disabled,
+.btn-mycustom[disabled],
+fieldset[disabled] .btn-mycustom,
+.btn-mycustom.disabled:hover,
+.btn-mycustom[disabled]:hover,
+fieldset[disabled] .btn-mycustom:hover,
+.btn-mycustom.disabled:focus,
+.btn-mycustom[disabled]:focus,
+fieldset[disabled] .btn-mycustom:focus,
+.btn-mycustom.disabled:active,
+.btn-mycustom[disabled]:active,
+fieldset[disabled] .btn-mycustom:active,
+.btn-mycustom.disabled.active,
+.btn-mycustom[disabled].active,
+fieldset[disabled] .btn-mycustom.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+.btn-mycustom2 {
+  color: white;
+  background-color: #132639;
+  border-color: #132639;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 8px;
+  margin-left: -1.75%;
+}
+.btn-mycustom2:hover,
+.btn-mycustom2:focus,
+.btn-mycustom2:active,
+.btn-mycustom2.active,
+.open .dropdown-toggle.btn-mycustom2 {
+  color: white;
+  background-color: #1a242f;
+  border-color: #161f29;
+  text-decoration: none;
+}
+.btn-mycustom2:active,
+.btn-mycustom2.active,
+.open .dropdown-toggle.btn-mycustom2 {
+  background-image: none;
+}
+.btn-mycustom2.disabled,
+.btn-mycustom2[disabled],
+fieldset[disabled] .btn-mycustom2,
+.btn-mycustom2.disabled:hover,
+.btn-mycustom2[disabled]:hover,
+fieldset[disabled] .btn-mycustom2:hover,
+.btn-mycustom2.disabled:focus,
+.btn-mycustom2[disabled]:focus,
+fieldset[disabled] .btn-mycustom2:focus,
+.btn-mycustom2.disabled:active,
+.btn-mycustom2[disabled]:active,
+fieldset[disabled] .btn-mycustom2:active,
+.btn-mycustom2.disabled.active,
+.btn-mycustom2[disabled].active,
+fieldset[disabled] .btn-mycustom2.active {
+  background-color: #336699;
+  border-color: #336699;
+  text-decoration: none;
+}
+.btn-mycustom2 .badge {
+  color: #336699;
+  background-color: white;
+}
+
+.btn-mycustom3 {
+  color: #9fbfdf;
+  font-weight: 300;
+}
+.btn-mycustom3:hover,
+.btn-mycustom3:focus,
+.btn-mycustom3:active,
+.btn-mycustom3.active,
+.open .dropdown-toggle.btn-mycustom3 {
+  color: white;
+  text-decoration: none;
+}
+.border-custom{
+  border:10px solid #132639;
+  border-radius: 8px;
+}
+
+
+
+/*LogIn*/
+.spacer_2{
+min-height: 3px;
+}
+.size_2{
+  min-height: 300px;
+}
+.my-login {
+  text-align: center;
+  background: url(../images/intro-bg-login.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+.my-login .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.my-login .intro-text img {
+  display: block;
+  margin: 0 auto 20px;
+  width:250px;
+}
+.my-login .intro-text .gif_1{
+  margin-top: -12%;
+  opacity: 0.5;
+}
+.my-login .intro-text .gif_2{
+  margin-top: -170px;
+}
+.my-login .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 25px;
+}
+.my-login .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 25px;
+}
+.textbox-login{
+  max-width: 190px;
+  display: block;
+  margin: 0px auto;
+}
+@media (min-width: 768px) {
+  .my-login .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  .my-login .intro-text .name {
+    font-size: 4.75em;
+    line-height: 60px;
+  }
+  .my-login .intro-text .skills {
+    font-size: 1.75em;
+    line-height: 40px;
+  }
+  .size_2{
+    min-height: 150px;
+  }
+
+  .textbox-login{
+    max-width: 250px;
+    display: block;
+    margin: 0px auto;
+  }
+  .spacer_2{
+  min-height: 8px;
+  }
+}
+
+
+
+.btn-mycustom-login {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  padding: 5px 60px;
+  border-radius: 8px;
+  font-size:14px;
+}
+.btn-mycustom-login:hover,
+.btn-mycustom-login:focus,
+.btn-mycustom-login:active,
+.btn-mycustom-login.active,
+.open .dropdown-toggle.btn-mycustom-login {
+  color: white;
+  background-color: #1a242f;
+  border-color: #161f29;
+  text-decoration: none;
+}
+.btn-mycustom-login:active,
+.btn-mycustom-login.active,
+.open .dropdown-toggle.btn-mycustom-login {
+  background-image: none;
+}
+.btn-mycustom-login.disabled,
+.btn-mycustom-login[disabled],
+fieldset[disabled] .btn-mycustom-login,
+.btn-mycustom-login.disabled:hover,
+.btn-mycustom-login[disabled]:hover,
+fieldset[disabled] .btn-mycustom-login:hover,
+.btn-mycustom-login.disabled:focus,
+.btn-mycustom-login[disabled]:focus,
+fieldset[disabled] .btn-mycustom-login:focus,
+.btn-mycustom-login.disabled:active,
+.btn-mycustom-login[disabled]:active,
+fieldset[disabled] .btn-mycustom-login:active,
+.btn-mycustom-login.disabled.active,
+.btn-mycustom-login[disabled].active,
+fieldset[disabled] .btn-mycustom-login.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-login .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+.mylink{
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+.mylink a:hover{
+  text-decoration: none;
+  color:  #ADD8E6;
+}
+
+
+
+
+
+/*Registration*/
+.size_3{
+  min-height: 600px;
+}
+.my-reg-1 {
+  text-align: center;
+  background: #2C3E50;
+  color: #3d454e;
+}
+.my-reg-1 .reg-box{
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 40px 100px 40px;
+  display:block;
+  margin:50px auto;
+}
+.my-reg-1 .name {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 25px;
+  border-bottom: 2px solid #7d8b9a;
+  max-width:700px;
+  margin-top: 100px;
+  padding-bottom: 25px;
+}
+.choices{
+  float:left;
+  width:50%;
+  margin:0px 25% 40px 25%;
+  text-align: left;
+  font-size:20px;
+}
+@media (max-width: 1200px){
+
+  .my-reg-1 .name {
+    text-align: center;
+    display: block;
+    margin: 25px auto 25px auto;
+  }
+  .choices{
+    width:50%;
+    margin:0px 40% 40px 40%;
+  }
+}
+@media (max-width: 768px){
+  .size_3{
+    min-height: 580px;
+  }
+  .my-reg-1 .reg-box{
+    padding: 50px 30% 110px 30%;
+  }
+  .choices{
+    width:50%;
+    margin:0px 25% 40px 25%;
+  }
+}
+@media (max-width: 425px){
+  .size_3{
+    min-height: 580px;
+  }
+  .my-reg-1 .reg-box{
+    padding: 110px 45px;
+    margin:0px auto;
+  }
+  .choices{
+    width:50%;
+    margin:0px 25% 40px 25%;
+  }
+}
+@media (max-width: 320px){
+  .size_3{
+    min-height: 580px;
+  }
+  .my-reg-1 .reg-box{
+    background-color: white;
+    border-radius: 10px;
+    padding: 150px 45px;
+    display:block;
+    margin:0px auto;
+  }
+  .my-reg-1 .name {
+    margin-top: 20px;
+    padding-bottom: 25px;
+  }
+  .choices{
+    float:left;
+    width:70%;
+    margin:0px 15% 40px 15%;
+    text-align: left;
+    font-size:20px;
+  }
+}
+
+.spacer_3{
+  min-height: 50px;
+ }
+
+
+/*step 2*/
+.size_4{
+  min-height: 600px;
+  display: block;
+  margin:30px auto 0px auto;
+}
+.my-reg-2 {
+  text-align: center;
+  background: #2C3E50;
+  color: #3d454e;
+}
+.my-reg-2 .reg-box{
+  display: block;
+  margin:0px auto 0px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+.my-reg-2 .divisions{
+  float:left;
+  width:46%;
+  margin:0 2%;
+}
+.my-reg-2 .name {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 25px;
+  border-bottom: 2px solid #7d8b9a;
+  max-width:700px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .my-reg-2 .name {
+    text-align: center;
+    display: block;
+    margin: 25px auto 25px auto;
+  }
+}
+@media (max-width: 767px){
+
+  .my-reg-2 .divisions{
+    float:left;
+    width:100%;
+  }
+  .size_4{
+    min-height: 600px;
+    display: block;
+    margin:0px auto 0px auto;
+  }
+}
+
+.required-red:before{
+  content: " * ";
+  color: red;
+}
+.required-red{
+  text-align: left;
+  margin-left: 0px;
+}
+.error-red{
+  color: red;
+  font-size: 12px;
+}
+
+
+
+
+
+
+/*ABOUT HEADER*/
+
+.size_5{
+  min-height: auto;
+}
+.my_header-2 {
+  text-align: center;
+  background:white;
+  color: #2C3E50;
+}
+.my_header-2 .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.my_header-2 img {
+  width:200px;
+}
+.area-1{
+  width:30%;
+  display: block;
+  margin:0px 0px 0px 5%;
+}
+.area-2{
+  width:74%;
+  display: block;
+  margin:-190px 0px 50px auto;
+}
+.my_header-2 .intro-text{
+  text-align: left;
+}
+.my_header-2 .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 25px;
+  padding-top:30px;
+}
+.my_header-2 .intro-text .skills {
+  font-family: Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.authors{
+  background: url(../images/achiever_content.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 20px 20px 100px 20px;
+  min-height: 600px;
+  text-align: center;
+}
+.authors h1{
+  padding-bottom: 60px;
+}
+.authors img{
+  width:180px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.img-center {
+  margin: 0 auto;
+}
+.profile-custom{
+  min-height:500px;
+  padding:20px;
+  background: #2C3E50;
+  border-radius: 10px;
+  margin:0px 5px 20px 5px;
+  color:white;
+}
+@media (max-width:1200px){
+
+  .my_header-2 img {
+
+    float:center;
+    width:250px;
+    display: block;
+    margin:0 auto;
+  }
+  .area-1{
+    width:30%;
+    display: block;
+    margin:0px;
+  }
+  .area-2{
+    width:74%;
+    display: block;
+    margin:0px auto;
+  }
+  .my_header-2 .intro-text{
+    text-align: center;
+  }
+  .my_header-2 .intro-text .name {
+    padding-bottom: 10px;
+  }
+  .my_header-2 .intro-text .skills {
+    font-family: Arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 25px;
+  }
+  .profile-custom{
+    min-height:500px;
+    padding:20px;
+    background: #2C3E50;
+    border-radius: 10px;
+    margin:0px 5px 20px 5px;
+    color:white;
+  }
+}

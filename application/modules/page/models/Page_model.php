@@ -30,6 +30,11 @@ class Page_model extends CI_Model {
             $this->db->insert('employerinfo',$fields);
             return $this->db->insert_id();
         }
+
+        function checkinquiry($fields){
+            $this->db->insert('inquiries',$fields);
+            return $this->db->insert_id();
+        }
 		
 		private function storeSessionInfo($accountID){
 			$this->session->set_userdata('degree', $this->getDegree($accountID));
@@ -113,11 +118,13 @@ class Page_model extends CI_Model {
 			}
 		}
 		
-		function home_achievers_1($id_1){
-            $home_achievers_1="SELECT * FROM `achievers` WHERE `id`='".$id_1."' LIMIT 1";
-                $the_achievers=$this->db->query($home_achievers_1);/*
+		function get_latest_article(){/*
+            $home_achievers_1="SELECT MAX(id) FROM `articles`";
+            $id_1=$home_achievers_1;*/
+            $query="SELECT * FROM articles";
+                $article=$this->db->query($query);/*
                 $achievers=$this->db->get('achievers');*/
-                return $the_achievers->result();
+                return $article->last_row();
             }
         function home_achievers_2($id_2){
             $home_achievers_2="SELECT * FROM `achievers` WHERE `id`='".$id_2."' LIMIT 1";
@@ -131,11 +138,6 @@ class Page_model extends CI_Model {
                 $achievers=$this->db->get('achievers');*/
                 return $the_achievers->result();
             }
-
-        function checkregistration($fields){
-            $this->db->insert('employerinfo',$fields);
-            return $this->db->insert_id();
-        }
 
         function get_achievers() {
             $achievers=$this->db->get('achievers');

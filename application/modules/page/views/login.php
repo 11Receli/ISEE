@@ -1,46 +1,44 @@
 
 <?php echo form_open(); ?>
 
-<div class="intro-header-login  w3-animate-opacity">
-
+<div class="my-login w3-animate-opacity">
     <div class="container">
-
-        <div class="row">
+        <div class="row size_2">
             <div class="col-lg-12">
-                <div class="intro-message-login">
+                <div class="intro-text">
+	                <img class="gif_1" src="<?php echo base_url(IMG . 'ISEE2.GIF'); ?>" alt="">
+	                <img class="gif_2" src="<?php echo base_url(IMG . 'ISEE.GIF'); ?>" alt="">
                     <form class="form-signin">
-                    <img class="opacity5" src="<?php echo base_url(IMG . 'ISEE2.GIF'); ?>" alt="">
-                    <img class="shadowimg" src="<?php echo base_url(IMG . 'ISEE.GIF'); ?>" alt="">
-						<h2 class="form-signin-heading borderline"></h2>
+                    	
 						<?php if($notify): ?>
 	                		<p class="text-danger">
 						  		<?php echo $notify; ?>
 						  	</p>
 		                <?php endif; ?>
-		                <div class="col-xs-12">
+		                <div>
 					  	<?php echo form_error('username'); ?>
-						<?php echo form_label('Username','username'); ?>
-					    <?php echo form_input('username',$username,'class="login-textbox form-control" placeholder="User Name" id="username"'); ?>
-
-						<?php echo form_error('password'); ?>
-						<?php echo form_label('Password','password'); ?>
-					    <?php echo form_password('password',$password,'class="login-textbox form-control" placeholder="Password" id="password"'); ?>
-					    
-<!-- 
-						<div class="checkbox">
-					      <label>
-					        <input type="checkbox" value="remember-me"> Remember me
-					      </label>
+						<h4><?php echo form_label('USERNAME','username'); ?></h4>
+					    <?php echo form_input('username',$username,'class="textbox-login form-control" placeholder="USERNAME" id="username"'); ?>
 					    </div>
- -->
-						<button type="submit" name="submit" class="btn btn-xlg btn-primary space">Login</button>
-						<h2 class="borderline"></h2>
-						<p>New to this site? <a class="whitelink" href="<?php echo base_url('page/mainregistration'); ?>">Click Here.</a></p> <br/><!-- 
-						<p><a class="whitelink" href="<?php echo base_url('page/registration'); ?>">Employer Registration</a></p><br/>
-						<p><a class="whitelink" href="<?php echo base_url('page/ApplicantRegistrationController/preregistration'); ?>">Job Applicant Registration</a></p> -->
+						<div class="spacer_2"></div>
+						<div>
+						<?php echo form_error('password'); ?>
+						<h4><?php echo form_label('PASSWORD','password'); ?></h4>
+					    <?php echo form_password('password',$password,'class="textbox-login form-control" placeholder="PASSWORD" id="password"'); ?>
+					    </div>
 
-						
-
+					    <div class="spacer_1"></div>
+					    <div class="spacer_1"></div>
+						<button type="submit" name="submit" class="btn btn-mycustom-login">
+							<h4>Login</h4>
+						</button>
+						<div class="spacer_1"></div>
+						<div class="spacer_1"></div>
+						<p class="mylink">New to this site? 
+							<a class="mylink" href="<?php echo base_url('page/mainregistration'); ?>">
+								Click Here.
+							</a>
+						</p>
 					</form>
                 </div>
             </div>
