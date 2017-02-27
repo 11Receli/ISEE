@@ -30,11 +30,6 @@ class Page_model extends CI_Model {
             $this->db->insert('employerinfo',$fields);
             return $this->db->insert_id();
         }
-
-        function checkinquiry($fields){
-            $this->db->insert('inquiries',$fields);
-            return $this->db->insert_id();
-        }
 		
 		private function storeSessionInfo($accountID){
 			$this->session->set_userdata('degree', $this->getDegree($accountID));

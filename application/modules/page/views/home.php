@@ -162,28 +162,28 @@
                             <div class="form-group">
                                 <?php echo form_label('Name:','inquiryname'); ?>
                                 <?php echo form_error('inquiryname'); ?>
-                                <?php echo form_input('inquiryname',$inquiryname,'class="form-control" placeholder="ex.John Smith" id="inquiryname"'); ?>
+                                <?php echo form_input('inquiryname','','class="form-control" placeholder="ex:John Smith" id="inquiryname"'); ?>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group">
                                 <?php echo form_label('E-mail Address:','inquiryemail'); ?>
                                 <?php echo form_error('inquiryemail'); ?>
-                                <?php echo form_input('inquiryemail',$inquiryemail,'class="form-control" placeholder="ex.myemail@gmail.com" id="inquiryemail"'); ?>
+                                <?php echo form_input('inquiryemail','','class="form-control" placeholder="ex:myemail@gmail.com" id="inquiryemail"'); ?>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group">
                                 <?php echo form_label('Contact Number:','inquirycontact'); ?>
                                 <?php echo form_error('inquirycontact'); ?>
-                                <?php echo form_input('inquirycontact',$inquirycontact,'class="form-control" placeholder="ex.+639777772525" id="inquirycontact"'); ?>
+                                <?php echo form_input('inquirycontact','','class="form-control" placeholder="ex:+639434345529" id="inquirycontact"'); ?>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group">
                                 <?php echo form_label('Message:','inquirymessage'); ?>
                                 <?php echo form_error('inquirymessage'); ?>
-                                <?php echo form_textarea('inquirymessage',$inquirymessage,'class="form-control" placeholder="Your Inquiry" id="inquirymessage"'); ?>
+                                <?php echo form_input('inquirymessage','','class="form-control" placeholder="Your Inquiry" id="inquirymessage"'); ?>
                             </div>
                         </div>
                         <br>
