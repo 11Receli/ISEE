@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class Templates {
-	private $layout="default";
+    private $layout="default";
 
     // Page resources
     private $js = array();
