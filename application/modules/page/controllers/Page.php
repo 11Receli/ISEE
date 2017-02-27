@@ -350,4 +350,42 @@ var $inquiry_validation = array(
 		$this->data->test_string='Hello World';
 		$this->templates->render('test_page',$this->data);
 	}
+    public function inquiry(){
+        $display="page";
+        $this->templates->layout('page');
+    
+        $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+         $this->form_validation->set_rules($this->inquiry_validation);
+            
+            foreach($this->inquiry_validation as $row) {
+                $this->data->$row['field']=NULL;
+            }
+
+            
+            if ($this->input->post('submit') == NULL)
+            {       
+            }
+            else {      
+
+                    if($this->form_validation->run()){
+                        foreach($this->inquiry_validation as $row) {
+                            $this->data->$row['field']=$this->input->post($row['field']);
+                            $fields[$row['field']]=$this->input->post($row['field']);
+                        }
+
+                        $this->load->model("Page_model");
+                        $register=$this->Page_model->saveinquiry($fields);
+
+                        if($register) {
+                            redirect();
+                        } else {
+                            echo "registration failed";
+                        }
+                    } else {
+                        
+                    }
+            }
+        $this->templates->render($display,$this->data);
+    }
 }

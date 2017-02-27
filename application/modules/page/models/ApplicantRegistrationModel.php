@@ -28,9 +28,12 @@ class ApplicantRegistrationModel extends CI_Model {
 		}
     }
 
-    function checkinquiry($id,$contact,$status){
-            $this->db->insert('inquiries',$fields);
-            return $this->db->insert_id();
+    function update_applicantrecords($fields){
+        $this->db->where('id', $id);
+		$this->db->delete('mytable');
+        $this->db->insert('applicantrecords',$fields);
+        return $this->db->insert_id();
+
     }
 	//check if email exists and if exists return the status
 	function verifyEmail($email) {

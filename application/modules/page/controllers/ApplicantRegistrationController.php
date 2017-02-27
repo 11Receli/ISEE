@@ -365,6 +365,8 @@ class ApplicantRegistrationController extends Public_Controller {
                 		$department=$this->input->post('department');
                 		$graduation=$this->input->post('graduation');
                 		$studentid=$this->input->post('studentid');
+                		$status=$this->input->post('status');
+                		$contact=$this->input->post('contact');
 
                         foreach($this->preapplicant_validation as $row) {
                             $this->data->$row['field']=$this->input->post($row['field']);
@@ -381,7 +383,14 @@ class ApplicantRegistrationController extends Public_Controller {
 							window.location.href='" . "preregistration_applicant';" . "</SCRIPT>");
                             /*print_r($check);*/
             			} else {
-							
+            				/*print_r($contact);
+            				die();*/
+            				foreach($this->preapplicant_validation as $row) {
+                            $this->data->$row['field']=$this->input->post($row['field']);
+                            $fields[$row['field']]=$this->input->post($row['field']);
+                        }
+							$this->load->model("ApplicantRegistrationModel");
+            				$this->ApplicantRegistrationModel->update_applicantrecords($fields);
             				redirect('page/ApplicantRegistrationController/handleRegistrationRequest');
             				 /*print_r($check);*/
             			}
