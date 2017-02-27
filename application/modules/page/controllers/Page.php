@@ -185,8 +185,8 @@ var $inquiry_validation = array(
     public function about() {
         $this->load->model("Page_model");
 
-        $students=$this->Page_model->get_achievers();
-        $this->data->students=$students;
+        $team=$this->Page_model->get_team();
+        $this->data->team=$team;
         $this->templates->layout('about');
         $this->templates->render('about',$this->data);
     }

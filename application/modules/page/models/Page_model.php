@@ -124,7 +124,7 @@ class Page_model extends CI_Model {
             $query="SELECT * FROM articles";
                 $article=$this->db->query($query);/*
                 $achievers=$this->db->get('achievers');*/
-                return $article->last_row();
+                return $article->last_row('array');
             }
         function home_achievers_2($id_2){
             $home_achievers_2="SELECT * FROM `achievers` WHERE `id`='".$id_2."' LIMIT 1";
@@ -142,5 +142,9 @@ class Page_model extends CI_Model {
         function get_achievers() {
             $achievers=$this->db->get('achievers');
             return $achievers->result();
+        }
+        function get_team() {
+            $team=$this->db->get('authors');
+            return $team->result();
         }
 }

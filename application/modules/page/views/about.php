@@ -23,13 +23,13 @@
         <h1 class="page-header">Our Team</h1>
     </div>
 
-    <?php foreach($students as $row): ?>
+    <?php foreach($team as $row): ?>
     <div class="col-lg-3 text-center">
         <div style="width:97%" class="profile-custom">
             <img class="img-circle img-responsive img-center" src="<?php echo base_url($row->image); ?>" alt="">
             <h3><?php echo $row->name; ?></h3>
             <h5><?php echo $row->graduation; ?></h5><br>
-            <span><?php echo $row->achievements; ?></span>
+            <span><?php echo $row->ambision; ?></span>
         </div>
     </div>  
     <?php endforeach; ?>
