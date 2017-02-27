@@ -162,28 +162,28 @@
                             <div class="form-group">
                                 <?php echo form_label('Name:','inquiryname'); ?>
                                 <?php echo form_error('inquiryname'); ?>
-                                <?php echo form_input('inquiryname',$inquiryname,'class="form-control" placeholder="Name" id="inquiryname"'); ?>
+                                <?php echo form_input('inquiryname',$inquiryname,'class="form-control" placeholder="ex.John Smith" id="inquiryname"'); ?>
                             </div>
                         </div>
                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <?php echo form_label('E-mail Address:','inquiryemail'); ?>
+                                <?php echo form_error('inquiryemail'); ?>
+                                <?php echo form_input('inquiryemail',$inquiryemail,'class="form-control" placeholder="ex.myemail@gmail.com" id="inquiryemail"'); ?>
                             </div>
                         </div>
                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <?php echo form_label('Contact Number:','inquirycontact'); ?>
+                                <?php echo form_error('inquirycontact'); ?>
+                                <?php echo form_input('inquirycontact',$inquirycontact,'class="form-control" placeholder="ex.+639777772525" id="inquirycontact"'); ?>
                             </div>
                         </div>
                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <?php echo form_label('Message:','inquirymessage'); ?>
+                                <?php echo form_error('inquirymessage'); ?>
+                                <?php echo form_textarea('inquirymessage',$inquirymessage,'class="form-control" placeholder="Your Inquiry" id="inquirymessage"'); ?>
                             </div>
                         </div>
                         <br>
