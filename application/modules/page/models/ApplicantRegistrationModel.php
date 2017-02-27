@@ -30,7 +30,7 @@ class ApplicantRegistrationModel extends CI_Model {
 
     function update_applicantrecords($fields){
         $this->db->where('id', $id);
-		$this->db->delete('mytable');
+		$this->db->delete('applicantrecords');
         $this->db->insert('applicantrecords',$fields);
         return $this->db->insert_id();
 
