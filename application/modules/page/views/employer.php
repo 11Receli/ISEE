@@ -19,13 +19,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Articles</a>
+                        <a href="<?php echo base_url('page/article'); ?>">Articles</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="<?php echo base_url('page/about'); ?>">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message'); ?>">Contact</a>
                     </li>
                     <li class="page-scroll">
                         <?php if($this->session->userdata('username')): ?>
@@ -38,10 +38,10 @@
                         <?php if($this->session->userdata('username')): ?>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <li>
-                                    <a href="<?php echo base_url('page/ApplicantProfileUpdateController/handleProfileUpdate'); ?>">Update Profile</a>
+                                    <a href="<?php echo base_url('page/ApplicantProfileUpdateController/handleProfileUpdate'); ?>" style="color:black;">Update Profile</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url('page/logout'); ?>">Logout</a>
+                                    <a href="<?php echo base_url('page/logout'); ?>" style="color:black;">Logout</a>
                                 </li>
                             </ul>
                         <?php endif; ?>
@@ -79,101 +79,15 @@
             </div>
         </div>
     </div>
-
+<!-- 
     <?php if($this->session->userdata('username')): ?>
         <?php
             $this->view('jobAlertView');
         ?>
         
-    <?php endif; ?>
+    <?php endif; ?> -->
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Featured Article of the Week</h2>
-                    <hr class="spacer_1">
-                </div>
-            </div>
-            <div class="row">
-            <?php if($latest_article):?>
-                <?php //foreach($latest_article as $row): ?>
-                <div class="col-md-7 ">
-                    <a href="#">
-                        <img class="img-responsive border-custom" src="<?php echo base_url($latest_article['img']); ?>" alt="">
-                    </a>
-                </div>
-                <div class="col-md-5">
-                    <h3><?php echo $latest_article['title']; ?></h3>
-                    <h4>by: <?php echo $latest_article['author']; ?></h4>
-                    <p><?php echo $latest_article['content']; ?></p>
-                    <a class="btn btn-primary" href="<?php echo base_url('page/article'); ?>">View Article<span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-                <?php //endforeach; ?>
-                <?php else: ?>
-                    <p>No latest article.</p>
-                <?php endif; ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About Us</h2>
-                </div>
-            </div>
-            <div class="spacer_1"></div>
-            <div class="spacer_1"></div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="<?php echo base_url('page/about'); ?>" class="btn btn-lg btn-outline">
-                     See More About Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>For Inquiries</h2>
-                    <hr class="spacer_1">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm">
-                        
-                        
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <h3 class="skills">
-                                
-                                    <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message'); ?>" class="btn-mycustom2" style="display:block;margin:0 auto;width:300px;text-align:center;">
-                                    <span>Go Here</span></a>
-                            </h3>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <div class="text-center my-footer">
         <div class="my-footer-above">

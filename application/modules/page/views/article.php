@@ -1,6 +1,24 @@
 
 <?php echo form_open(); ?>
-<!-- Navigation -->
+<!-- 
+<div class="my_header-2 w3-animate-opacity">
+    <div class="container">
+        <div class="row size_5">
+            <div class="col-lg-12">
+                <div class="intro-text col-lg-12">
+                    <img class="gif_1 area-1" src="<?php echo base_url(IMG . 'CCS.jpg'); ?>" alt="">
+                    <div class="area-2">
+                        <span class="name">DYCIans</span>
+                        <div class="spacer_1"></div>
+                        <span class="skills">We are students in Dr. Yanga's Colleges Inc., taking up the course of Bachelor of Science in Computer Science, creating an employment site to help out our fellow DYCIans on about having more opportunities and connections to the real world.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+ <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,39 +70,53 @@
         <!-- /.container-fluid -->
     </nav>
 
-<div class="my_header-2 w3-animate-opacity">
-    <div class="container">
-        <div class="row size_5">
-            <div class="col-lg-12">
-                <div class="intro-text col-lg-12">
-                    <img class="gif_1 area-1" src="<?php echo base_url(IMG . 'CCS.jpg'); ?>" alt="">
-                    <div class="area-2">
-                        <span class="name">DYCIans</span>
-                        <div class="spacer_1"></div>
-                        <span class="skills">We are students in Dr. Yanga's Colleges Inc., taking up the course of Bachelor of Science in Computer Science, creating an employment site to help out our fellow DYCIans on about having more opportunities and connections to the real world.</span>
-                    </div>
+ <div id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Featured Article of the Week</h2>
+                    <hr class="spacer_1">
                 </div>
             </div>
+            <?php if($latest_article):?>
+            <div class="row">
+            
+                <?php //foreach($latest_article as $row): ?>
+                <div class="col-md-2 "></div>
+                <div class="col-md-8 ">
+                        <img class="img-responsive border-custom" src="<?php echo base_url($latest_article['img']); ?>" alt="">
+                        <div style="border:2px solid #132639;margin-right:4%;margin-top:20px;border-radius:10px">
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                            <h3 style="text-align:center"><?php echo $latest_article['title']; ?></h3>
+                            <h4 style="text-align:center">by: <?php echo $latest_article['author']; ?></h4>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                        </div>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+
+                            <p style="padding:0px 40px"><?php echo $latest_article['content']; ?></p>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                            <div class="spacer_1"></div>
+                </div>
+                <div class="col-md-2 "></div>
+                <!-- <div class="col-md-5">
+                    
+                </div> -->
+                
+            </div>
+            <?php else: ?>
+                    <p>No latest article.</p>
+                <?php endif; ?>
         </div>
     </div>
-</div>
 
-<div class="row authors">
-    <div class="col-lg-12">
-        <h1 class="page-header">Our Team</h1>
-    </div>
-
-    <?php foreach($team as $row): ?>
-    <div class="col-lg-3 text-center">
-        <div style="width:97%" class="profile-custom">
-            <img class="img-circle img-responsive img-center" src="<?php echo base_url($row->image); ?>" alt="">
-            <h3><?php echo $row->name; ?></h3>
-            <h5><?php echo $row->graduation; ?></h5><br>
-            <span><?php echo $row->ambision; ?></span>
-        </div>
-    </div>  
-    <?php endforeach; ?>
-</div>
 
 <div class="text-center my-footer">
         <div class="my-footer-above">
@@ -131,26 +163,3 @@
 <script src="js/bootstrap.min.js"></script>
 
 <?php echo form_close(); ?>
-<!--                 <?php foreach($students as $row): ?>
-                <div class="col-lg-4 col-sm-12 text-center bottom-space backchange" style="padding-bottom:50px">
-                    <div class="padding-top_25">
-                       <img class="img-circle img-thumbnail img-center circle growachiever margin-bottom_35" src="<?php echo base_url($row->image); ?>" alt="">
-                    
-                        <div class="margin-top_25" style="min-height:140px;">
-                            <h3 class="grow" style="line-height:20px;"><?php echo $row->name; ?></h3>
-                            <h5 class="font-15 grow" style="line-height:20px; font-weight:bold;"><?php echo $row->course; ?><br> <span class="font-13 grow" style="line-height:20px; font-weight:lighter;">Batch <?php echo $row->graduation; ?></span></h5>
-                            <h6 class="font-13 grow" style="line-height:20px;"><?php echo $row->achievements; ?><br></h6>
-                        </div>
-                        <div class="bg-blue" style="padding:10px">
-                            <h5 class="font-22 white grow" style="line-height:20px;"><?php echo $row->work; ?><br></h5>
-                            <h6 class="font-13 white grow" style="line-height:15px;"><?php echo $row->company; ?><br></h6>
-                            <p></p>
-                            <div class="bg-white grow">
-                                <h2 class="font-14 italic" style="line-height:20px;"><?php echo $row->quote; ?></h2>
-                            </div>
-                        </div>
-                         
-                    </div>
-                    
-                </div>
-                <?php endforeach; ?> -->

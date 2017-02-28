@@ -25,6 +25,34 @@ class Page_model extends CI_Model {
 				return $result[0]->id;
 			}
         }
+        function check_userlevel($identity){
+			$this->db->select('userlevel');
+			$this->db->from('accounts');
+			$this->db->where('id', $identity );
+			
+			$userlevel = $this->db->get()->result();
+
+			if(empty($userlevel)){
+				return 0;
+			} else {
+				$this->storeSessionInfo($userlevel[0]->userlevel);
+				return $userlevel[0]->userlevel;
+			}
+        }
+        function check_userlevel_again($identity){
+			$this->db->select('userlevel');
+			$this->db->from('accounts');
+			$this->db->where('username', $identity );
+			
+			$userlevel = $this->db->get()->result();
+
+			if(empty($userlevel)){
+				return 0;
+			} else {
+				$this->storeSessionInfo($userlevel[0]->userlevel);
+				return $userlevel[0]->userlevel;
+			}
+        }
 
         function checkregistration($fields){
             $this->db->insert('employerinfo',$fields);
@@ -32,6 +60,10 @@ class Page_model extends CI_Model {
         }
         function saveinquiry($fields){
             $this->db->insert('inquiries',$fields);
+            return $this->db->insert_id();
+        }
+        function savepersonalinfo($fields){
+            $this->db->insert('personalinfo',$fields);
             return $this->db->insert_id();
         }
 		
@@ -125,18 +157,6 @@ class Page_model extends CI_Model {
                 $achievers=$this->db->get('achievers');*/
                 return $article->last_row('array');
             }
-        function home_achievers_2($id_2){
-            $home_achievers_2="SELECT * FROM `achievers` WHERE `id`='".$id_2."' LIMIT 1";
-                $the_achievers=$this->db->query($home_achievers_2);/*
-                $achievers=$this->db->get('achievers');*/
-                return $the_achievers->result();
-            }
-        function home_achievers_3($id_3){
-            $home_achievers_3="SELECT * FROM `achievers` WHERE `id`='".$id_3."' LIMIT 1";
-                $the_achievers=$this->db->query($home_achievers_3);/*
-                $achievers=$this->db->get('achievers');*/
-                return $the_achievers->result();
-            }
 
         function get_achievers() {
             $achievers=$this->db->get('achievers');
@@ -145,5 +165,29 @@ class Page_model extends CI_Model {
         function get_team() {
             $team=$this->db->get('authors');
             return $team->result();
+        }/*
+        function get_article() {
+            $article=$this->db->get('articles');
+            return $article->result();
+        }*/
+        function get_colleges() {
+            $collegeList=$this->db->get('collegelist');
+            return $collegeList->result();
+        }
+        function get_status() {
+            $statusList=$this->db->get('statuslist');
+            return $statusList->result();
+        }
+        function get_industry() {
+            $industryList=$this->db->get('industrylist');
+            return $industryList->result();
+        }
+        function get_gender() {
+            $genderList=$this->db->get('genderlist');
+            return $genderList->result();
+        }
+        function get_personstatus() {
+            $personstatusList=$this->db->get('personstatuslist');
+            return $personstatusList->result();
         }
 }

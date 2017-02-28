@@ -77,14 +77,36 @@ var $company_validation = array(
         array(
                 'field' => 'companytype',
                 'label' => 'Company Type',
-                'rules' => 'required',
-                'errors' => array(
-                'required' => 'You must provide a %s.',
-                )
+                'rules' => 'required'
         ),
         array(
-                'field' => 'companyaddress',
-                'label' => 'Company Address',
+                'field' => 'companycountry',
+                'label' => 'Company Country',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'companystreet',
+                'label' => 'Company Street',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'companybrgy',
+                'label' => 'Company Baranggay',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'companycity',
+                'label' => 'Company City/Town',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'companyprovince',
+                'label' => 'Company Province',
+                'rules' => 'required'
+        ),
+        array(
+                'field' => 'companyzip',
+                'label' => 'Company Zip Code',
                 'rules' => 'required'
         ),
         array(
@@ -121,57 +143,21 @@ var $company_validation = array(
                 'field' => 'hremail',
                 'label' => 'HR Email',
                 'rules' => 'required'
-        ),
-        array(
-                'field' => 'positions',
-                'label' => 'Position',
-                'rules' => 'required'
-        )
-	);
-
-var $inquiry_validation = array(
-        array(
-                'field' => 'inquiryname',
-                'label' => 'Inquiry Name',
-                'rules' => 'required'
-        ),
-        array(
-                'field' => 'inquiryemail',
-                'label' => 'Inquiry Email',
-                'rules' => 'required',
-                'errors' => array(
-                'required' => 'You must provide a %s.',
-                )
-        ),
-        array(
-                'field' => 'inquirycontact',
-                'label' => 'Inquiry Contact',
-                'rules' => 'required'
-        ),
-        array(
-                'field' => 'inquirymessage',
-                'label' => 'Inquiry Message',
-                'rules' => 'required'
         )
     );
+
 	public function index() {
+        $display="home";
+        $this->templates->layout('home');
 
         $id_1="1";
         $id_2="2";
         $id_3="4";
-        $this->templates->layout('home');
         $this->load->model("Page_model");
 
         $latest_article=$this->Page_model->get_latest_article();
         $this->data->latest_article=$latest_article;
-        /*$this->data->home_achievers_1=$home_achievers_1;
-        $home_achievers_2=$this->Page_model->home_achievers_2($id_2);
-        $this->data->home_achievers_2=$home_achievers_2;
-        $home_achievers_3=$this->Page_model->home_achievers_3($id_3);
-        $this->data->home_achievers_3=$home_achievers_3;*/
-
-		
-		$this->templates->render('home',$this->data);
+        $this->templates->render($display,$this->data);
 	}
 
     public function achiever() {
@@ -182,6 +168,7 @@ var $inquiry_validation = array(
         $this->templates->layout('achiever');
         $this->templates->render('achiever',$this->data);
     }
+
     public function about() {
         $this->load->model("Page_model");
 
@@ -189,6 +176,30 @@ var $inquiry_validation = array(
         $this->data->team=$team;
         $this->templates->layout('about');
         $this->templates->render('about',$this->data);
+    }
+    public function article() {
+        $this->load->model("Page_model");
+
+        $latest_article=$this->Page_model->get_latest_article();
+        $this->data->latest_article=$latest_article;
+        $this->templates->layout('article');
+        $this->templates->render('article',$this->data);
+    }
+    public function about_2() {
+        $this->load->model("Page_model");
+
+        $team=$this->Page_model->get_team();
+        $this->data->team=$team;
+        $this->templates->layout('about_2');
+        $this->templates->render('about_2',$this->data);
+    }
+    public function article_2() {
+        $this->load->model("Page_model");
+
+        $latest_article=$this->Page_model->get_latest_article();
+        $this->data->latest_article=$latest_article;
+        $this->templates->layout('article_2');
+        $this->templates->render('article_2',$this->data);
     }
 
     public function mainregistration(){
@@ -233,53 +244,57 @@ var $inquiry_validation = array(
 
         $this->templates->render($display,$this->data);
     }
+    public function reload_page(){
+        if ($this->session->userdata('username'))
+        {
+                $identity=$this->session->userdata('username'); 
+                $this->load->model("Page_model");
+                $userlevel=$this->Page_model->check_userlevel_again($identity);
 
-	public function registration(){
-        $display="employerregister";
-        $this->templates->layout('employerregister');
-	
-		$this->load->library('form_validation');
-			$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
-		 $this->form_validation->set_rules($this->company_validation);
-			
-			foreach($this->company_validation as $row) {
-	            $this->data->$row['field']=NULL;
-	        }
+                if($userlevel=='employee') { 
+                    $this->load->model("JobAlertModel");
+                    $this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+                            
+                    $this->load->model("ApplicantProfileUpdateModel");
+                    $this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
 
-	 		
-            if ($this->input->post('submit') == NULL)
-            {
-
-            		
-            }
-            else {		
-
-                    if($this->form_validation->run()){
-                        foreach($this->company_validation as $row) {
-                            $this->data->$row['field']=$this->input->post($row['field']);
-                            $fields[$row['field']]=$this->input->post($row['field']);
-                        }
-
-                        $this->load->model("Page_model");
-                        $register=$this->Page_model->checkregistration($fields);
-
-                        if($register) {
-                            redirect();
-                        } else {
-                            echo "registration failed";
-                        }
-                    } else {
+                    $this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+                    
+                    $this->templates->layout('employee');
+                    $this->templates->render('employee',$this->data);
+                }
+                elseif($userlevel=='employer') {                         
                         
-                    }
-            }
-		$this->templates->render($display,$this->data);
-	}
-
+                    $this->load->model("JobAlertModel");
+                    $this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+                            
+                    $this->load->model("ApplicantProfileUpdateModel");
+                    $this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
+                            
+                            
+                    $this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+                    
+                    $this->templates->layout('employer');
+                    $this->templates->render('employer',$this->data);
+                }
+                elseif($userlevel=='admin') {                         
+                        
+                    $this->load->model("JobAlertModel");
+                    $this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+                            
+                    $this->load->model("ApplicantProfileUpdateModel");
+                    $this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
+                            
+                            
+                    $this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+                    
+                    $this->templates->layout('admin');
+                    $this->templates->render('admin',$this->data);
+                }
+        }
+    }
 	public function login() {
-		if ($this->session->userdata('username'))
-		{
-			redirect('page');
-		}
+		
 
 		$this->templates->layout('login');
         $this->load->library('form_validation');
@@ -290,9 +305,10 @@ var $inquiry_validation = array(
                 if ($this->form_validation->run() == FALSE)
                 {
                     foreach($this->login_validation as $row) {
-                        $this->data->$row['field']="";
+                        $this->data->$row['field']=$this->input->post($row['field']);
+                            $fields[$row['field']]=$this->input->post($row['field']);
                     }
-                		$this->templates->render('login',$this->data);
+                	$this->templates->render('login',$this->data);
                 }
                 else
                 {		
@@ -300,7 +316,9 @@ var $inquiry_validation = array(
                 		$password=$this->input->post('password');
 
                         foreach($this->login_validation as $row) {
+                            
                             $this->data->$row['field']=$this->input->post($row['field']);
+                                $fields[$row['field']]=$this->input->post($row['field']);
                         }
 
             			$this->load->model("Page_model");
@@ -309,20 +327,55 @@ var $inquiry_validation = array(
                             $this->templates->notify="Incorrect Username or password.";
                             $this->templates->render('login',$this->data);
             			} else {
-							//set session
             				$this->session->set_userdata('username',$username);
 							$this->session->set_userdata('userid',$check);
-            				$this->load->model("JobAlertModel");
-					$this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
-							
-					$this->load->model("ApplicantProfileUpdateModel");
-					$this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
-							
-							
-					$this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
-							
-					$this->templates->layout('home');
-					$this->templates->render('home',$this->data);
+
+                            $identity=$check; 
+
+                            $this->load->model("Page_model");
+                            $userlevel=$this->Page_model->check_userlevel($identity);
+
+                            if($userlevel=='employee') { 
+                                $this->load->model("JobAlertModel");
+                                $this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+                                        
+                                $this->load->model("ApplicantProfileUpdateModel");
+                                $this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
+  
+                                $this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+                                
+                                $this->templates->layout('employee');
+                                $this->templates->render('employee',$this->data);
+                            }
+                            elseif($userlevel=='employer') {                         
+                                    
+                                $this->load->model("JobAlertModel");
+                                $this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+                                        
+                                $this->load->model("ApplicantProfileUpdateModel");
+                                $this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
+                                        
+                                        
+                                $this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+                                
+                                $this->templates->layout('employer');
+                                $this->templates->render('employer',$this->data);
+                            }
+                            elseif($userlevel=='admin') {                         
+                                    
+                                $this->load->model("JobAlertModel");
+                                $this->data->jobs=$this->JobAlertModel->getSuggestedJobPostings();
+                                        
+                                $this->load->model("ApplicantProfileUpdateModel");
+                                $this->data->industryList = $this->ApplicantProfileUpdateModel->getIndustryList();
+                                        
+                                        
+                                $this->data->jobAlertPreferences = $this->JobAlertModel->getJobAlertPreferences();
+                                
+                                $this->templates->layout('admin');
+                                $this->templates->render('admin',$this->data);
+                            }
+
             			}
                 }
 	}
@@ -350,42 +403,4 @@ var $inquiry_validation = array(
 		$this->data->test_string='Hello World';
 		$this->templates->render('test_page',$this->data);
 	}
-    public function inquiry(){
-        $display="page";
-        $this->templates->layout('page');
-    
-        $this->load->library('form_validation');
-            $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
-         $this->form_validation->set_rules($this->inquiry_validation);
-            
-            foreach($this->inquiry_validation as $row) {
-                $this->data->$row['field']=NULL;
-            }
-
-            
-            if ($this->input->post('submit') == NULL)
-            {       
-            }
-            else {      
-
-                    if($this->form_validation->run()){
-                        foreach($this->inquiry_validation as $row) {
-                            $this->data->$row['field']=$this->input->post($row['field']);
-                            $fields[$row['field']]=$this->input->post($row['field']);
-                        }
-
-                        $this->load->model("Page_model");
-                        $register=$this->Page_model->saveinquiry($fields);
-
-                        if($register) {
-                            redirect();
-                        } else {
-                            echo "registration failed";
-                        }
-                    } else {
-                        
-                    }
-            }
-        $this->templates->render($display,$this->data);
-    }
 }

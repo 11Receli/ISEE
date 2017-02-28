@@ -1,4 +1,4 @@
-
+<?php echo form_open('','class="form-sign"'); ?>
   <?php echo form_open('','class="form-sign"'); ?>
   <div class=" my-reg-2  w3-animate-opacity">
     <div class="container">
@@ -29,7 +29,7 @@
             <div class="form-group required-red">
               <?php echo form_label('E-mail:','email'); ?><br>
               <span class="error-red"><?php echo form_error('email','Required Input: '); ?></span>
-              <?php echo form_input('email',$email,'class="form-control" type="email" placeholder="myemail@mail.com" id="email"'); ?>
+              <?php echo form_input('email',$email,'class="form-control" placeholder="myemail@mail.com" id="email"'); ?>
             </div>
           </div>
 

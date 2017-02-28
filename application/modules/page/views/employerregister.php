@@ -13,65 +13,87 @@
 
           <div class="divisions">
             <div class="form-group required-red">
-              <?php echo form_label('Company Name:','companyname'); ?><br>
+              <?php echo form_label('Company Name:','companyname'); ?><br/>
               <span class="error-red"><?php echo form_error('companyname','Rerqured Input: ');?></span>
               <?php echo form_input('companyname',$companyname,'class="form-control" placeholder="Company Name" id="companyname"'); ?>
             </div>
             <div class="form-group required-red">
-              <?php echo form_label('Type of Company:','companytype'); ?><br>
+              <?php echo form_label('Company Type:','companytype'); ?><br/>
               <span class="error-red"><?php echo form_error('companytype','Rerqured Input: '); ?></span>
-              <?//php echo form_input('companytype',$companytype,'class="form-control" placeholder="Type of Company" id="companytype"'); ?>
-              <input id="companytype" name="companytype" class="form-control" placeholder="ex. Startup" type="text" list="types" autocomplete="off"/>
-              <datalist id="types">
-                 <option value="Afghanistan"></option>
-                 <option value="Albania"></option>
-                 <option value="Algeria"></option>
-                 <option value="Andorra"></option> 
-                 <option value="Angola"></option>
-              </datalist>
+              <input id="companytype" name="companytype" class="form-control" placeholder="Select from the list" type="text" list="companytypes"/>
+                <datalist id="companytypes">
+                  <?php foreach($industryList as $row): ?>
+                    <option><?php echo($row->industry); ?></option>
+                  <?php endforeach; ?>
+                </datalist>
             </div>
             <div class="form-group required-red">
-              <?php echo form_label('Company Address:','companyaddress'); ?><br>
-              <span class="error-red"><?php echo form_error('companyaddress','Rerqured Input: '); ?></span>
-              <?php echo form_input('companyaddress',$companyaddress,'class="form-control" placeholder="Company Address" id="companyaddress"'); ?>
+              <?php echo form_label('Street:','companystreet'); ?><br/>
+              <span class="error-red"><?php echo form_error('companystreet','Rerqured Input: '); ?></span>
+              <?php echo form_input('companystreet',$companystreet,'class="form-control" placeholder="ex: 487 Acacia Street" id="companystreet"'); ?>
             </div>
             <div class="form-group required-red">
-              <?php echo form_label('Contact Number:','companycontact'); ?><br>
-              <span class="error-red"><?php echo form_error('companycontact','Rerqured Input: '); ?></span>
-              <?php echo form_input('companycontact',$companycontact,'class="form-control" placeholder="ex: (044) 6324 877 / +639984478282" id="companycontact"'); ?>
+              <?php echo form_label('Baranggay:','companybrgy'); ?><br/>
+              <span class="error-red"><?php echo form_error('companybrgy','Rerqured Input: '); ?></span>
+              <?php echo form_input('companybrgy',$companybrgy,'class="form-control" placeholder="ex: Panginay" id="companybrgy"'); ?>
             </div>
             <div class="form-group required-red">
-              <?php echo form_label('E-mail Address:','companyemail'); ?><br>
-              <span class="error-red"><?php echo form_error('companyemail','Rerqured Input: '); ?></span>
-              <?php echo form_input('companyemail',$companyemail,'class="form-control" placeholder="ex: companyemail@gmail.com" id="companyemail"'); ?>
+              <?php echo form_label('City/Town:','companycity'); ?><br/>
+              <span class="error-red"><?php echo form_error('companycity','Rerqured Input: '); ?></span>
+              <?php echo form_input('companycity',$companycity,'class="form-control" placeholder="ex: Balagtas" id="companycity"'); ?>
+            </div>
+            <div class="form-group required-red">
+              <?php echo form_label('Province:','companyprovince'); ?><br/>
+              <span class="error-red"><?php echo form_error('companyprovince','Rerqured Input: '); ?></span>
+              <?php echo form_input('companyprovince',$companyprovince,'class="form-control" placeholder="ex: Bulacan" id="companyprovince"'); ?>
+            </div>
+            <div class="form-group required-red">
+              <?php echo form_label('Country:','companycountry'); ?><br/>
+              <span class="error-red"><?php echo form_error('companycountry','Rerqured Input: '); ?></span>
+              <?php echo form_input('companycountry',$companycountry,'class="form-control" placeholder="ex: Philippines" id="companycountry"'); ?>
+            </div>
+            <div class="form-group required-red">
+              <?php echo form_label('Zip Code:','companyzip'); ?><br/>
+              <span class="error-red"><?php echo form_error('companyzip','Rerqured Input: '); ?></span>
+              <?php echo form_input('companyzip',$companyzip,'class="form-control" type="number" placeholder="ex: 3018" id="companyzip"'); ?>
             </div>
           </div>
 
           <div class="divisions">
             <div class="form-group required-red">
-              <?php echo form_label('Company Owner:','companyfounder'); ?><br>
+              <?php echo form_label('Contact Number:','companycontact'); ?><br/>
+              <span class="error-red"><?php echo form_error('companycontact','Rerqured Input: '); ?></span>
+              <?php echo form_input('companycontact',$companycontact,'class="form-control" placeholder="ex: (044) 6324 877 / +639984478282" type="number" id="companycontact"'); ?>
+            </div>
+            <div class="form-group required-red">
+              <?php echo form_label('E-mail Address:','companyemail'); ?><br/>
+              <span class="error-red"><?php echo form_error('companyemail','Rerqured Input: '); ?></span>
+              <?php echo form_input('companyemail',$companyemail,'class="form-control"  type="email" placeholder="ex: companyemail@gmail.com" id="companyemail"'); ?>
+            </div>
+            <div class="form-group required-red">
+              <?php echo form_label('Company Owner:','companyfounder'); ?><br/>
               <span class="error-red"><?php echo form_error('companyfounder','Rerqured Input: '); ?></span>
               <?php echo form_input('companyfounder',$companyfounder,'class="form-control" placeholder="Name of Company Owner" id="companyfounder"'); ?>
             </div>
             <div class="form-group required-red">
-              <?php echo form_label('Company Year:','companyyear'); ?><br>
+              <?php echo form_label('Company Year:','companyyear'); ?><br/>
               <span class="error-red"><?php echo form_error('companyyear','Rerqured Input: '); ?></span>
               <?php echo form_input('companyyear',$companyyear,'class="form-control" placeholder="Year of Establishment" id="companyyear"'); ?>
             </div>
-            <div class="form-group required-red">
-              <?php echo form_label('Human Resource Representative:','hrname'); ?><br>
+            <div class="form-group">
+              <?php echo form_label('Human Resource Representative:','hrname'); ?><br/>
               <span class="error-red"><?php echo form_error('hrname','Rerqured Input: '); ?></span>
               <?php echo form_input('hrname',$hrname,'class="form-control" placeholder="ex: John Martin" id="hrname"'); ?>
             </div>
-            <div class="form-group required-red">
-              <?php echo form_label('HR Contact','hrcontact'); ?><br>
+            <div class="form-group">
+              <?php echo form_label('HR Contact','hrcontact'); ?><br/>
               <span class="error-red"><?php echo form_error('hrcontact','Rerqured Input: '); ?></span>
-              <?php echo form_input('hrcontact',$hrcontact,'class="form-control" placeholder="ex: (044) 6324 877 / +639984478282" id="hrcontact"'); ?>
+              <?php echo form_input('hrcontact',$hrcontact,'class="form-control" type="number" placeholder="ex: (044) 6324 877 / +639984478282" id="hrcontact"'); ?>
             </div>
-            <div class="form-group required-red">
-              <?php echo form_label('HR E-mail Address:','hremail'); ?><br>
+            <div class="form-group">
+              <?php echo form_label('HR E-mail Address:','hremail'); ?><br/>
               <span class="error-red"><?php echo form_error('hremail','Rerqured Input: '); ?></span>
-              <?php echo form_input('hremail',$hremail,'class="form-control" placeholder="ex: hremail@gmail.com" id="hremail"'); ?>
+              <?php echo form_input('hremail',$hremail,'class="form-control" type="email" placeholder="ex: hremail@gmail.com" id="hremail"'); ?>
             </div>
           </div>
 
@@ -89,31 +111,3 @@
   </div>
 <?php echo form_close(); ?>
 
-            <!-- 
-      <div class="form-group">
-        <?php echo form_label('Company Positions:','positions'); ?>
-        <?php echo form_error('positions'); ?>
-        <?//php echo form_input('positions',$positions,'class="form-control" placeholder="ex: Accountant, Manager, etc." id="positions"'); ?>
-        <input id="positions" name="positions" class="form-control" placeholder="ex: Accountant, Manager, etc." type="text" list="positionlist" autocomplete="off" />
-        <datalist id="positionlist">
-           <option value="Start Up">
-           <option value="Albania">
-           <option value="Algeria">
-           <option value="Andorra">
-           <option value="Angola">
-        </datalist>
-      </div> -->
-      <!-- <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Check me out
-        </label>
-      </div> -->

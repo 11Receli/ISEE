@@ -18,18 +18,50 @@ class ApplicantRegistrationModel extends CI_Model {
 
 		if(empty($check)){
 			return 0;
-		} else {/*
-			$addstatus="UPDATE `applicantrecords` SET `status`= '".$status."' ";
-                $addnow=$this->db->query($addstatus);
-			$addcontact="UPDATE `applicantrecords` SET `contact`= '".$contact."' ";
-                $addnow2=$this->db->query($addcontact);*/
+		} else {
 			return $check[0]->id;
 			
 		}
+    }	
+    function checkpreregistration_emp($companyname,$companytype,$companyemail,$companyyear){
+		$this->db->select('id');
+		$this->db->from('employerinfo');
+		$this->db->where('companyname', $companyname );
+		$this->db->where('companytype', $companytype );
+		$this->db->where('companyyear', $companyyear );
+		$this->db->where('companyemail', $companyemail );
+
+		$check = $this->db->get()->result();
+
+		if(empty($check)){
+			$this->db->select('id');
+			$this->db->from('employerinfo');
+			$this->db->where('companyname', $companyname );
+
+			$check = $this->db->get()->result();
+
+			if(empty($check)){
+				$this->db->select('id');
+				$this->db->from('employerinfo');
+				$this->db->where('companyemail', $companyemail );
+
+				$check = $this->db->get()->result();
+
+				if(empty($check)){
+					return 0;
+				} else {
+					return $check[0]->id;	
+				}
+			} else {
+				return $check[0]->id;	
+			}
+		} else {
+			return $check[0]->id;	
+		}
     }
 
-    function update_applicantrecords($fields){
-        $this->db->where('id', $id);
+    function update_applicantrecords($fields,$check){
+        $this->db->where('id', $check);
 		$this->db->delete('applicantrecords');
         $this->db->insert('applicantrecords',$fields);
         return $this->db->insert_id();
@@ -67,6 +99,26 @@ class ApplicantRegistrationModel extends CI_Model {
 		$confirmationKey = $this->randStrGen();
 		$fields['confirmationKey'] = $confirmationKey;
 		$fields['status'] = 'tentative';
+		$fields['userlevel'] = 'employee';
+		if($affectedRecords=$this->db->insert('accounts', $fields)){
+			if($this->sendEmail($fields['email'], $confirmationKey)){
+				return "Please click the registration confirmation link sent to your email to complete the registration.";
+			} else {
+				return "Problem sending email, please try again later.";
+			}
+		} else {
+			return "Unable to insert new record to table.";
+		}
+		
+	}
+	function doTentativeRegistration_2($fields){
+		$confirmationKey = $this->randStrGen();
+		$fields['confirmationKey'] = $confirmationKey;
+	
+		$confirmationKey = $this->randStrGen();
+		$fields['confirmationKey'] = $confirmationKey;
+		$fields['status'] = 'tentative';
+		$fields['userlevel'] = 'employer';
 		if($affectedRecords=$this->db->insert('accounts', $fields)){
 			if($this->sendEmail($fields['email'], $confirmationKey)){
 				return "Please click the registration confirmation link sent to your email to complete the registration.";

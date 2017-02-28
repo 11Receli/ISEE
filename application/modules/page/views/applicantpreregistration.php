@@ -24,24 +24,18 @@
               <?php echo form_label('Last Name:','lastname'); ?><br>
               <span class="error-red"><?php echo form_error('lastname','Required Input: '); ?></span>
               <?php echo form_input('lastname',$lastname,'class="form-control" placeholder="Smith" id="lastname"'); ?>
-            </div>
+            </div> 
             <div class="form-group required-red">
-              <?php echo form_label('Department:','department'); ?><br>
-              <span class="error-red"><?php echo form_error('department','Required Input: '); ?></span>
-              <?//php echo form_input('department',$department,'class="form-control" placeholder="Type of Company" id="department"'); ?>
-              <input id="department" name="department" class="form-control" placeholder="Select from the list" type="text" list="departments" autocomplete="off"/>
-              <datalist id="departments">
-                 <option value="College of Computer Studies">
-                 <option value="College of Business Administration ">
-                 <option value="College of Accountancy">
-                 <option value="College of Education">
-                 <option value="College of Hotel Management and Tourism">
-                 <option value="College of Maritime Engineering">
-                 <option value="College of Arts and Scieneces">
-                 <option value="College of Health and Sciences">
-                 <option value="School of Mechanical Engineering">
-              </datalist>
+              <?php echo form_label('Department:','department'); ?><br/>
+              <span class="error-red"><?php echo form_error('department','Rerqured Input: '); ?></span>
+              <input id="department" name="department" class="form-control" placeholder="Select from the list" type="text" list="departments"/>
+                <datalist id="departments">
+                  <?php foreach($collegeList as $row): ?>
+                    <option><?php echo($row->college); ?></option>
+                  <?php endforeach; ?>
+                </datalist>
             </div>
+            
           </div>
           
           <div class=" divisions"> 
@@ -53,23 +47,26 @@
             <div class="form-group required-red">
                 <?php echo form_label('Contact Number:','contact'); ?><br>
               <span class="error-red">  <?php echo form_error('contact','Required Input: '); ?></span>
-                <?php echo form_input('contact',$contact,'class="form-control" placeholder="ex: +639123456789" id="contact"'); ?>
+                <?php echo form_input('contact',$contact,'class="form-control" type="number" placeholder="ex: +639123456789" id="contact"'); ?>
             </div>
             <div class="form-group required-red">
                 <?php echo form_label('Student ID:','studentid'); ?><br>
               <span class="error-red">  <?php echo form_error('studentid','Required Input: '); ?></span>
                 <?php echo form_input('studentid',$studentid,'class="form-control" placeholder="ex: 21316211" id="studentid"'); ?>
             </div>
+
+           
             <div class="form-group required-red">
-                <?php echo form_label('Status:','status'); ?><br>
-              <span class="error-red">  <?php echo form_error('status','Required Input: '); ?></span>
-                <?//php echo form_input('status',$status,'class="form-control" required placeholder="Type of Company" id="status"'); ?>
-                <input id="status" name="status" class="form-control" placeholder="Select from the list" type="text" list="statuslist" autocomplete="off"/>
+              <?php echo form_label('Status:','status'); ?><br/>
+              <span class="error-red"><?php echo form_error('status','Rerqured Input: '); ?></span>
+              <input id="status" name="status" class="form-control" placeholder="Select from the list" type="text" list="statuslist"/>
                 <datalist id="statuslist">
-                   <option value="Graduating">
-                   <option value="Alumni">
+                  <?php foreach($statusList as $row): ?>
+                    <option><?php echo($row->status); ?></option>
+                  <?php endforeach; ?>
                 </datalist>
-            </div>
+            </div>                  
+           
           </div>
 
           <div class="spacer_3"></div>

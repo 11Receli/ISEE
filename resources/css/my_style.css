@@ -385,7 +385,7 @@ fieldset[disabled] .btn-mycustom-login.active {
   font-size: 2em;
   line-height: 25px;
   border-bottom: 2px solid #7d8b9a;
-  max-width:700px;
+  max-width:1000px;
   padding-bottom: 20px;
 }
 
@@ -537,4 +537,8 @@ fieldset[disabled] .btn-mycustom-login.active {
     margin:0px 5px 20px 5px;
     color:white;
   }
+}
+
+.dropdown-width{
+  width: 20px;
 }

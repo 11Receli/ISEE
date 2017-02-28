@@ -8,14 +8,14 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url('page'); ?>">I S E E</a>
+                <a class="navbar-brand" href="<?php echo base_url('page/reload_page'); ?>">I S E E</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="<?php echo base_url('page'); ?>">Home</a>
+                        <a href="<?php echo base_url('page/reload_page'); ?>">Home</a>
                     </li>
                     <li class="page-scroll">
                         <a href="<?php echo base_url('page/article'); ?>">Articles</a>
