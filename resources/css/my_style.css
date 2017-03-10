@@ -1,6 +1,31 @@
+.yes_error{
+  color: #940707;
+}
+
+.mylink{
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+.mylink a:hover{
+  text-decoration: none;
+  color:  #D07171;
+}
+.forgot{
+  font-weight: 700;
+  font-size: 16px;
+  color: #AB1717;
+  text-decoration: none;
+}
+.forgot a:hover{
+  text-decoration: none;
+  color:  #ADD8E6;
+}
 .spacer_1{
 min-height: 15px;
 }
+
 .btn-mycustom {
   color: white;
   background-color: #2C3E50;
@@ -126,12 +151,17 @@ min-height: 3px;
 }
 .my-login {
   text-align: center;
-  background: url(../images/intro-bg-login.jpg) no-repeat center center;
+  background: url(../images/intro-bg-login.jpg) no-repeat center center; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
 .my-login .container {
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 50px;
 }
 .my-login .intro-text img {
@@ -166,8 +196,8 @@ min-height: 3px;
 }
 @media (min-width: 768px) {
   .my-login .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 178px;
+    padding-bottom: 90px;
   }
   .my-login .intro-text .name {
     font-size: 4.75em;
@@ -178,7 +208,14 @@ min-height: 3px;
     line-height: 40px;
   }
   .size_2{
-    min-height: 150px;
+    min-height: 300px;
+  }
+  .my-login .intro-text .gif_1{
+    margin-top: -8%;
+    opacity: 0.5;
+  }
+  .my-login .intro-text .gif_2{
+    margin-top: -170px;
   }
 
   .textbox-login{
@@ -191,6 +228,14 @@ min-height: 3px;
   }
 }
 
+.spacer_reg1{
+  min-height: 65px;
+}
+@media (max-width:425px){
+  .spacer_reg1{
+    min-height: 10px;
+  }
+}
 
 
 .btn-mycustom-login {
@@ -198,9 +243,11 @@ min-height: 3px;
   background-color: #2C3E50;
   border-color: #2C3E50;
   font-weight: 700;
-  padding: 5px 60px;
-  border-radius: 8px;
   font-size:14px;
+  width:90%;
+  margin-bottom: 2%;
+  /*
+  float: right;*/
 }
 .btn-mycustom-login:hover,
 .btn-mycustom-login:focus,
@@ -208,8 +255,8 @@ min-height: 3px;
 .btn-mycustom-login.active,
 .open .dropdown-toggle.btn-mycustom-login {
   color: white;
-  background-color: #1a242f;
-  border-color: #161f29;
+  background-color: #141b21;
+  border-color: #141b21;
   text-decoration: none;
 }
 .btn-mycustom-login:active,
@@ -241,15 +288,379 @@ fieldset[disabled] .btn-mycustom-login.active {
   background-color: white;
 }
 
-.mylink{
-  font-weight: 500;
-  color: #fff;
+
+.btn-mycustom-reg {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  padding: 5px 60px;
+  border-radius: 8px;
+  font-size:14px;
+}
+.btn-mycustom-reg:hover,
+.btn-mycustom-reg:focus,
+.btn-mycustom-reg:active,
+.btn-mycustom-reg.active,
+.open .dropdown-toggle.btn-mycustom-reg {
+  color: white;
+  background-color: #1a242f;
+  border-color: #161f29;
   text-decoration: none;
 }
-.mylink a:hover{
-  text-decoration: none;
-  color:  #ADD8E6;
+.btn-mycustom-reg:active,
+.btn-mycustom-reg.active,
+.open .dropdown-toggle.btn-mycustom-reg {
+  background-image: none;
 }
+.btn-mycustom-reg.disabled,
+.btn-mycustom-reg[disabled],
+fieldset[disabled] .btn-mycustom-reg,
+.btn-mycustom-reg.disabled:hover,
+.btn-mycustom-reg[disabled]:hover,
+fieldset[disabled] .btn-mycustom-reg:hover,
+.btn-mycustom-reg.disabled:focus,
+.btn-mycustom-reg[disabled]:focus,
+fieldset[disabled] .btn-mycustom-reg:focus,
+.btn-mycustom-reg.disabled:active,
+.btn-mycustom-reg[disabled]:active,
+fieldset[disabled] .btn-mycustom-reg:active,
+.btn-mycustom-reg.disabled.active,
+.btn-mycustom-reg[disabled].active,
+fieldset[disabled] .btn-mycustom-reg.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-reg .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+
+
+.btn-mycustom-leftreg2 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  display: block;
+  width:20%;
+  margin:-16% auto 3% 45%;/*
+  float:right;
+  margin:0% 1% 0% 0%;*/
+  /*
+  float: leftreg2;*/
+}
+.btn-mycustom-leftreg2:hover,
+.btn-mycustom-leftreg2:focus,
+.btn-mycustom-leftreg2:active,
+.btn-mycustom-leftreg2.active,
+.open .dropdown-toggle.btn-mycustom-leftreg2 {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-leftreg2:active,
+.btn-mycustom-leftreg2.active,
+.open .dropdown-toggle.btn-mycustom-leftreg2 {
+  background-image: none;
+}
+.btn-mycustom-leftreg2.disabled,
+.btn-mycustom-leftreg2[disabled],
+fieldset[disabled] .btn-mycustom-leftreg2,
+.btn-mycustom-leftreg2.disabled:hover,
+.btn-mycustom-leftreg2[disabled]:hover,
+fieldset[disabled] .btn-mycustom-leftreg2:hover,
+.btn-mycustom-leftreg2.disabled:focus,
+.btn-mycustom-leftreg2[disabled]:focus,
+fieldset[disabled] .btn-mycustom-leftreg2:focus,
+.btn-mycustom-leftreg2.disabled:active,
+.btn-mycustom-leftreg2[disabled]:active,
+fieldset[disabled] .btn-mycustom-leftreg2:active,
+.btn-mycustom-leftreg2.disabled.active,
+.btn-mycustom-leftreg2[disabled].active,
+fieldset[disabled] .btn-mycustom-leftreg2.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-leftreg2 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+.btn-mycustom-rightreg2 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  display: block;
+  width:20%;
+  margin:0px 13% 3% auto;/*
+  display: block;
+  margin:-16% 29% 38% auto;*/
+  /*
+  float: rightreg2;*/
+}
+.btn-mycustom-rightreg2:hover,
+.btn-mycustom-rightreg2:focus,
+.btn-mycustom-rightreg2:active,
+.btn-mycustom-rightreg2.active,
+.open .dropdown-toggle.btn-mycustom-rightreg2 {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-rightreg2:active,
+.btn-mycustom-rightreg2.active,
+.open .dropdown-toggle.btn-mycustom-rightreg2 {
+  background-image: none;
+}
+.btn-mycustom-rightreg2.disabled,
+.btn-mycustom-rightreg2[disabled],
+fieldset[disabled] .btn-mycustom-rightreg2,
+.btn-mycustom-rightreg2.disabled:hover,
+.btn-mycustom-rightreg2[disabled]:hover,
+fieldset[disabled] .btn-mycustom-rightreg2:hover,
+.btn-mycustom-rightreg2.disabled:focus,
+.btn-mycustom-rightreg2[disabled]:focus,
+fieldset[disabled] .btn-mycustom-rightreg2:focus,
+.btn-mycustom-rightreg2.disabled:active,
+.btn-mycustom-rightreg2[disabled]:active,
+fieldset[disabled] .btn-mycustom-rightreg2:active,
+.btn-mycustom-rightreg2.disabled.active,
+.btn-mycustom-rightreg2[disabled].active,
+fieldset[disabled] .btn-mycustom-rightreg2.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-rightreg2 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+
+.btn-mycustom-right {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  width:35%;
+  display: block;
+  margin:0% 13% 15% auto;
+  /*
+  float: right;*/
+}
+.btn-mycustom-right:hover,
+.btn-mycustom-right:focus,
+.btn-mycustom-right:active,
+.btn-mycustom-right.active,
+.open .dropdown-toggle.btn-mycustom-right {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-right:active,
+.btn-mycustom-right.active,
+.open .dropdown-toggle.btn-mycustom-right {
+  background-image: none;
+}
+.btn-mycustom-right.disabled,
+.btn-mycustom-right[disabled],
+fieldset[disabled] .btn-mycustom-right,
+.btn-mycustom-right.disabled:hover,
+.btn-mycustom-right[disabled]:hover,
+fieldset[disabled] .btn-mycustom-right:hover,
+.btn-mycustom-right.disabled:focus,
+.btn-mycustom-right[disabled]:focus,
+fieldset[disabled] .btn-mycustom-right:focus,
+.btn-mycustom-right.disabled:active,
+.btn-mycustom-right[disabled]:active,
+fieldset[disabled] .btn-mycustom-right:active,
+.btn-mycustom-right.disabled.active,
+.btn-mycustom-right[disabled].active,
+fieldset[disabled] .btn-mycustom-right.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-right .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+
+.btn-mycustom-left {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  width:35%;
+  display: block;
+  margin:-40%  auto 15% 13%;
+  /*
+  float: left;*/
+}
+.btn-mycustom-left:hover,
+.btn-mycustom-left:focus,
+.btn-mycustom-left:active,
+.btn-mycustom-left.active,
+.open .dropdown-toggle.btn-mycustom-left {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-left:active,
+.btn-mycustom-left.active,
+.open .dropdown-toggle.btn-mycustom-left {
+  background-image: none;
+}
+.btn-mycustom-left.disabled,
+.btn-mycustom-left[disabled],
+fieldset[disabled] .btn-mycustom-left,
+.btn-mycustom-left.disabled:hover,
+.btn-mycustom-left[disabled]:hover,
+fieldset[disabled] .btn-mycustom-left:hover,
+.btn-mycustom-left.disabled:focus,
+.btn-mycustom-left[disabled]:focus,
+fieldset[disabled] .btn-mycustom-left:focus,
+.btn-mycustom-left.disabled:active,
+.btn-mycustom-left[disabled]:active,
+fieldset[disabled] .btn-mycustom-left:active,
+.btn-mycustom-left.disabled.active,
+.btn-mycustom-left[disabled].active,
+fieldset[disabled] .btn-mycustom-left.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-left .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+
+.btn-mycustom-leftreg1 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  width:38%;
+  display: block;
+  margin:0px auto 0% 10%;
+  /*
+  float: leftreg1;*/
+}
+.btn-mycustom-leftreg1:hover,
+.btn-mycustom-leftreg1:focus,
+.btn-mycustom-leftreg1:active,
+.btn-mycustom-leftreg1.active,
+.open .dropdown-toggle.btn-mycustom-leftreg1 {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-leftreg1:active,
+.btn-mycustom-leftreg1.active,
+.open .dropdown-toggle.btn-mycustom-leftreg1 {
+  background-image: none;
+}
+.btn-mycustom-leftreg1.disabled,
+.btn-mycustom-leftreg1[disabled],
+fieldset[disabled] .btn-mycustom-leftreg1,
+.btn-mycustom-leftreg1.disabled:hover,
+.btn-mycustom-leftreg1[disabled]:hover,
+fieldset[disabled] .btn-mycustom-leftreg1:hover,
+.btn-mycustom-leftreg1.disabled:focus,
+.btn-mycustom-leftreg1[disabled]:focus,
+fieldset[disabled] .btn-mycustom-leftreg1:focus,
+.btn-mycustom-leftreg1.disabled:active,
+.btn-mycustom-leftreg1[disabled]:active,
+fieldset[disabled] .btn-mycustom-leftreg1:active,
+.btn-mycustom-leftreg1.disabled.active,
+.btn-mycustom-leftreg1[disabled].active,
+fieldset[disabled] .btn-mycustom-leftreg1.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-leftreg1 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+
+
+
+.btn-mycustom-rightreg1 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  width:38%;
+  display: block;
+  margin:-16% 10% 38% auto;
+  /*
+  float: rightreg1;*/
+}
+.btn-mycustom-rightreg1:hover,
+.btn-mycustom-rightreg1:focus,
+.btn-mycustom-rightreg1:active,
+.btn-mycustom-rightreg1.active,
+.open .dropdown-toggle.btn-mycustom-rightreg1 {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-rightreg1:active,
+.btn-mycustom-rightreg1.active,
+.open .dropdown-toggle.btn-mycustom-rightreg1 {
+  background-image: none;
+}
+.btn-mycustom-rightreg1.disabled,
+.btn-mycustom-rightreg1[disabled],
+fieldset[disabled] .btn-mycustom-rightreg1,
+.btn-mycustom-rightreg1.disabled:hover,
+.btn-mycustom-rightreg1[disabled]:hover,
+fieldset[disabled] .btn-mycustom-rightreg1:hover,
+.btn-mycustom-rightreg1.disabled:focus,
+.btn-mycustom-rightreg1[disabled]:focus,
+fieldset[disabled] .btn-mycustom-rightreg1:focus,
+.btn-mycustom-rightreg1.disabled:active,
+.btn-mycustom-rightreg1[disabled]:active,
+fieldset[disabled] .btn-mycustom-rightreg1:active,
+.btn-mycustom-rightreg1.disabled.active,
+.btn-mycustom-rightreg1[disabled].active,
+fieldset[disabled] .btn-mycustom-rightreg1.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-rightreg1 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
 
 
 
@@ -257,157 +668,281 @@ fieldset[disabled] .btn-mycustom-login.active {
 
 /*Registration*/
 .size_3{
-  min-height: 600px;
+  min-height: 662px;
 }
 .my-reg-1 {
   text-align: center;
-  background: #2C3E50;
-  color: #3d454e;
+  background: url(../images/registration-bg2.jpg) no-repeat left; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;/*
+  color: white;*/
+  color: #2C3E50;
 }
 .my-reg-1 .reg-box{
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px 40px 100px 40px;
-  display:block;
-  margin:50px auto;
+  background: white; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  padding-top: 30%;
+  min-height:662px;
+}
+.my-reg-1 .reg-box p{
+  width:85%;
+  display: block;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:50px;
 }
 .my-reg-1 .name {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
-  font-size: 2em;
-  line-height: 25px;
-  border-bottom: 2px solid #7d8b9a;
-  max-width:700px;
-  margin-top: 100px;
-  padding-bottom: 25px;
+  font-size: 4em;
+  padding-bottom: 10px;
+}
+.border-bottom{
+  border-bottom: 2px solid #ebd1d3;
+  width:85%;
+  display: block;
+  margin: 0px auto 10px;
 }
 .choices{
-  float:left;
-  width:50%;
-  margin:0px 25% 40px 25%;
+  width:100%;
+  margin:0px 0px 30% 24%;
   text-align: left;
-  font-size:20px;
+  font-size:16px;
+  font-weight: 550;
 }
-@media (max-width: 1200px){
-
-  .my-reg-1 .name {
-    text-align: center;
-    display: block;
-    margin: 25px auto 25px auto;
-  }
-  .choices{
-    width:50%;
-    margin:0px 40% 40px 40%;
-  }
+.choices span{
+  margin-left: 5%;
+  color: #2C3E50;
 }
-@media (max-width: 768px){
+@media(max-width:425px){
   .size_3{
-    min-height: 580px;
-  }
+    min-height:500;
+  }  
   .my-reg-1 .reg-box{
-    padding: 50px 30% 110px 30%;
+    min-height:500px;
   }
-  .choices{
-    width:50%;
-    margin:0px 25% 40px 25%;
-  }
-}
-@media (max-width: 425px){
-  .size_3{
-    min-height: 580px;
-  }
-  .my-reg-1 .reg-box{
-    padding: 110px 45px;
-    margin:0px auto;
-  }
-  .choices{
-    width:50%;
-    margin:0px 25% 40px 25%;
-  }
-}
-@media (max-width: 320px){
-  .size_3{
-    min-height: 580px;
-  }
-  .my-reg-1 .reg-box{
-    background-color: white;
-    border-radius: 10px;
-    padding: 150px 45px;
-    display:block;
-    margin:0px auto;
-  }
-  .my-reg-1 .name {
-    margin-top: 20px;
-    padding-bottom: 25px;
-  }
-  .choices{
-    float:left;
-    width:70%;
-    margin:0px 15% 40px 15%;
-    text-align: left;
-    font-size:20px;
-  }
-}
 
-.spacer_3{
-  min-height: 50px;
- }
-
+  .btn-mycustom-leftreg1 {
+    width:80%;
+    margin:0px auto 3% auto;
+  }
+  .btn-mycustom-rightreg1 {
+    width:80%;
+    margin:0px auto 10% auto;
+  }
+}
 
 /*step 2*/
 .size_4{
-  min-height: 600px;
-  display: block;
-  margin:30px auto 0px auto;
+  min-height: 662px;
+  height:100%;
 }
 .my-reg-2 {
   text-align: center;
-  background: #2C3E50;
-  color: #3d454e;
+  background: url(../images/registration-bg2.jpg) no-repeat left; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;/*
+  color: white;*/
+  color: #2C3E50;
 }
 .my-reg-2 .reg-box{
-  display: block;
-  margin:0px auto 0px auto;
-  padding: 40px;
-  background-color: white;
-  border-radius: 10px;
+  background: white; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  padding-top: 5%;
+  padding-bottom: 40px;
 }
-.my-reg-2 .divisions{
-  float:left;
-  width:46%;
-  margin:0 2%;
+.my-reg-2 .reg-box p{
+  width:70%;
+  display: block;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:55px;
 }
 .my-reg-2 .name {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
-  font-size: 2em;
-  line-height: 25px;
-  border-bottom: 2px solid #7d8b9a;
-  max-width:1000px;
-  padding-bottom: 20px;
+  font-size: 3.5em;
+  padding-bottom: 10px;
 }
-
-@media (max-width: 1200px) {
-  .my-reg-2 .name {
-    text-align: center;
-    display: block;
-    margin: 25px auto 25px auto;
-  }
+.border-bottom{
+  border-bottom: 2px solid #ebd1d3;
+  width:75%;
+  display: block;
+  margin: 0px auto 10px;
 }
-@media (max-width: 767px){
-
-  .my-reg-2 .divisions{
-    float:left;
-    width:100%;
-  }
+.my-reg-2 .choices3{
+  width:35%;
+  margin:0px 2% 15px 13%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.my-reg-2 .choices3 input{
+  width:100%;
+  margin-top: 0%;
+}
+.my-reg-2 .choices3 span{
+  margin-top: 0%;
+}
+.my-reg-2 .choices2{
+  width:35%;
+  margin:0px 0% 15px 2%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.my-reg-2 .choices2 input{
+  width:100%;
+  margin-top: 0%;
+}
+@media(max-width:425px){
   .size_4{
-    min-height: 600px;
-    display: block;
-    margin:0px auto 0px auto;
+    min-height:500px;
+    height:100%;
+  } 
+  .my-reg-2 .choices3{
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .my-reg-2 .choices3 input{
+    width:75%;
+  }
+  .my-reg-2 .choices2{
+    
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .my-reg-2 .choices2 input{
+    width:75%;
+  }
+  .btn-mycustom-leftreg2 {
+    width:80%;
+    margin:0px auto 0% auto;
+  }
+  .btn-mycustom-rightreg2 {
+    width:80%;
+    margin:0px auto 3% auto;
   }
 }
+
+
+
+
+
+.my-reg-3 {
+  text-align: center;
+  background: url(../images/registration-bg2.jpg) no-repeat left; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;/*
+  color: white;*/
+  color: #2C3E50;
+}
+.my-reg-3 .reg-box{
+  background: white; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  padding-top: 10%
+}
+.my-reg-3 .reg-box p{
+  width:85%;
+  display: block;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:30px;
+}
+.my-reg-3 .name {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4em;
+  padding-bottom: 10px;
+}
+.border-bottom{
+  border-bottom: 2px solid #ebd1d3;
+  width:85%;
+  display: block;
+  margin: 0px auto 10px;
+}
+.my-reg-3 .choices4{
+  width:80%;
+  margin:0px 10% 20px 10%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.my-reg-3 .choices4 input{
+  width:100%;
+  margin-top: 0%;
+}
+@media (max-width: 425px){
+
+  .btn-mycustom-right {
+    color: white;
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+    font-weight: 700;
+    font-size:14px;
+    width:80%;
+    display: block;
+    margin:0px auto 9% auto;
+    /*
+    float: right;*/
+  }
+  .btn-mycustom-left {
+    color: white;
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+    font-weight: 700;
+    font-size:14px;
+    width:80%;
+    display: block;
+    margin:0px auto 9% auto;
+    /*
+    float: right;*/
+  }
+}
+
+
 
 .required-red:before{
   content: " * ";
@@ -423,12 +958,15 @@ fieldset[disabled] .btn-mycustom-login.active {
 }
 
 
-
-
-
-
 /*ABOUT HEADER*/
-
+.about_header{
+  font-size:70px;
+  }
+  @media (min-height:768px){
+    .about_header{
+      font-size:50px;
+    }
+  }
 .size_5{
   min-height: auto;
 }
@@ -471,6 +1009,10 @@ fieldset[disabled] .btn-mycustom-login.active {
   font-weight: 300;
   line-height: 25px;
 }
+
+
+
+
 
 .authors{
   background: url(../images/achiever_content.jpg) no-repeat center center;
@@ -539,6 +1081,882 @@ fieldset[disabled] .btn-mycustom-login.active {
   }
 }
 
+
+
+
+
 .dropdown-width{
   width: 20px;
+}
+.profile-custom2{
+  min-height:2000px;
+  padding:20px;
+  background: white;
+  border-radius: 10px;
+  margin:0px 5px 20px 5px;
+  color:white;
+}
+.divisions_profile{
+  float:left;
+  width:20%;
+  margin:0 2%;
+  text-align: left;
+}
+.divisions_profile_thirds{
+  float:left;
+  width:29%;
+  margin:0 2%;
+  text-align: left;
+}
+.divisions_profile_full{
+  float:left;
+  width:100%;
+  margin:0 2%;
+  text-align: left;
+}
+
+
+
+
+
+.authors2{
+  background: #dcdcdc;
+  padding: 20px 20px 100px 20px;
+  min-height: 600px;
+  text-align: center;
+}
+.authors2 h1{
+  padding-bottom: 60px;
+}
+.authors2 img{
+  width:180px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.img-center {
+  margin: 0 auto;
+}
+.profile-custom{
+  min-height:500px;
+  padding:20px;
+  background: #2C3E50;
+  border-radius: 10px;
+  margin:0px 5px 20px 5px;
+  color:white;
+}
+@media (max-width:1200px){
+
+  .my_header-2 img {
+
+    float:center;
+    width:250px;
+    display: block;
+    margin:0 auto;
+  }
+  .area-1{
+    width:30%;
+    display: block;
+    margin:0px;
+  }
+  .area-2{
+    width:74%;
+    display: block;
+    margin:0px auto;
+  }
+  .my_header-2 .intro-text{
+    text-align: center;
+  }
+  .my_header-2 .intro-text .name {
+    padding-bottom: 10px;
+  }
+  .my_header-2 .intro-text .skills {
+    font-family: Arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 25px;
+  }
+  .profile-custom{
+    min-height:500px;
+    padding:20px;
+    background: #2C3E50;
+    border-radius: 10px;
+    margin:0px 5px 20px 5px;
+    color:white;
+  }
+}
+
+
+
+
+
+
+.upload_size{
+  width:350px;
+  height: 350px;
+}
+
+
+
+.passwordforgot {
+  text-align: center;
+  background: url(../images/password2.jpg) no-repeat left; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;/*
+  color: white;*/
+  color: #2C3E50;
+}
+.passwordforgot .reg-box{
+  background: white; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  padding-top: 5%;
+  padding-bottom: 50px;
+}
+.passwordforgot .reg-box p{
+  width:70%;
+  display: block;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:55px;
+}
+.passwordforgot .name {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+.border-bottom{
+  border-bottom: 2px solid #BAB4B4;
+  width:75%;
+  display: block;
+  margin: 0px auto 10px;
+}
+.passwordforgot .choices3{
+  width:35%;
+  margin:0px 2% 15px 13%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.passwordforgot .choices3 input{
+  width:100%;
+  margin-top: 0%;
+}
+.passwordforgot .choices3 span{
+  margin-top: 0%;
+}
+.passwordforgot .choices2{
+  width:35%;
+  margin:0px 0% 15px 2%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.passwordforgot .choices2 input{
+  width:100%;
+  margin-top: 0%;
+}
+@media(max-width:425px){
+  .passwordforgot .choices3{
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .passwordforgot .choices3 input{
+    width:75%;
+  }
+  .passwordforgot .choices2{
+    
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .passwordforgot .choices2 input{
+    width:75%;
+  }
+  .btn-mycustom-leftreg2 {
+    width:80%;
+    margin:0px auto 0% auto;
+  }
+  .btn-mycustom-rightreg2 {
+    width:80%;
+    margin:0px auto 3% auto;
+  }
+}
+
+/*EMPLOYER LAND PAGE*/
+.homeheaderemp_size{
+  min-height: 100px;
+}
+.homeheaderemp {
+  text-align: center;/* The image used */
+  background: url(../images/home-app-5.jpg) no-repeat center center;
+
+  /* Full height */
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background: url(../images/intro-bg.jpg) no-repeat center center;
+  background-size: cover;*/
+  color: white;
+}
+.homeheaderemp .container {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+.homeheaderemp img {
+  display: block;
+  margin: 0 auto 20px 2%;
+  width:300px;
+}
+.homeheaderemp .gif_1{
+  margin-top: 10%;
+  opacity: 0.5;
+}
+.homeheaderemp .gif_2{
+  margin-top: -200px;
+}
+.homeheaderemp .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 5em;
+  line-height: 25px;
+  text-align: left;
+  margin-top: 10%;
+}
+.homeheaderemp .intro-text .skills {
+  font-size: 2.5em;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: left;
+  margin-top: 5%;
+}
+
+
+.homeemp{
+  background-color: white;
+}
+.homeemp_bg{
+  min-height: 500px;
+  background: url(../images/home-app-5.jpg) no-repeat center center;
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeemp_base{
+  min-height: 500px;
+  background-color: white;
+  border-right:1px solid white;
+  border-radius: 8px;
+  margin:0% 2% 3% 0.25%;
+}
+.homeemp_base2{
+  min-height: 1000px;
+  background-color: white;
+  border-right:1px solid white;
+  border-radius: 8px;
+  margin:0% 2% 3%;
+}
+.homeemp .none{
+  display: block;
+  margin:0px auto 5px 2px;
+  font-size: 13px;
+  font-weight: 200;
+  color:#AF0C0C;
+  text-align: left;
+}
+.homeemp .updating{
+  display: block;
+  margin:10px auto 1px 2px;
+  font-size: 13px;
+  font-weight: 200;
+  color:#000;
+  text-align: left;
+}
+.homeemp_base h3{
+  display: block;
+  margin:0px auto 20px;
+  text-align: center;
+}
+.jobad{
+ 
+ padding:8% 10%;
+}
+
+/*EMPLOYEE LAND PAGE*/
+.homeheaderapp_size{
+  min-height: 100px;
+}
+.homeheaderapp {
+  text-align: center;/* The image used */
+  background: url(../images/home-app-6.jpg) no-repeat center center;
+
+  /* Full height */
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background: url(../images/intro-bg.jpg) no-repeat center center;
+  background-size: cover;*/
+  color: white;
+}
+.homeheaderapp .container {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+.homeheaderapp img {
+  display: block;
+  margin: 0 auto 20px 2%;
+  width:300px;
+}
+.homeheaderapp .gif_1{
+  margin-top: 10%;
+  opacity: 0.5;
+}
+.homeheaderapp .gif_2{
+  margin-top: -200px;
+}
+.homeheaderapp .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 5em;
+  line-height: 25px;
+  text-align: left;
+  margin-top: 10%;
+}
+.homeheaderapp .intro-text .skills {
+  font-size: 2.5em;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: left;
+  margin-top: 5%;
+}
+
+
+.btn-uh1 {
+  color: #2C3E50;
+  background-color: white;
+  border: 2px solid #2C3E50;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px auto;
+  border-radius: 8px;
+  display:block;
+  margin:20px auto;
+  text-align: center;
+}
+.btn-uh1:hover,
+.btn-uh1:focus,
+.btn-uh1:active,
+.btn-uh1.active,
+.open .dropdown-toggle.btn-uh1 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.btn-uh1:active,
+.btn-uh1.active,
+.open .dropdown-toggle.btn-uh1 {
+  background-image: none;
+}
+.btn-uh1.disabled,
+.btn-uh1[disabled],
+fieldset[disabled] .btn-uh1,
+.btn-uh1.disabled:hover,
+.btn-uh1[disabled]:hover,
+fieldset[disabled] .btn-uh1:hover,
+.btn-uh1.disabled:focus,
+.btn-uh1[disabled]:focus,
+fieldset[disabled] .btn-uh1:focus,
+.btn-uh1.disabled:active,
+.btn-uh1[disabled]:active,
+fieldset[disabled] .btn-uh1:active,
+.btn-uh1.disabled.active,
+.btn-uh1[disabled].active,
+fieldset[disabled] .btn-uh1.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-uh1 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+
+
+.btn-uh2 {
+  color: #2C3E50;
+  background-color: white;
+  border: 2px solid #2C3E50;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 15px auto;
+  border-radius: 8px;
+  display:block;
+  margin:20px 0 20px auto;
+  text-align: center;
+  width:30%;
+}
+.btn-uh2:hover,
+.btn-uh2:focus,
+.btn-uh2:active,
+.btn-uh2.active,
+.open .dropdown-toggle.btn-uh2 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.btn-uh2:active,
+.btn-uh2.active,
+.open .dropdown-toggle.btn-uh2 {
+  background-image: none;
+}
+.btn-uh2.disabled,
+.btn-uh2[disabled],
+fieldset[disabled] .btn-uh2,
+.btn-uh2.disabled:hover,
+.btn-uh2[disabled]:hover,
+fieldset[disabled] .btn-uh2:hover,
+.btn-uh2.disabled:focus,
+.btn-uh2[disabled]:focus,
+fieldset[disabled] .btn-uh2:focus,
+.btn-uh2.disabled:active,
+.btn-uh2[disabled]:active,
+fieldset[disabled] .btn-uh2:active,
+.btn-uh2.disabled.active,
+.btn-uh2[disabled].active,
+fieldset[disabled] .btn-uh2.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-uh2 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+.homeapp{
+  background-color: white;
+}
+.homeapp_bg{
+  min-height: 500px;
+  background: url(../images/home-app-6.jpg) no-repeat center center;
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeapp_base{
+  min-height: 500px;
+  background-color: white;
+  border-right:1px solid white;
+  border-radius: 8px;
+  margin:0% 2% 3% 0.25%;
+}
+.homeapp_base2{
+  min-height: 1000px;
+  background-color: white;
+  border-right:1px solid white;
+  border-radius: 8px;
+  margin:0% 2% 3%;
+}
+.homeapp .none{
+  display: block;
+  margin:0px auto 5px 2px;
+  font-size: 13px;
+  font-weight: 200;
+  color:#AF0C0C;
+  text-align: left;
+}
+.homeapp .updating{
+  display: block;
+  margin:10px auto 1px 2px;
+  font-size: 13px;
+  font-weight: 200;
+  color:#000;
+  text-align: left;
+}
+.homeapp_base h3{
+  display: block;
+  margin:0px auto 20px;
+  text-align: center;
+}
+.jobad{
+ 
+ padding:8% 10%;
+}
+
+
+
+
+
+/*UPDATE PROFILE*/
+.size_10{
+  min-height: 1500px;
+  height:100%;
+}
+.updateprof {
+  text-align: center;
+  background: url(../images/updates.jpg) no-repeat left; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;/*
+  color: white;*/
+  color: #2C3E50;
+}
+.updateprof .reg-box{
+  background: white; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.85;
+  padding-top: 5%;
+  padding-bottom: 100%;
+}
+.updateprof .reg-box p{
+  width:70%;
+  display: block;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:55px;
+}
+.updateprof .name {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+.border-bottom{
+  border-bottom: 2px solid #ebd1d3;
+  width:75%;
+  display: block;
+  margin: 0px auto 10px;
+}
+.updateprof .choices3{
+  margin:0px 2% 15px 5%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.updateprof .choices3 input{
+  width:100%;
+  margin-top: 0%;
+}
+.updateprof .choices3 span{
+  margin-top: 0%;
+}
+.updateprof .choices4{
+  margin:0px 0% 0px 2%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.updateprof .choices4 input{
+  width:100%;
+  margin-top: 0%;
+}
+.updateprof .choices4 span{
+  margin-top: 0%;
+}
+.updateprof .choices2{
+  margin:0px 5% 0px 5%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.updateprof .choices2 input{
+  width:100%;
+  margin-top: 0%;
+}
+.section-size{
+  min-height: 500px;
+}
+@media(max-width:425px){
+  .size_10{
+    min-height:1500px;
+    height:100%;
+  } 
+  .updateprof .choices3{
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .updateprof .choices3 input{
+    width:75%;
+  }
+  .updateprof .choices2{
+    
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .updateprof .choices2 input{
+    width:75%;
+  }
+  .btn-mycustom-leftreg2 {
+    width:80%;
+    margin:0px auto 0% auto;
+  }
+  .btn-mycustom-rightreg2 {
+    width:80%;
+    margin:0px auto 3% auto;
+  }
+}
+
+.btn-mycustom-leftreg22 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  display: block;
+  width:20%;
+  margin:-16% 0 3% 28%;/*
+  float:right;
+  margin:0% 1% 0% 0%;*/
+  /*
+  float: leftreg2;*/
+}
+.btn-mycustom-leftreg22:hover,
+.btn-mycustom-leftreg22:focus,
+.btn-mycustom-leftreg22:active,
+.btn-mycustom-leftreg22.active,
+.open .dropdown-toggle.btn-mycustom-leftreg22 {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-leftreg22:active,
+.btn-mycustom-leftreg22.active,
+.open .dropdown-toggle.btn-mycustom-leftreg22 {
+  background-image: none;
+}
+.btn-mycustom-leftreg22.disabled,
+.btn-mycustom-leftreg22[disabled],
+fieldset[disabled] .btn-mycustom-leftreg22,
+.btn-mycustom-leftreg22.disabled:hover,
+.btn-mycustom-leftreg22[disabled]:hover,
+fieldset[disabled] .btn-mycustom-leftreg22:hover,
+.btn-mycustom-leftreg22.disabled:focus,
+.btn-mycustom-leftreg22[disabled]:focus,
+fieldset[disabled] .btn-mycustom-leftreg22:focus,
+.btn-mycustom-leftreg22.disabled:active,
+.btn-mycustom-leftreg22[disabled]:active,
+fieldset[disabled] .btn-mycustom-leftreg22:active,
+.btn-mycustom-leftreg22.disabled.active,
+.btn-mycustom-leftreg22[disabled].active,
+fieldset[disabled] .btn-mycustom-leftreg22.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-leftreg22 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+
+
+.btn-mycustom-rightreg22 {
+  color: white;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  font-weight: 700;
+  font-size:14px;
+  display: block;
+  width:20%;
+  margin:0px 40% 3% 52%;/*
+  display: block;
+  margin:-16% 29% 38% auto;*/
+  /*
+  float: rightreg2;*/
+}
+.btn-mycustom-rightreg22:hover,
+.btn-mycustom-rightreg22:focus,
+.btn-mycustom-rightreg22:active,
+.btn-mycustom-rightreg22.active,
+.open .dropdown-toggle.btn-mycustom-rightreg22 {
+  color: white;
+  background-color: #141b21;
+  border-color: #141b21;
+  text-decoration: none;
+}
+.btn-mycustom-rightreg22:active,
+.btn-mycustom-rightreg22.active,
+.open .dropdown-toggle.btn-mycustom-rightreg22 {
+  background-image: none;
+}
+.btn-mycustom-rightreg22.disabled,
+.btn-mycustom-rightreg22[disabled],
+fieldset[disabled] .btn-mycustom-rightreg22,
+.btn-mycustom-rightreg22.disabled:hover,
+.btn-mycustom-rightreg22[disabled]:hover,
+fieldset[disabled] .btn-mycustom-rightreg22:hover,
+.btn-mycustom-rightreg22.disabled:focus,
+.btn-mycustom-rightreg22[disabled]:focus,
+fieldset[disabled] .btn-mycustom-rightreg22:focus,
+.btn-mycustom-rightreg22.disabled:active,
+.btn-mycustom-rightreg22[disabled]:active,
+fieldset[disabled] .btn-mycustom-rightreg22:active,
+.btn-mycustom-rightreg22.disabled.active,
+.btn-mycustom-rightreg22[disabled].active,
+fieldset[disabled] .btn-mycustom-rightreg22.active {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+  text-decoration: none;
+}
+.btn-mycustom-rightreg22 .badge {
+  color: #2C3E50;
+  background-color: white;
+}
+.upload-size{
+  width:50px;
+}
+
+
+
+
+.my-reg-222 {
+  text-align: center;
+  background: url(../images/updates2.jpg) no-repeat left; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;/*
+  color: white;*/
+  color: #2C3E50;
+}
+.my-reg-222 .reg-box{
+  background: white; 
+  height: 100%;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  padding-top: 5%;
+  padding-bottom: 40px;
+}
+.my-reg-222 .reg-box p{
+  width:70%;
+  display: block;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:55px;
+}
+.my-reg-222 .name {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.5em;
+  padding-bottom: 10px;
+}
+.border-bottom{
+  border-bottom: 2px solid #ebd1d3;
+  width:75%;
+  display: block;
+  margin: 0px auto 10px;
+}
+.my-reg-222 .choices3{
+  width:35%;
+  margin:0px 2% 15px 13%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.my-reg-222 .choices3 input{
+  width:100%;
+  margin-top: 0%;
+}
+.my-reg-222 .choices3 span{
+  margin-top: 0%;
+}
+.my-reg-222 .choices2{
+  width:35%;
+  margin:0px 0% 15px 2%;
+  text-align: left;
+  font-size:16px;
+  font-weight: 550;
+  float:left;
+}
+.my-reg-222 .choices2 input{
+  width:100%;
+  margin-top: 0%;
+}
+@media(max-width:425px){
+  .size_4{
+    min-height:500px;
+    height:100%;
+  } 
+  .my-reg-222 .choices3{
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .my-reg-222 .choices3 input{
+    width:75%;
+  }
+  .my-reg-222 .choices2{
+    
+    width:100%;
+    margin:0px 0% 20px 13%;
+  }
+  .my-reg-222 .choices2 input{
+    width:75%;
+  }
+  .btn-mycustom-leftreg2 {
+    width:80%;
+    margin:0px auto 0% auto;
+  }
+  .btn-mycustom-rightreg2 {
+    width:80%;
+    margin:0px auto 3% auto;
+  }
 }

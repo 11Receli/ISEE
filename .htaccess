@@ -8,3 +8,4 @@ RewriteEngine on
 
 RewriteCond $1 !^(index\.php|user_guide|asset|upload|uploads|resources|users|robots.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]
+

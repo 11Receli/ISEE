@@ -19,7 +19,7 @@
 </div>
  -->
  <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="w3-animate-opacity navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -71,9 +71,15 @@
     </nav>
 
  <div id="portfolio">
-        <div class="container">
+        <div class="container w3-animate-opacity">
             <div class="row">
                 <div class="col-lg-12 text-center">
+                    <hr class="spacer_1">
+                    <div class="spacer_1"></div>
+                    <div class="spacer_1"></div>
+                    <div class="spacer_1"></div>
+                    <div class="spacer_1"></div>
+
                     <h2>Featured Article of the Week</h2>
                     <hr class="spacer_1">
                 </div>
@@ -118,7 +124,7 @@
     </div>
 
 
-<div class="text-center my-footer">
+<div class="text-center my-footer w3-animate-opacity">
         <div class="my-footer-above">
             <div class="container">
                 <div class="row">

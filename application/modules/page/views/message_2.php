@@ -1,6 +1,6 @@
 <?php echo form_open('','class="form-sign"'); ?>
 <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="w3-animate-opacity navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -17,13 +17,13 @@
                         <a href="<?php echo base_url('page/reload_page'); ?>">Home</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/article'); ?>">Articles</a>
+                        <a href="<?php echo base_url('page/article_2'); ?>">Articles</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/about'); ?>">About</a>
+                        <a href="<?php echo base_url('page/about_2'); ?>">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message'); ?>">Contact</a>
+                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message_2'); ?>">Contact</a>
                     </li>
                     <li class="page-scroll">
                         <?php if($this->session->userdata('username')): ?>
@@ -52,13 +52,15 @@
     </nav>
 
 <div id="contact">
-        <div class="container">
+        <div class="container w3-animate-opacity">
             <div class="row">
 
                 <div class="spacer_1"></div>
                 <div class="spacer_1"></div>
                 <div class="spacer_1"></div>
                 <div class="col-lg-12 text-center">
+                    <hr class="spacer_1">
+                    <div class="spacer_1"></div>
                     <h1>For Inquiries</h1>
                     <hr class="spacer_1">
                 </div>

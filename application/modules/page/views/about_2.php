@@ -1,7 +1,7 @@
 
 <?php echo form_open(); ?>
 <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="w3-animate-opacity navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -18,13 +18,13 @@
                         <a href="<?php echo base_url('page/reload_page'); ?>">Home</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/article'); ?>">Articles</a>
+                        <a href="<?php echo base_url('page/article_2'); ?>">Articles</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/about'); ?>">About</a>
+                        <a href="<?php echo base_url('page/about_2'); ?>">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message'); ?>">Contact</a>
+                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message_2'); ?>">Contact</a>
                     </li>
                     <li class="page-scroll">
                         <?php if($this->session->userdata('username')): ?>
@@ -69,7 +69,7 @@
     </div>
 </div>
 
-<div class="row authors">
+<div class="row authors w3-animate-opacity">
     <div class="col-lg-12">
         <h1 class="page-header">Our Team</h1>
     </div>
@@ -86,7 +86,7 @@
     <?php endforeach; ?>
 </div>
 
-<div class="text-center my-footer">
+<div class="text-center my-footer w3-animate-opacity">
         <div class="my-footer-above">
             <div class="container">
                 <div class="row">

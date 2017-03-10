@@ -1,17 +1,5 @@
 //flow of ISEE website
 
-        EMPLOYER REGISTRATION:
-            -Company name
-            -Address
-            -Contact number
-            -email
-            -founder
-            -year of establishment
-            -hr personnel
-            -hr contact number
-            -hr email
-            -type of company
-        checking first if there is already a company registered like that.
         NEXT
             -confirmation message (there will be a sent confirmation email on the registered email of the hr personnel(link to further registration))
             -message to confirm email first
@@ -27,40 +15,13 @@
 
 
 
- 
 
 
 
-                    NEXT/SKIP/BACK
-                        -they will be asked to fill up about their educational background
-                            > Other courses taken and school attended for it (optional)
-                            > Honors and awards upon graduation (optional)
-                            > (if alumni) : awards won outside school (optional)
-                            > Certifications (could insert .jpg / .png as proof) (optional)
-                            > Seminars attended (could attach .jpg / .png as proof) (optional)
-                            > GWA (optional)
-                            (could skip this)
 
-                        NEXT/SKIP/BACK
-                            -they will be asked to fill up about their skills by selecting from a dropdown textbox
-                                > list to select from
-                                > there is also an "OTHERS" text box (optional)
-                                > there is also the area for "Specialization" (I am well knowledgeable with the following:) (optional)
+                                
 
-                            NEXT/SKIP/BACK
-                                -they will be asked to fill out a form for their work experience (optional)
-                                    > No. of years in the industry
-                                    > Past company position or job
-                                    > company they last worked at
-                                    > no. of years in that company
-                                    > other jobs in the past and companies they went to (Job title first then company)
-
-                                NEXT/SKIP/BACK
-                                        -will be an option to upload a photo. (2x2) (optional)
-                                        -will be asked if "willing to work outside their area" YES/ NO (based on their input city and province)
-                                        -salary expectation (optional)
-
-                                    NEXT/SKIP/BACK
+                                    NEXT/SKIP
                                         -all the information they entered (only the ones that are not empty or skipped)
                                          will be displayed in a DOWNLOADABLE RESUME and should be available for direct PRINTING. (arranged in a resume format) BUT they have to confirm all the information first by clicking a confirmation button below the resume form.
                                          ONLY THEN will the option for downloading or printing be shown.

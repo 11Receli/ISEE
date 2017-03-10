@@ -4,7 +4,7 @@
       <div class="row size_4">
         <div class="col-lg-2"></div>
         <div class="col-lg-8 reg-box">
-          <h2 class="name">Step 2</h2> 
+          <h2 class="name">Step 4: Personal Information</h2> 
 
           <div class="spacer_2"></div>
           <div class="spacer_2"></div>
@@ -77,7 +77,7 @@
           </div>
 
           <div class="spacer_3"></div>
-          <button type="submit" name="submit" class="btn btn-mycustom-login" style="margin-top:30px;" value="1"><h4>Submit</h4></button>
+          <button type="submit" name="submit" class="btn btn-mycustom-login" style="margin-top:30px;" value="1"><h4>Next</h4></button>
         </div>
         <div class="col-lg-2"></div>
       </div>

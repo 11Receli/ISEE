@@ -1,7 +1,7 @@
 
 <?php echo form_open(); ?>
 <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="w3-animate-opacity navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -57,6 +57,8 @@
         <div class="row size_5">
             <div class="col-lg-12">
                 <div class="intro-text col-lg-12">
+                    <div class="spacer_1"></div>
+                    <div class="spacer_1"></div>
                     <img class="gif_1 area-1" src="<?php echo base_url(IMG . 'CCS.jpg'); ?>" alt="">
                     <div class="area-2">
                         <span class="name">DYCIans</span>
@@ -69,7 +71,7 @@
     </div>
 </div>
 
-<div class="row authors">
+<div class="row authors w3-animate-opacity">
     <div class="col-lg-12">
         <h1 class="page-header">Our Team</h1>
     </div>
@@ -86,7 +88,7 @@
     <?php endforeach; ?>
 </div>
 
-<div class="text-center my-footer">
+<div class="text-center my-footer w3-animate-opacity">
         <div class="my-footer-above">
             <div class="container">
                 <div class="row">

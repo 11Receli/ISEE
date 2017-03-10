@@ -68,12 +68,22 @@ hr.star-primary:after {
   margin: 0 auto;
 }
 .size_1{
-	min-height: 480px;
+	min-height: 500px;
 }
 .my_header {
-  text-align: center;
+  text-align: center;/* The image used */
   background: url(../images/intro-bg.jpg) no-repeat center center;
+
+  /* Full height */
+  height: 100%; 
+
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  /*background: url(../images/intro-bg.jpg) no-repeat center center;
+  background-size: cover;*/
   color: white;
 }
 .my_header .container {
@@ -83,14 +93,14 @@ hr.star-primary:after {
 .my_header img {
   display: block;
   margin: 0 auto 20px;
-  width:300px;
+  width:280px;
 }
 .my_header .gif_1{
-	margin-top: -10%;
+	margin-top: 5%;
 	opacity: 0.5;
 }
 .my_header .gif_2{
-	margin-top: -200px;
+	margin-top: -190px;
 }
 .my_header .intro-text .name {
   display: block;
@@ -106,94 +116,215 @@ hr.star-primary:after {
   line-height: 25px;
 }
 @media (min-width: 768px) {
+.my_header .gif_1{
+  margin-top: -6%;
+  opacity: 0.5;
+}
+.my_header .gif_2{
+  margin-top: -200px;
+}
+
+.my_header img {
+  display: block;
+  margin: 0 auto 20px;
+  width:300px;
+}
   .my_header .container {
     padding-top: 200px;
     padding-bottom: 100px;
   }
   .my_header .intro-text .name {
-    font-size: 4.75em;
+    font-size: 5em;
     line-height: 60px;
   }
   .my_header .intro-text .skills {
-    font-size: 1.75em;
+    font-size: 2em;
     line-height: 40px;
   }
 	.size_1{
-		min-height: 310px;
+		min-height: 380px;
 	}
 }
-.navbar-custom {
-  background: #2C3E50;
+
+.my_header_5 {
+  text-align: center;
+  background: url(../images/intro-bg2.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+.my_header_5 .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.my_header_5 img {
+  display: block;
+  margin: 0 auto 20px;
+  width:300px;
+}
+.my_header_5 .gif_1{
+  margin-top: -10%;
+  opacity: 0.5;
+}
+.my_header_5 .gif_2{
+  margin-top: -200px;
+}
+.my_header_5 .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 25px;
+}
+.my_header_5 .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 25px;
+}
+@media (min-width: 768px) {
+  .my_header_5 .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  .my_header_5 .intro-text .name {
+    font-size: 4.75em;
+    line-height: 60px;
+  }
+  .my_header_5 .intro-text .skills {
+    font-size: 1.75em;
+    line-height: 40px;
+  }
+}
+
+
+/* I added #main to the selector of the active class */
+
+
+
+nav.navbar{
+  background:#3a536b;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border: none;
+  min-height:90px;
+   padding-top: 20px;
+   font-size: 20px;
+   // Animation
+   -webkit-transition: all 0.8s ease;
+   transition: all 0.8s ease;
 }
-.navbar-custom a:focus {
+
+nav.navbar.shrink {
+
+  background:#547799;
+  min-height: 35px;
+  padding-top: 0px;
+  font-size: 15px;
+}
+nav.navbar a:focus {
   outline: none;
 }
-.navbar-custom .navbar-brand {
+nav.navbar .navbar-brand {
   color: white;
 }
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus,
-.navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
+nav.navbar .navbar-brand:hover,
+nav.navbar .navbar-brand:focus,
+nav.navbar .navbar-brand:active,
+nav.navbar .navbar-brand.active {
+  background: transparent;
   color: white;
 }
-.navbar-custom .navbar-nav {
+nav.navbar .navbar-nav {
   letter-spacing: 1px;
 }
-.navbar-custom .navbar-nav li a {
+nav.navbar .navbar-nav li a {
   color: white;
 }
-.navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+nav.navbar .navbar-nav li a:hover {
+  background: white;
+  color: #3a536b;
   outline: none;
 }
-.navbar-custom .navbar-nav li a:focus,
-.navbar-custom .navbar-nav li a:active {
+.active #art{
+  background: white;
+  color: #3a536b;
+}
+.active2 #abt{
+  background: white;
+  color: #3a536b;
+}
+.active3 #cont{
+  background: white;
+  color: #3a536b;
+}
+.inactive #cont{
+  background: #3a536b;
   color: white;
 }
-.navbar-custom .navbar-nav li.active a {
+.inactive #abt{
+  background: #3a536b;
   color: white;
-  background: #18BC9C;
 }
-.navbar-custom .navbar-nav li.active a:hover,
-.navbar-custom .navbar-nav li.active a:focus,
-.navbar-custom .navbar-nav li.active a:active {
+.inactive #art{
+  background: #3a536b;
   color: white;
-  background: #18BC9C;
 }
-.navbar-custom .navbar-toggle {
+.inactive2 #cont{
+  background: #547799;
+  color: white;
+}
+.inactive2 #abt{
+  background: #547799;
+  color: white;
+}
+.inactive2 #art{
+  background: #547799;
+  color: white;
+}
+/*
+nav.navbar li a:hover,
+nav.navbar li a.active { background: white;
+  color: #3a536b; }
+  
+nav.navbar li a {overflow: hidden; }*/
+nav.navbar .navbar-nav li a:focus{
+  background: white;
+  color: #3a536b;
+}
+nav.navbar .navbar-nav li a.active {
+  color: #3a536b;
+  background: white;
+}
+nav.navbar .navbar-nav li.active a:hover,
+nav.navbar .navbar-nav li.active a:focus{
+  color: #3a536b;
+  background: white;
+}
+nav.navbar .navbar-toggle {
   color: white;
   text-transform: uppercase;
   font-size: 10px;
   border-color: white;
 }
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
+nav.navbar .navbar-toggle:hover,
+nav.navbar .navbar-toggle:focus {
   background-color: #18BC9C;
   color: white;
   border-color: #18BC9C;
 }
 @media (min-width: 768px) {
-  .navbar-custom {
-    padding: 10px 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-  }
-  .navbar-custom .navbar-brand {
+  
+  nav.navbar .navbar-brand {
     font-size: 2em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .navbar-custom.affix {
+  nav.navbar.affix {
     padding: 10px 0;
   }
-  .navbar-custom.affix .navbar-brand {
+  nav.navbar.affix .navbar-brand {
     font-size: 1.5em;
   }
 }
@@ -206,6 +337,12 @@ section h2 {
 }
 section.success {
   background: url(../images/intro-bg2.jpg) no-repeat center center;
+  height: 100%; 
+
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
@@ -324,6 +461,7 @@ form .row:first-child .floating-label-form-group {
   padding-top: 50px;
   background-color: #132639;
 }
+
 .my-footer .my-footer-col {
   margin-bottom: 50px;
   color:white;

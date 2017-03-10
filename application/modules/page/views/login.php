@@ -29,14 +29,18 @@
 
 					    <div class="spacer_1"></div>
 					    <div class="spacer_1"></div>
-						<button type="submit" name="submit" class="btn btn-mycustom-login">
+						<button type="submit" name="submit" class="btn btn-mycustom-reg">
 							<h4>Login</h4>
 						</button>
-						<div class="spacer_1"></div>
 						<div class="spacer_1"></div>
 						<p class="mylink">New to this site? 
 							<a class="mylink" href="<?php echo base_url('page/mainregistration'); ?>">
 								Click Here.
+							</a>
+						</p>
+						<p class="forgot">
+							<a class="forgot" href="<?php echo base_url('page/ApplicantRegistrationController/forgotpassword'); ?>">
+								Forgot Password?
 							</a>
 						</p>
 					</form>

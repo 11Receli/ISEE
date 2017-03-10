@@ -1,43 +1,55 @@
 
   <?php echo form_open('','class="form-sign"'); ?>
-  <div class=" my-reg-2  w3-animate-opacity">
+  <div class="my-reg-3 w3-animate-opacity">
     <div class="container">
-      <div class="row size_4">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4 reg-box">
-          <h2 class="name">Step 3</h2> 
-
-          <div class="spacer_2"></div>
-          <div class="spacer_2"></div>
-
-          <div>
-            <div class="form-group  required-red">
-              <?php echo form_label('Username:','username'); ?><br>
-              <span class="error-red"><?php echo form_error('username','Required Input: '); ?></span>
-              <?php echo form_input('username',$username,'class="form-control" placeholder="ex: JohnSmith22" id="username"'); ?>
+        <div class="row size_4">
+            <div class="col-lg-4">
+                <div class="reg-box">
+                  <form>
+                    <div class="">
+                      <div class="name">Step 3</div>
+                      <div class="border-bottom"></div>
+                      <p>You are a DYCIan! You can now create your user account in this section.</p>
+                    
+                      <div class="choices4">
+                        <div <?php echo (form_error('username') == '') ? '' : ' class="yes_error"'; ?> class="required-red form-group">
+                          <?php echo form_label('Username:','username'); ?>
+                    <?php echo form_error('username','<div class="error-red">', '</div>'); ?>
+                          <?php echo form_input('username','','class="form-control" placeholder="ex: JohnSmith22" id="username"'); ?>
+                        </div>
+                        <div <?php echo (form_error('password') == '') ? '' : ' class="yes_error"'; ?> class="required-red form-group">
+                          <?php echo form_label('Password:','password'); ?>
+                    <?php echo form_error('password','<div class="error-red">', '</div>'); ?>
+                          <?php echo form_password('password','','class="form-control" placeholder="Password" id="password"'); ?>
+                        </div>
+                        <div <?php echo (form_error('conpassword') == '') ? '' : ' class="yes_error"'; ?> class="required-red form-group">
+                          <?php echo form_label('Confirm Password:','conpassword'); ?>
+                    <?php echo form_error('conpassword','<div class="error-red">', '</div>'); ?>
+                          <?php echo form_password('conpassword','','class="form-control" placeholder="Confirm Password" id="conpassword"'); ?>
+                        </div>
+                        <div <?php echo (form_error('email') == '') ? '' : ' class="yes_error"'; ?> class="required-red form-group">
+                          <?php echo form_label('E-mail:','email'); ?>
+                    <?php echo form_error('email','<div class="error-red">', '</div>'); ?>
+                          <?php echo form_input('email','','class="form-control" type="email" placeholder="myemail@mail.com" id="email"'); ?>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" name="submit" id="submit" class="btn btn-mycustom-right" value="1">
+                      <h4>Next<span style="margin-left:2px;" class="glyphicon glyphicon-chevron-right"></span></h4>
+                    </button>
+                    
+                    <button type="submit" name="submit2" class="btn btn-mycustom-left" value="1">
+                    <h4>Cancel</h4>
+                    </button>
+                    
+                  </form>
+                </div>
             </div>
-            <div class="form-group required-red">
-              <?php echo form_label('Password:','password'); ?><br>
-              <span class="error-red"><?php echo form_error('password','Required Input: '); ?></span>
-              <?php echo form_password('password',$password,'class="form-control" placeholder="Password" id="password"'); ?>
-            </div>
-            <div class="form-group required-red">
-              <?php echo form_label('Confirm Password:','conpassword'); ?><br>
-              <span class="error-red"><?php echo form_error('conpassword','Required Input: '); ?></span>
-              <?php echo form_password('conpassword',$conpassword,'class="form-control" placeholder="Confirm Password" id="conpassword"'); ?>
-            </div>
-            <div class="form-group required-red">
-              <?php echo form_label('E-mail:','email'); ?><br>
-              <span class="error-red"><?php echo form_error('email','Required Input: '); ?></span>
-              <?php echo form_input('email',$email,'class="form-control" type="email" placeholder="myemail@mail.com" id="email"'); ?>
-            </div>
-          </div>
-
-          <div class="spacer_3"></div>
-          <button type="submit" name="submit" class="btn btn-mycustom-login" style="margin-top:30px;" value="1"><h4>Submit</h4></button>
         </div>
-        <div class="col-lg-2"></div>
-      </div>
+
     </div>
-  </div>
+    <!-- /.container -->
+
+</div>
+
 <?php echo form_close(); ?>

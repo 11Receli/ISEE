@@ -1,31 +1,29 @@
 
-<div id="page-top">
+<body class="w3-animate-opacity" id="page-top" style="height:100%">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top">I S E E</a>
-            </div>
+    <nav id="main" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="scroll navbar-brand w3-animate-opacity" href="#page-top">I S E E</a>
+        </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/article'); ?>">Articles</a>
+                        <a href="<?php echo base_url('page/article_2'); ?>">Articles</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/about'); ?>">About</a>
+                        <a href="<?php echo base_url('page/about_2'); ?>">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message'); ?>">Contact</a>
+                        <a href="<?php echo base_url('page/ApplicantRegistrationController/my_message_2'); ?>">Contact</a>
                     </li>
                     <li class="page-scroll">
                         <?php if($this->session->userdata('username')): ?>
@@ -38,8 +36,11 @@
                         <?php if($this->session->userdata('username')): ?>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <li>
-                                    <a href="<?php echo base_url('page/ApplicantProfileUpdateController/handleProfileUpdate'); ?>" style="color:black;">Update Profile</a>
+                                    <a href="<?php echo base_url('page/ApplicantRegistrationController/jobposting'); ?>" style="color:black;">Create Job Post</a>
                                 </li>
+                                <!-- <li>
+                                    <a href="<?php echo base_url('page/ApplicantRegistrationController/resume'); ?>" style="color:black;">View Profile</a>
+                                </li> -->
                                 <li>
                                     <a href="<?php echo base_url('page/logout'); ?>" style="color:black;">Logout</a>
                                 </li>
@@ -47,48 +48,111 @@
                         <?php endif; ?>
                     </li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+            <!-- /.navbar-collapse -->
+      </div>
     </nav>
 
-    <!-- Header -->
-    <div class="my_header">
+    <div class="homeheaderemp">
         <div class="container">
-            <div class="row size_1">
+            <div class="row homeheaderemp_size">
                 <div class="col-lg-12">
                     <div class="intro-text">
-                        <img class="gif_1" src="<?php echo base_url(IMG . 'ISEE2.GIF'); ?>" alt="">
-                        <img class="gif_2" src="<?php echo base_url(IMG . 'ISEE.GIF'); ?>" alt="">
-                        <h1 class="name">DISCOVER OR</h1>
-                        <h1 class="name">BE DISCOVERED</h1>
-                        <h3 class="skills">A NEW AVENUE TO FIND JOBS AND EMPLOYEES ALL AT ONCE</h3>
-                        <div class="spacer_1"></div>
+                        <div class="col-lg-4">
+                            <img class="gif_1" src="<?php echo base_url(IMG . 'ISEE2.GIF'); ?>" alt="">
+                            <img class="gif_2" src="<?php echo base_url(IMG . 'ISEE.GIF'); ?>" alt="">
+                        </div>
+                        <div class="col-lg-8">
+                            <h1 class="name">DISCOVERED</h1>
+                            <h3 class="skills">A NEW AVENUE TO FIND VALUABLE APPLICANTS</h3>
+                            <div class="spacer_1"></div>
                             <h3 class="skills">
                                 <?php if($this->session->userdata('username')): ?>
-                                    <h3>WELCOME!</h3>
+                                    
                                 <?php else: ?>
                                     <a href="<?php echo base_url('page/login'); ?>" class="btn-mycustom">
                                     <span>Login Here</span></a>
                                 <?php endif; ?>
                             </h3>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<!-- 
-    <?php if($this->session->userdata('username')): ?>
+
+    <!-- <?php if($this->session->userdata('username')): ?>
         <?php
             $this->view('jobAlertView');
         ?>
         
     <?php endif; ?> -->
     <!-- Portfolio Grid Section -->
-    
+
     <!-- Footer -->
+    <!-- <div style="min-height:25px;background-color:#2C3E50;"></div>
+    <div style="min-height:50px;background-color:white;"></div>
+    <div style="min-height:25px;background-color:#2C3E50;"></div> -->
+    <div class="col-lg-12 homeemp_bg"> 
+    
+        <div class="col-lg-4 homeemp_base">
+        <hr class="col-lg-2">
+        <hr class="col-lg-8 spacer_1"> 
+            <h3>PROFILE STATUS</h3>
+        <hr class="col-lg-2">
+        <hr class="col-lg-8 spacer_1"> 
+            
+            <div class="col-lg-12 homeemp">
+            </div>
+            <div class="col-lg-12 homeemp">
+            </div>
+            <div class="col-lg-12 homeemp">
+            </div>
+            <div class="col-lg-12 homeemp">
+                <label>Basic Company Information</label><br>
+                <a href="ApplicantRegistrationController/updateprofile" class="btn-uh1">
+                    Edit Your Profile
+                </a>
+            <div class="spacer_1"></div>
+            <div class="spacer_1"></div>
+
+
+              <div id="selectImage" style="text-align:left;">
+                <label>Upload your Companies Background</label><br>
+                
+                <input type='file' name='userfile' size='20' id='file' onchange="readURL(this);" />
+                <div class="spacer_1"></div>
+                
+              </div>
+              
+                <a href="#" class="btn-uh1">
+                    Submit
+                </a>
+              
+            </div>
+        </div>
+        <div class="col-lg-7 homeemp_base2">
+        <hr class="col-lg-2">
+        <hr class="col-lg-9 spacer_1"> 
+            <h3 style="text-align:center">Applicants</h3>
+        <hr class="col-lg-2">
+        <hr class="col-lg-9 spacer_1"> 
+            <div class="jobad">
+            <?php foreach($applicants as $row): ?>
+                      <h2><span><?php echo $row->firstname; ?></span>
+                      <span><?php echo $row->middlename; ?></span>
+                      <span><?php echo $row->lastname; ?></span></h2>
+                      <p><?php echo $row->course; ?></p>
+                      <p><?php echo $row->department; ?></p>
+                      <p><?php echo $row->graduation; ?></p>
+                      <a href="#" class="btn-uh2">
+                            View
+                        </a>
+            <hr class="spacer_1">
+            <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
     <div class="text-center my-footer">
         <div class="my-footer-above">
             <div class="container">
@@ -128,5 +192,27 @@
             </div>
         </div>
     </div>
-</div>
+    
+</body>
+<script type="text/javascript">
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 500);
+        return false;
+    });
+
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 100) {
+        $('nav').addClass('shrink');
+
+      } else {
+
+        $('nav').removeClass('shrink');
+      }
+    });
+    
+
+</script>
+
 

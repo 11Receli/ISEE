@@ -1,6 +1,6 @@
 <?php echo form_open('','class="form-sign"'); ?>
 <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="w3-animate-opacity navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -52,13 +52,15 @@
     </nav>
 
 <div id="contact">
-        <div class="container">
+        <div class="container w3-animate-opacity">
             <div class="row">
 
                 <div class="spacer_1"></div>
                 <div class="spacer_1"></div>
                 <div class="spacer_1"></div>
                 <div class="col-lg-12 text-center">
+                    <hr class="spacer_1">
+                    <div class="spacer_1"></div>
                     <h1>For Inquiries</h1>
                     <hr class="spacer_1">
                 </div>
